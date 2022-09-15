@@ -2,9 +2,9 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   build:
@@ -23,7 +23,7 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
-          cache: 'npm'
+          cache: "npm"
       - name: create env file
         working-directory: ./
         run: |
@@ -36,6 +36,4 @@ jobs:
         working-directory: ./
         run: |
           npm ci
-          npm run build
-          # npm test
-        
+          npm test
