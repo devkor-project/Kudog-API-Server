@@ -14,6 +14,6 @@ export const exp = () => {
     .use(methodOverride())
     .use(express.static("public"));
 
-  app.use("/test", require("../src/routes/test"));
+  app.use("/test", require("../src/routes/testRoute"));
   return app;
 };
