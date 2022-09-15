@@ -1,3 +1,5 @@
+[![deploy](https://github.com/devkor-project/backend/actions/workflows/deploy.yml/badge.svg)](https://github.com/devkor-project/backend/actions/workflows/deploy.yml)
+
 <br/>
 
 # 📧 About this Service- 🧐
