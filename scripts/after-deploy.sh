@@ -5,4 +5,4 @@ cd $REPOSITORY
 
 sudo yarn
 
-sudo pm2 start dist --watch --ignore-watch="../log/*"
+sudo pm2 start dist/src --watch --ignore-watch="../logs/*"
