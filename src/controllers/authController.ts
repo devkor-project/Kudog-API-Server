@@ -30,6 +30,7 @@ export const login = async function (req: Request, res: Response) {
     return res.status(400).send(errResponse(message.SIGNIN_EMAIL_NOT_EXISTS));
   }
 
+  // 회원가입 API 완성되면 password 해쉬 부분 추가
   //   // Compare hased password with user password to see if they are valid
   //   const isMatch = await bcrypt.compare(password, user.password);
 
