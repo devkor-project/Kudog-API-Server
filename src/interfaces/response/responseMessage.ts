@@ -32,10 +32,16 @@ export const message = {
     message: "email does not exist",
   },
 
-  SIGNIN_EMAIL_PASSWORD_INVALID: {
+  SIGNIN_INVALID_PASSWORD: {
     isSuccess: false,
     code: 2003,
-    message: "invalid email or password",
+    message: "invalid password",
+  },
+
+  SIGNIN_VALIDATION_FAIL: {
+    isSuccess: false,
+    code: 2004,
+    message: "The email or password format is wrong ",
   },
 
   //Connection, Transaction 등의 서버 오류
