@@ -2,4 +2,3 @@ node_modules/
 .env
 logs/
 prisma/
-jest.config.js

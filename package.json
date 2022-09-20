@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --setupFiles dotenv/config --forceExit --detectOpenHandles",
+    "test": "jest",
     "dev": "NODE_ENV=development ts-node src",
     "build": "NODE_ENV=production tsc"
   },
