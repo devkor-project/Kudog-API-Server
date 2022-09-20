@@ -8,7 +8,6 @@ if (process.env.NODE_ENV === "development") {
 } else {
   port = 8080;
 }
-
 express().listen(port);
 logger.info(
   `environment : ${process.env.NODE_ENV} - API Server Start At Port ${port}`
