@@ -38,7 +38,7 @@ export const login = async function (req: Request, res: Response) {
   //     return res.status(401).send(errResponse(message.SIGNIN_INVALID_PASSWORD));
   //   }
 
-  //login 성공 result
+  // success result
   const loginResult = await authService.login(email);
 
   res.send(response(message.SUCCESS, loginResult));
