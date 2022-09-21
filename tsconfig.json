@@ -20,8 +20,6 @@
     "resolveJsonModule": true
   },
   "include": [
-    "src/**/*",
-    "jest.config.ts",
-    "test/**/*.test.ts"
+    "src/**/*"
   ]
 }
