@@ -1,12 +1,12 @@
-import { Request, Response, NextFunction } from "express";
-import * as Joi from "joi";
-import { response, errResponse } from "../interfaces/response/response";
-import { message } from "../interfaces/response/responseMessage";
+import { Request, Response, NextFunction } from 'express';
+import { INVALID_FORMAT } from '@/interfaces/error';
+import * as Joi from 'joi';
 
+// eslint-disable-next-line import/prefer-default-export
 export const loginValidation = async (
   req: Request,
   res: Response,
-  next: NextFunction
+  next: NextFunction,
 ) => {
   const schema = Joi.object({
     // check e-mail
@@ -21,8 +21,6 @@ export const loginValidation = async (
 
   // validate req.body
   const result = await schema.validateAsync(req.body);
-
-  return result.error
-    ? res.status(400).send(errResponse(message.SIGNIN_VALIDATION_FAIL))
-    : next();
+  if (result.error) throw INVALID_FORMAT;
+  else next();
 };
