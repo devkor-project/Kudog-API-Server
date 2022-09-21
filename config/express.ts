@@ -15,6 +15,5 @@ export const exp = () => {
     .use(express.static("public"));
 
   app.use("/test", require("../src/routes/testRoute"));
-  app.use("/auth", require("../src/routes/auth"));
   return app;
 };
