@@ -1,11 +1,12 @@
 import { NextFunction, Request, Response } from "express";
 import { response, errResponse } from "../interfaces/response/response";
 import { message } from "../interfaces/response/responseMessage";
-import * as authService from "../services/authService";
 import JWT from "jsonwebtoken";
 import bcrypt from "bcrypt";
 import dotenv from "dotenv";
-import { prisma } from "../utils/util";
+import { logInUserDto } from "../dtos/user.dto";
+
+import { User } from "../entities/User";
 dotenv.config();
 
 /**
@@ -16,19 +17,21 @@ dotenv.config();
  * @return_data accessToken
  */
 export const login = async function (req: Request, res: Response) {
-  const { email, password } = req.body;
+  const userData: logInUserDto = req.body;
 
   // Look for user email in the database
-  const user = await prisma.user.findFirst({
-    where: {
-      email: email,
-    },
-  });
+
+  // to do : typeorm으로 교체
+  // const user = await prisma.user.findFirst({
+  //   where: {
+  //     email: userData.email,
+  //   },
+  // });
 
   // If user not found, send error message
-  if (!user) {
-    return res.status(400).send(errResponse(message.SIGNIN_EMAIL_NOT_EXISTS));
-  }
+  // if (!user) {
+  //   return res.status(400).send(errResponse(message.SIGNIN_EMAIL_NOT_EXISTS));
+  // }
 
   // 회원가입 API 완성되면 password 해쉬 부분 추가
   //   // Compare hased password with user password to see if they are valid
@@ -39,7 +42,7 @@ export const login = async function (req: Request, res: Response) {
   //   }
 
   // success result
-  const loginResult = await authService.login(email);
+  // const loginResult = await authService.login(userData.email);
 
-  res.send(response(message.SUCCESS, loginResult));
+  res.send(response(message.SUCCESS, "hi"));
 };
