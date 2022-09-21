@@ -20,7 +20,11 @@ export const loginValidation = async (
   });
 
   // validate req.body
-  const result = await schema.validateAsync(req.body);
-  if (result.error) throw INVALID_FORMAT;
-  else next();
+  try {
+    await schema.validateAsync(req.body);
+  } catch (err) {
+    // throw INVALID_FORMAT; 서버 다운됨
+    return res.status(400).send('수정 필요');
+  }
+  next();
 };
