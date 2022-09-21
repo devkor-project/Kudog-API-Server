@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "NODE_ENV=development ts-node src",
     "build": "NODE_ENV=production tsc",
     "start": "ts-node src/index.ts",
