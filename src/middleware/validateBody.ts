@@ -19,10 +19,10 @@ export const loginValidation = async (
       .regex(/^[ -~]+$/i),
   });
 
-  try {
-    await schema.validateAsync(req.body);
-  } catch (err) {
-    return res.status(400).send(errResponse(message.SIGNIN_VALIDATION_FAIL));
-  }
-  next();
+  // validate req.body
+  const result = await schema.validateAsync(req.body);
+
+  return result.error
+    ? res.status(400).send(errResponse(message.SIGNIN_VALIDATION_FAIL))
+    : next();
 };
