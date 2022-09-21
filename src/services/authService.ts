@@ -1,36 +1,33 @@
-import { NextFunction, Request, Response } from "express";
-import { response, errResponse } from "../interfaces/response/response";
-import { message } from "../interfaces/response/responseMessage";
-import JWT from "jsonwebtoken";
-import dotenv from "dotenv";
-import { prisma } from "../utils/util";
-dotenv.config();
+import JWT from 'jsonwebtoken';
+import prisma from '../utils/prisma';
 
-export const login = async function (email: string) {
+// eslint-disable-next-line import/prefer-default-export
+export const login = function (email: string) {
+  const secret = process.env.ACCESS_TOKEN_SECRET;
   // create JWT access token
-  const accessToken = await JWT.sign(
+  const accessToken = JWT.sign(
     { email },
-    process.env.ACCESS_TOKEN_SECRET,
+    secret,
     {
-      expiresIn: "30m",
-    }
+      expiresIn: '30m',
+    },
   );
-  const refreshToken = await JWT.sign(
+  const refreshToken = JWT.sign(
     { email },
-    process.env.REFRESH_TOKEN_SECRET,
+    secret,
     {
-      expiresIn: "30d",
-    }
+      expiresIn: '30d',
+    },
   );
-
-  const updateUser = await prisma.user.update({
-    where: {
-      email: email,
-    },
-    data: {
-      refreshToken: refreshToken,
-    },
-  });
+  /*
+const updateUser = await prisma.user.update({
+  where: {
+    email,
+  },
+  data: {
+    refreshToken,
+  },
+}); */
 
   return { accessToken, refreshToken };
 };

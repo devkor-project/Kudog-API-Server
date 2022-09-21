@@ -2,3 +2,6 @@ node_modules/
 .env
 logs/
 prisma/
+dist/
+*.log
+yarn.lock
