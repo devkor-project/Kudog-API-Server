@@ -1,5 +1,6 @@
 import express from '@/config/express';
 import logger from '@/config/winston';
+import AppDataSource from '@/config/data-source';
 
 let port: number;
 if (process.env.NODE_ENV === 'development') {
@@ -10,7 +11,12 @@ if (process.env.NODE_ENV === 'development') {
   port = 8080;
 }
 
-express().listen(port);
-logger.info(
-  `environment : ${process.env.NODE_ENV} - API Server Start At Port ${port}`,
-);
+AppDataSource.initialize()
+  .then(() => {
+    logger.info('DB Connected');
+    express().listen(port);
+    logger.info(`environment : ${process.env.NODE_ENV} - API Server Start At Port ${port}`);
+  })
+  .catch((error) => {
+    logger.error(error.toString());
+  });
