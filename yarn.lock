@@ -24,7 +24,7 @@
 
 "@babel/core@^7.1.0", "@babel/core@^7.12.3", "@babel/core@^7.7.2", "@babel/core@^7.8.0":
   version "7.19.1"
-  resolved "https://registry.npmjs.org/@babel/core/-/core-7.19.1.tgz"
+  resolved "https://registry.yarnpkg.com/@babel/core/-/core-7.19.1.tgz#c8fa615c5e88e272564ace3d42fbc8b17bfeb22b"
   integrity sha512-1H8VgqXme4UXCRv7/Wa1bq7RVymKOzC7znjyFM8KiEzwFqcKUKYNoQef4GhdklgNvoBXyW4gYhuBNCM5o1zImw==
   dependencies:
     "@ampproject/remapping" "^2.1.0"
@@ -195,6 +195,16 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.8.0"
 
+<<<<<<< HEAD
+=======
+"@babel/plugin-syntax-jsx@^7.7.2":
+  version "7.18.6"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-jsx/-/plugin-syntax-jsx-7.18.6.tgz#a8feef63b010150abd97f1649ec296e849943ca0"
+  integrity sha512-6mmljtAedFGTWu2p/8WIORGwy+61PLgOMPOdazc7YoJ9ZCWUyFy3A6CpPkRKLKD1ToAesxX8KGEViAiLo9N+7Q==
+  dependencies:
+    "@babel/helper-plugin-utils" "^7.18.6"
+
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
 "@babel/plugin-syntax-logical-assignment-operators@^7.8.3":
   version "7.10.4"
   resolved "https://registry.npmjs.org/@babel/plugin-syntax-logical-assignment-operators/-/plugin-syntax-logical-assignment-operators-7.10.4.tgz"
@@ -339,10 +349,17 @@
   resolved "https://registry.npmjs.org/@istanbuljs/schema/-/schema-0.1.3.tgz"
   integrity sha512-ZXRY4jNvVgSVQ8DL3LTcakaAtXwTVUxE81hslsyD2AtoXW/wVob10HkOJ1X/pAlcI7D+2YoZKg5do8G/w6RYgA==
 
+<<<<<<< HEAD
 "@jest/console@^27.5.1":
   version "27.5.1"
   resolved "https://registry.npmjs.org/@jest/console/-/console-27.5.1.tgz"
   integrity sha512-kZ/tNpS3NXn0mlXXXPNuDZnb4c0oZ20r4K5eemM2k30ZC3G0T02nXUvyhf5YdbXWHPEJLc9qGLxEZ216MdL+Zg==
+=======
+"@jest/console@^29.0.3":
+  version "29.0.3"
+  resolved "https://registry.yarnpkg.com/@jest/console/-/console-29.0.3.tgz#a222ab87e399317a89db88a58eaec289519e807a"
+  integrity sha512-cGg0r+klVHSYnfE977S9wmpuQ9L+iYuYgL+5bPXiUlUynLLYunRxswEmhBzvrSKGof5AKiHuTTmUKAqRcDY9dg==
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
   dependencies:
     "@jest/types" "^27.5.1"
     "@types/node" "*"
@@ -351,10 +368,17 @@
     jest-util "^27.5.1"
     slash "^3.0.0"
 
+<<<<<<< HEAD
 "@jest/core@^27.5.1":
   version "27.5.1"
   resolved "https://registry.npmjs.org/@jest/core/-/core-27.5.1.tgz"
   integrity sha512-AK6/UTrvQD0Cd24NSqmIA6rKsu0tKIxfiCducZvqxYdmMisOYAsdItspT+fQDQYARPf8XgjAFZi0ogW2agH5nQ==
+=======
+"@jest/core@^29.0.3":
+  version "29.0.3"
+  resolved "https://registry.yarnpkg.com/@jest/core/-/core-29.0.3.tgz#ba22a9cbd0c7ba36e04292e2093c547bf53ec1fd"
+  integrity sha512-1d0hLbOrM1qQE3eP3DtakeMbKTcXiXP3afWxqz103xPyddS2NhnNghS7MaXx1dcDt4/6p4nlhmeILo2ofgi8cQ==
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
   dependencies:
     "@jest/console" "^27.5.1"
     "@jest/reporters" "^27.5.1"
@@ -385,20 +409,51 @@
     slash "^3.0.0"
     strip-ansi "^6.0.0"
 
+<<<<<<< HEAD
 "@jest/environment@^27.5.1":
   version "27.5.1"
   resolved "https://registry.npmjs.org/@jest/environment/-/environment-27.5.1.tgz"
   integrity sha512-/WQjhPJe3/ghaol/4Bq480JKXV/Rfw8nQdN7f41fM8VDHLcxKXou6QyXAh3EFr9/bVG3x74z1NWDkP87EiY8gA==
+=======
+"@jest/environment@^29.0.3":
+  version "29.0.3"
+  resolved "https://registry.yarnpkg.com/@jest/environment/-/environment-29.0.3.tgz#7745ec30a954e828e8cc6df6a13280d3b51d8f35"
+  integrity sha512-iKl272NKxYNQNqXMQandAIwjhQaGw5uJfGXduu8dS9llHi8jV2ChWrtOAVPnMbaaoDhnI3wgUGNDvZgHeEJQCA==
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
   dependencies:
     "@jest/fake-timers" "^27.5.1"
     "@jest/types" "^27.5.1"
     "@types/node" "*"
+<<<<<<< HEAD
     jest-mock "^27.5.1"
 
 "@jest/fake-timers@^27.5.1":
   version "27.5.1"
   resolved "https://registry.npmjs.org/@jest/fake-timers/-/fake-timers-27.5.1.tgz"
   integrity sha512-/aPowoolwa07k7/oM3aASneNeBGCmGQsc3ugN4u6s4C/+s5M64MFo/+djTdiwcbQlRfFElGuDXWzaWj6QgKObQ==
+=======
+    jest-mock "^29.0.3"
+
+"@jest/expect-utils@^29.0.3":
+  version "29.0.3"
+  resolved "https://registry.yarnpkg.com/@jest/expect-utils/-/expect-utils-29.0.3.tgz#f5bb86f5565bf2dacfca31ccbd887684936045b2"
+  integrity sha512-i1xUkau7K/63MpdwiRqaxgZOjxYs4f0WMTGJnYwUKubsNRZSeQbLorS7+I4uXVF9KQ5r61BUPAUMZ7Lf66l64Q==
+  dependencies:
+    jest-get-type "^29.0.0"
+
+"@jest/expect@^29.0.3":
+  version "29.0.3"
+  resolved "https://registry.yarnpkg.com/@jest/expect/-/expect-29.0.3.tgz#9dc7c46354eeb7a348d73881fba6402f5fdb2c30"
+  integrity sha512-6W7K+fsI23FQ01H/BWccPyDZFrnU9QlzDcKOjrNVU5L8yUORFAJJIpmyxWPW70+X624KUNqzZwPThPMX28aXEQ==
+  dependencies:
+    expect "^29.0.3"
+    jest-snapshot "^29.0.3"
+
+"@jest/fake-timers@^29.0.3":
+  version "29.0.3"
+  resolved "https://registry.yarnpkg.com/@jest/fake-timers/-/fake-timers-29.0.3.tgz#ad5432639b715d45a86a75c47fd75019bc36b22c"
+  integrity sha512-tmbUIo03x0TdtcZCESQ0oQSakPCpo7+s6+9mU19dd71MptkP4zCwoeZqna23//pgbhtT1Wq02VmA9Z9cNtvtCQ==
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
   dependencies:
     "@jest/types" "^27.5.1"
     "@sinonjs/fake-timers" "^8.0.1"
@@ -407,19 +462,33 @@
     jest-mock "^27.5.1"
     jest-util "^27.5.1"
 
+<<<<<<< HEAD
 "@jest/globals@^27.5.1":
   version "27.5.1"
   resolved "https://registry.npmjs.org/@jest/globals/-/globals-27.5.1.tgz"
   integrity sha512-ZEJNB41OBQQgGzgyInAv0UUfDDj3upmHydjieSxFvTRuZElrx7tXg/uVQ5hYVEwiXs3+aMsAeEc9X7xiSKCm4Q==
+=======
+"@jest/globals@^29.0.3":
+  version "29.0.3"
+  resolved "https://registry.yarnpkg.com/@jest/globals/-/globals-29.0.3.tgz#681950c430fdc13ff9aa89b2d8d572ac0e4a1bf5"
+  integrity sha512-YqGHT65rFY2siPIHHFjuCGUsbzRjdqkwbat+Of6DmYRg5shIXXrLdZoVE/+TJ9O1dsKsFmYhU58JvIbZRU1Z9w==
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
   dependencies:
     "@jest/environment" "^27.5.1"
     "@jest/types" "^27.5.1"
     expect "^27.5.1"
 
+<<<<<<< HEAD
 "@jest/reporters@^27.5.1":
   version "27.5.1"
   resolved "https://registry.npmjs.org/@jest/reporters/-/reporters-27.5.1.tgz"
   integrity sha512-cPXh9hWIlVJMQkVk84aIvXuBB4uQQmFqZiacloFuGiP3ah1sbCxCosidXFDfqG8+6fO1oR2dTJTlsOy4VFmUfw==
+=======
+"@jest/reporters@^29.0.3":
+  version "29.0.3"
+  resolved "https://registry.yarnpkg.com/@jest/reporters/-/reporters-29.0.3.tgz#735f110e08b44b38729d8dbbb74063bdf5aba8a5"
+  integrity sha512-3+QU3d4aiyOWfmk1obDerie4XNCaD5Xo1IlKNde2yGEi02WQD+ZQD0i5Hgqm1e73sMV7kw6pMlCnprtEwEVwxw==
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
   dependencies:
     "@bcoe/v8-coverage" "^0.2.3"
     "@jest/console" "^27.5.1"
@@ -445,41 +514,78 @@
     source-map "^0.6.0"
     string-length "^4.0.1"
     terminal-link "^2.0.0"
+<<<<<<< HEAD
     v8-to-istanbul "^8.1.0"
 
 "@jest/source-map@^27.5.1":
   version "27.5.1"
   resolved "https://registry.npmjs.org/@jest/source-map/-/source-map-27.5.1.tgz"
   integrity sha512-y9NIHUYF3PJRlHk98NdC/N1gl88BL08aQQgu4k4ZopQkCw9t9cV8mtl3TV8b/YCB8XaVTFrmUTAJvjsntDireg==
+=======
+    v8-to-istanbul "^9.0.1"
+
+"@jest/schemas@^29.0.0":
+  version "29.0.0"
+  resolved "https://registry.yarnpkg.com/@jest/schemas/-/schemas-29.0.0.tgz#5f47f5994dd4ef067fb7b4188ceac45f77fe952a"
+  integrity sha512-3Ab5HgYIIAnS0HjqJHQYZS+zXc4tUmTmBH3z83ajI6afXp8X3ZtdLX+nXx+I7LNkJD7uN9LAVhgnjDgZa2z0kA==
+  dependencies:
+    "@sinclair/typebox" "^0.24.1"
+
+"@jest/source-map@^29.0.0":
+  version "29.0.0"
+  resolved "https://registry.yarnpkg.com/@jest/source-map/-/source-map-29.0.0.tgz#f8d1518298089f8ae624e442bbb6eb870ee7783c"
+  integrity sha512-nOr+0EM8GiHf34mq2GcJyz/gYFyLQ2INDhAylrZJ9mMWoW21mLBfZa0BUVPPMxVYrLjeiRe2Z7kWXOGnS0TFhQ==
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
   dependencies:
     callsites "^3.0.0"
     graceful-fs "^4.2.9"
     source-map "^0.6.0"
 
+<<<<<<< HEAD
 "@jest/test-result@^27.5.1":
   version "27.5.1"
   resolved "https://registry.npmjs.org/@jest/test-result/-/test-result-27.5.1.tgz"
   integrity sha512-EW35l2RYFUcUQxFJz5Cv5MTOxlJIQs4I7gxzi2zVU7PJhOwfYq1MdC5nhSmYjX1gmMmLPvB3sIaC+BkcHRBfag==
+=======
+"@jest/test-result@^29.0.3":
+  version "29.0.3"
+  resolved "https://registry.yarnpkg.com/@jest/test-result/-/test-result-29.0.3.tgz#b03d8ef4c58be84cd5d5d3b24d4b4c8cabbf2746"
+  integrity sha512-vViVnQjCgTmbhDKEonKJPtcFe9G/CJO4/Np4XwYJah+lF2oI7KKeRp8t1dFvv44wN2NdbDb/qC6pi++Vpp0Dlg==
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
   dependencies:
     "@jest/console" "^27.5.1"
     "@jest/types" "^27.5.1"
     "@types/istanbul-lib-coverage" "^2.0.0"
     collect-v8-coverage "^1.0.0"
 
+<<<<<<< HEAD
 "@jest/test-sequencer@^27.5.1":
   version "27.5.1"
   resolved "https://registry.npmjs.org/@jest/test-sequencer/-/test-sequencer-27.5.1.tgz"
   integrity sha512-LCheJF7WB2+9JuCS7VB/EmGIdQuhtqjRNI9A43idHv3E4KltCTsPsLxvdaubFHSYwY/fNjMWjl6vNRhDiN7vpQ==
+=======
+"@jest/test-sequencer@^29.0.3":
+  version "29.0.3"
+  resolved "https://registry.yarnpkg.com/@jest/test-sequencer/-/test-sequencer-29.0.3.tgz#0681061ad21fb8e293b49c4fdf7e631ca79240ba"
+  integrity sha512-Hf4+xYSWZdxTNnhDykr8JBs0yBN/nxOXyUQWfotBUqqy0LF9vzcFB0jm/EDNZCx587znLWTIgxcokW7WeZMobQ==
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
   dependencies:
     "@jest/test-result" "^27.5.1"
     graceful-fs "^4.2.9"
     jest-haste-map "^27.5.1"
     jest-runtime "^27.5.1"
 
+<<<<<<< HEAD
 "@jest/transform@^27.5.1":
   version "27.5.1"
   resolved "https://registry.npmjs.org/@jest/transform/-/transform-27.5.1.tgz"
   integrity sha512-ipON6WtYgl/1329g5AIJVbUuEh0wZVbdpGwC99Jw4LwuoBNS95MVphU6zOeD9pDkon+LLbFL7lOQRapbB8SCHw==
+=======
+"@jest/transform@^29.0.3":
+  version "29.0.3"
+  resolved "https://registry.yarnpkg.com/@jest/transform/-/transform-29.0.3.tgz#9eb1fed2072a0354f190569807d1250572fb0970"
+  integrity sha512-C5ihFTRYaGDbi/xbRQRdbo5ddGtI4VSpmL6AIcZxdhwLbXMa7PcXxxqyI91vGOFHnn5aVM3WYnYKCHEqmLVGzg==
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
   dependencies:
     "@babel/core" "^7.1.0"
     "@jest/types" "^27.5.1"
@@ -497,10 +603,17 @@
     source-map "^0.6.1"
     write-file-atomic "^3.0.0"
 
+<<<<<<< HEAD
 "@jest/types@^27.5.1":
   version "27.5.1"
   resolved "https://registry.npmjs.org/@jest/types/-/types-27.5.1.tgz"
   integrity sha512-Cx46iJ9QpwQTjIdq5VJu2QTMMs3QlEjI0x1QbBP5W1+nMzyc2XmimiRR/CbX9TO0cPTeUlxWMOu8mslYsJ8DEw==
+=======
+"@jest/types@^29.0.3":
+  version "29.0.3"
+  resolved "https://registry.yarnpkg.com/@jest/types/-/types-29.0.3.tgz#0be78fdddb1a35aeb2041074e55b860561c8ef63"
+  integrity sha512-coBJmOQvurXjN1Hh5PzF7cmsod0zLIOXpP8KD161mqNlroMhLcwpODiEzi7ZsRl5Z/AIuxpeNm8DCl43F4kz8A==
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
   dependencies:
     "@types/istanbul-lib-coverage" "^2.0.0"
     "@types/istanbul-reports" "^3.0.0"
@@ -544,6 +657,17 @@
   version "0.3.9"
   resolved "https://registry.npmjs.org/@jridgewell/trace-mapping/-/trace-mapping-0.3.9.tgz"
   integrity sha512-3Belt6tdc8bPgAtbcmdtNJlirVoTmEb5e2gC94PnkwEW9jI6CAHUeoG85tjWP5WquqfavoMtMwiG4P926ZKKuQ==
+<<<<<<< HEAD
+=======
+  dependencies:
+    "@jridgewell/resolve-uri" "^3.0.3"
+    "@jridgewell/sourcemap-codec" "^1.4.10"
+
+"@jridgewell/trace-mapping@^0.3.12", "@jridgewell/trace-mapping@^0.3.15":
+  version "0.3.15"
+  resolved "https://registry.yarnpkg.com/@jridgewell/trace-mapping/-/trace-mapping-0.3.15.tgz#aba35c48a38d3fd84b37e66c9c0423f9744f9774"
+  integrity sha512-oWZNOULl+UbhsgB51uuZzglikfIKSUBO/M9W2OfEjn7cmqoAiCgmv9lyACTUacZwBz0ITnJ2NqjU8Tx0DHL88g==
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
   dependencies:
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
@@ -597,6 +721,14 @@
   resolved "https://registry.yarnpkg.com/@sideway/pinpoint/-/pinpoint-2.0.0.tgz#cff8ffadc372ad29fd3f78277aeb29e632cc70df"
   integrity sha512-RNiOoTPkptFtSVzQevY/yWtZwf/RxyVnPy/OcA9HBM3MlGDnBEYL5B41H0MTn0Uec8Hi+2qUtTfG2WWZBmMejQ==
 
+<<<<<<< HEAD
+=======
+"@sinclair/typebox@^0.24.1":
+  version "0.24.42"
+  resolved "https://registry.yarnpkg.com/@sinclair/typebox/-/typebox-0.24.42.tgz#a74b608d494a1f4cc079738e050142a678813f52"
+  integrity sha512-d+2AtrHGyWek2u2ITF0lHRIv6Tt7X0dEHW+0rP+5aDCEjC3fiN2RBjrLD0yU0at52BcZbRGxLbAtXiR0hFCjYw==
+
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
 "@sinonjs/commons@^1.7.0":
   version "1.8.3"
   resolved "https://registry.npmjs.org/@sinonjs/commons/-/commons-1.8.3.tgz"
@@ -604,6 +736,7 @@
   dependencies:
     type-detect "4.0.8"
 
+<<<<<<< HEAD
 "@sinonjs/fake-timers@^8.0.1":
   version "8.1.0"
   resolved "https://registry.npmjs.org/@sinonjs/fake-timers/-/fake-timers-8.1.0.tgz"
@@ -616,6 +749,15 @@
   resolved "https://registry.npmjs.org/@tootallnate/once/-/once-1.1.2.tgz"
   integrity sha512-RbzJvlNzmRq5c3O09UipeuXno4tA1FE6ikOjxZK0tuxVv3412l64l5t1W5pj4+rJq9vpkm/kwiR07aZXnsKPxw==
 
+=======
+"@sinonjs/fake-timers@^9.1.2":
+  version "9.1.2"
+  resolved "https://registry.yarnpkg.com/@sinonjs/fake-timers/-/fake-timers-9.1.2.tgz#4eaab737fab77332ab132d396a3c0d364bd0ea8c"
+  integrity sha512-BPS4ynJW/o92PUR4wgriz2Ud5gpST5vz6GQfMixEDK0Z8ZCUv2M7SkBLykH56T++Xs+8ln9zTGbOvNGIe02/jw==
+  dependencies:
+    "@sinonjs/commons" "^1.7.0"
+
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
 "@tsconfig/node10@^1.0.7":
   version "1.0.9"
   resolved "https://registry.npmjs.org/@tsconfig/node10/-/node10-1.0.9.tgz"
@@ -731,7 +873,7 @@
 
 "@types/graceful-fs@^4.1.2":
   version "4.1.5"
-  resolved "https://registry.npmjs.org/@types/graceful-fs/-/graceful-fs-4.1.5.tgz"
+  resolved "https://registry.yarnpkg.com/@types/graceful-fs/-/graceful-fs-4.1.5.tgz#21ffba0d98da4350db64891f92a9e5db3cdb4e15"
   integrity sha512-anKkLmZZ+xm4p8JWBf4hElkM4XR+EZeA2M9BAkkTldmcyDY4mbdIJnRghDJH3Ov5ooY7/UAoENtmdMSkaAd7Cw==
   dependencies:
     "@types/node" "*"
@@ -755,6 +897,17 @@
   dependencies:
     "@types/istanbul-lib-report" "*"
 
+<<<<<<< HEAD
+=======
+"@types/jest@^29.0.3":
+  version "29.0.3"
+  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-29.0.3.tgz#b61a5ed100850686b8d3c5e28e3a1926b2001b59"
+  integrity sha512-F6ukyCTwbfsEX5F2YmVYmM5TcTHy1q9P5rWlRbrk56KyMh3v9xRGUO3aa8+SkvMi0SHXtASJv1283enXimC0Og==
+  dependencies:
+    expect "^29.0.0"
+    pretty-format "^29.0.0"
+
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
 "@types/joi@^17.2.3":
   version "17.2.3"
   resolved "https://registry.yarnpkg.com/@types/joi/-/joi-17.2.3.tgz#b7768ed9d84f1ebd393328b9f97c1cf3d2b94798"
@@ -819,6 +972,7 @@
   resolved "https://registry.npmjs.org/@types/yargs-parser/-/yargs-parser-21.0.0.tgz"
   integrity sha512-iO9ZQHkZxHn4mSakYV0vFHAVDyEOIJQrV2uZ06HxEPcx+mt8swXoZHIbaaJ2crJYFfErySgktuTZ3BeLz+XmFA==
 
+<<<<<<< HEAD
 "@types/yargs@^16.0.0":
   version "16.0.4"
   resolved "https://registry.npmjs.org/@types/yargs/-/yargs-16.0.4.tgz"
@@ -831,6 +985,15 @@ abab@^2.0.3, abab@^2.0.5:
   resolved "https://registry.npmjs.org/abab/-/abab-2.0.6.tgz"
   integrity sha512-j2afSsaIENvHZN2B8GOpF566vZ5WVk5opAiMTvWgaQT8DkbOqsTfvNAvHoRGU2zzP8cPoqys+xHTRDWW8L+/BA==
 
+=======
+"@types/yargs@^17.0.8":
+  version "17.0.12"
+  resolved "https://registry.yarnpkg.com/@types/yargs/-/yargs-17.0.12.tgz#0745ff3e4872b4ace98616d4b7e37ccbd75f9526"
+  integrity sha512-Nz4MPhecOFArtm81gFQvQqdV7XYCrWKx5uUt6GNHredFHn1i2mtWqXTON7EPXMtNi1qjtjEM/VCHDhcHsAMLXQ==
+  dependencies:
+    "@types/yargs-parser" "*"
+
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
 abbrev@1:
   version "1.1.1"
   resolved "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz"
@@ -948,6 +1111,14 @@ array-flatten@1.1.1:
   resolved "https://registry.npmjs.org/array-flatten/-/array-flatten-1.1.1.tgz"
   integrity sha512-PCVAQswWemu6UdxsDFFX/+gVeYqKAod3D3UVm91jHwynguOwAvYPhx8nNlM++NqRcK6CxxpUafjmhIdKiHibqg==
 
+<<<<<<< HEAD
+=======
+asap@^2.0.0:
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/asap/-/asap-2.0.6.tgz#e50347611d7e690943208bbdafebcbc2fb866d46"
+  integrity sha512-BSHWgDSAiKs50o2Re8ppvp3seVHXSRM44cdSsT9FfNEUUZLOGWVCsiWaRPWM1Znn+mqZ1OfVZ3z3DWEzSp7hRA==
+
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
 async@^3.2.3:
   version "3.2.4"
   resolved "https://registry.npmjs.org/async/-/async-3.2.4.tgz"
@@ -958,10 +1129,17 @@ asynckit@^0.4.0:
   resolved "https://registry.npmjs.org/asynckit/-/asynckit-0.4.0.tgz"
   integrity sha512-Oei9OH4tRh0YqU3GxhX79dM/mwVgvbZJaSNaRk+bshkj0S5cfHcgYakreBjrHwatXKbz+IoIdYLxrKim2MjW0Q==
 
+<<<<<<< HEAD
 babel-jest@^27.5.1:
   version "27.5.1"
   resolved "https://registry.npmjs.org/babel-jest/-/babel-jest-27.5.1.tgz"
   integrity sha512-cdQ5dXjGRd0IBRATiQ4mZGlGlRE8kJpjPOixdNRdT+m3UcNqmYWN6rK6nvtXYfY3D76cb8s/O1Ss8ea24PIwcg==
+=======
+babel-jest@^29.0.3:
+  version "29.0.3"
+  resolved "https://registry.yarnpkg.com/babel-jest/-/babel-jest-29.0.3.tgz#64e156a47a77588db6a669a88dedff27ed6e260f"
+  integrity sha512-ApPyHSOhS/sVzwUOQIWJmdvDhBsMG01HX9z7ogtkp1TToHGGUWFlnXJUIzCgKPSfiYLn3ibipCYzsKSURHEwLg==
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
   dependencies:
     "@jest/transform" "^27.5.1"
     "@jest/types" "^27.5.1"
@@ -983,10 +1161,17 @@ babel-plugin-istanbul@^6.1.1:
     istanbul-lib-instrument "^5.0.4"
     test-exclude "^6.0.0"
 
+<<<<<<< HEAD
 babel-plugin-jest-hoist@^27.5.1:
   version "27.5.1"
   resolved "https://registry.npmjs.org/babel-plugin-jest-hoist/-/babel-plugin-jest-hoist-27.5.1.tgz"
   integrity sha512-50wCwD5EMNW4aRpOwtqzyZHIewTYNxLA4nhB+09d8BIssfNfzBRhkBIHiaPv1Si226TQSvp8gxAJm2iY2qs2hQ==
+=======
+babel-plugin-jest-hoist@^29.0.2:
+  version "29.0.2"
+  resolved "https://registry.yarnpkg.com/babel-plugin-jest-hoist/-/babel-plugin-jest-hoist-29.0.2.tgz#ae61483a829a021b146c016c6ad39b8bcc37c2c8"
+  integrity sha512-eBr2ynAEFjcebVvu8Ktx580BD1QKCrBG1XwEUTXJe285p9HA/4hOhfWCFRQhTKSyBV0VzjhG7H91Eifz9s29hg==
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
   dependencies:
     "@babel/template" "^7.3.3"
     "@babel/types" "^7.3.3"
@@ -1011,10 +1196,17 @@ babel-preset-current-node-syntax@^1.0.0:
     "@babel/plugin-syntax-optional-chaining" "^7.8.3"
     "@babel/plugin-syntax-top-level-await" "^7.8.3"
 
+<<<<<<< HEAD
 babel-preset-jest@^27.5.1:
   version "27.5.1"
   resolved "https://registry.npmjs.org/babel-preset-jest/-/babel-preset-jest-27.5.1.tgz"
   integrity sha512-Nptf2FzlPCWYuJg41HBqXVT8ym6bXOevuCTbhxlUpjwtysGaIWFvDEjp4y+G7fl13FgOdjs7P/DmErqH7da0Ag==
+=======
+babel-preset-jest@^29.0.2:
+  version "29.0.2"
+  resolved "https://registry.yarnpkg.com/babel-preset-jest/-/babel-preset-jest-29.0.2.tgz#e14a7124e22b161551818d89e5bdcfb3b2b0eac7"
+  integrity sha512-BeVXp7rH5TK96ofyEnHjznjLMQ2nAeDJ+QzxKnHAAMs0RgrQsCywjAN8m4mOm5Di0pxU//3AoEeJJrerMH5UeA==
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
   dependencies:
     babel-plugin-jest-hoist "^27.5.1"
     babel-preset-current-node-syntax "^1.0.0"
@@ -1085,6 +1277,16 @@ browserslist@^4.21.3:
     node-releases "^2.0.6"
     update-browserslist-db "^1.0.5"
 
+<<<<<<< HEAD
+=======
+bs-logger@0.x:
+  version "0.2.6"
+  resolved "https://registry.yarnpkg.com/bs-logger/-/bs-logger-0.2.6.tgz#eb7d365307a72cf974cc6cda76b68354ad336bd8"
+  integrity sha512-pd8DCoxmbgc7hyPKOvxtqNcjYoOsABPQdcCUjGp3d42VR2CX1ORhk2A87oqqu5R1kk+76nsxZupkmyd+MVtCog==
+  dependencies:
+    fast-json-stable-stringify "2.x"
+
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
 bser@2.1.1:
   version "2.1.1"
   resolved "https://registry.npmjs.org/bser/-/bser-2.1.1.tgz"
@@ -1271,6 +1473,14 @@ combined-stream@^1.0.8:
   dependencies:
     delayed-stream "~1.0.0"
 
+<<<<<<< HEAD
+=======
+component-emitter@^1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/component-emitter/-/component-emitter-1.3.0.tgz#16e4070fba8ae29b679f2215853ee181ab2eabc0"
+  integrity sha512-Rd3se6QB+sO1TwqZjscQrurpEPIfO0/yYnSin6Q/rD3mOutHvUrCAhJub3r90uNb+SESBuE0QYoB90YdfatsRg==
+
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
 compressible@~2.0.16:
   version "2.0.18"
   resolved "https://registry.npmjs.org/compressible/-/compressible-2.0.18.tgz"
@@ -1330,6 +1540,14 @@ cookie@0.5.0:
   resolved "https://registry.npmjs.org/cookie/-/cookie-0.5.0.tgz"
   integrity sha512-YZ3GUyn/o8gfKJlnlX7g7xq4gyO6OSuhGPKaaGssGB2qgDUS0gPgtTvoyZLTt9Ab6dC4hfc9dV5arkvc/OCmrw==
 
+<<<<<<< HEAD
+=======
+cookiejar@^2.1.3:
+  version "2.1.3"
+  resolved "https://registry.yarnpkg.com/cookiejar/-/cookiejar-2.1.3.tgz#fc7a6216e408e74414b90230050842dacda75acc"
+  integrity sha512-JxbCBUdrfr6AQjOXrxoTvAMJO4HBTUIlBzslcJPAz+/KT8yk53fXun51u+RenNYvad/+Vc2DIz5o9UxlCDymFQ==
+
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
 cors@^2.8.5:
   version "2.8.5"
   resolved "https://registry.npmjs.org/cors/-/cors-2.8.5.tgz"
@@ -1352,6 +1570,7 @@ cross-spawn@^7.0.3:
     shebang-command "^2.0.0"
     which "^2.0.1"
 
+<<<<<<< HEAD
 cssom@^0.4.4:
   version "0.4.4"
   resolved "https://registry.npmjs.org/cssom/-/cssom-0.4.4.tgz"
@@ -1378,6 +1597,8 @@ data-urls@^2.0.0:
     whatwg-mimetype "^2.3.0"
     whatwg-url "^8.0.0"
 
+=======
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
 debug@2.6.9:
   version "2.6.9"
   resolved "https://registry.npmjs.org/debug/-/debug-2.6.9.tgz"
@@ -1392,7 +1613,11 @@ debug@3.1.0:
   dependencies:
     ms "2.0.0"
 
+<<<<<<< HEAD
 debug@4, debug@^4.1.0, debug@^4.1.1:
+=======
+debug@4, debug@^4.1.0, debug@^4.1.1, debug@^4.3.4:
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
   version "4.3.4"
   resolved "https://registry.npmjs.org/debug/-/debug-4.3.4.tgz"
   integrity sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==
@@ -1456,16 +1681,32 @@ detect-newline@^3.0.0:
   resolved "https://registry.npmjs.org/detect-newline/-/detect-newline-3.1.0.tgz"
   integrity sha512-TLz+x/vEXm/Y7P7wn1EJFNLxYpUD4TgMosxY6fAVJUnJMbupHBOncxyWUG9OpTaH9EBD7uFI5LfEgmMOc54DsA==
 
+<<<<<<< HEAD
 diff-sequences@^27.5.1:
   version "27.5.1"
   resolved "https://registry.npmjs.org/diff-sequences/-/diff-sequences-27.5.1.tgz"
   integrity sha512-k1gCAXAsNgLwEL+Y8Wvl+M6oEFj5bgazfZULpS5CneoPPXRaCCW7dm+q21Ky2VEE5X+VeRDBVg1Pcvvsr4TtNQ==
+=======
+dezalgo@1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/dezalgo/-/dezalgo-1.0.3.tgz#7f742de066fc748bc8db820569dddce49bf0d456"
+  integrity sha512-K7i4zNfT2kgQz3GylDw40ot9GAE47sFZ9EXHFSPP6zONLgH6kWXE0KWJchkbQJLBkRazq4APwZ4OwiFFlT95OQ==
+  dependencies:
+    asap "^2.0.0"
+    wrappy "1"
+
+diff-sequences@^29.0.0:
+  version "29.0.0"
+  resolved "https://registry.yarnpkg.com/diff-sequences/-/diff-sequences-29.0.0.tgz#bae49972ef3933556bcb0800b72e8579d19d9e4f"
+  integrity sha512-7Qe/zd1wxSDL4D/X/FPjOMB+ZMDt71W94KYaq05I2l0oQqgXgs7s4ftYYmV38gBSrPz2vcygxfs1xn0FT+rKNA==
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
 
 diff@^4.0.1:
   version "4.0.2"
   resolved "https://registry.npmjs.org/diff/-/diff-4.0.2.tgz"
   integrity sha512-58lmxKSA4BNyLz+HHMUzlOEpg09FV+ev6ZMe3vJihgdxzgcwZ8VoEEPmALCZG9LmqfVoNMMKpttIYTVG6uDY7A==
 
+<<<<<<< HEAD
 domexception@^2.0.1:
   version "2.0.1"
   resolved "https://registry.npmjs.org/domexception/-/domexception-2.0.1.tgz"
@@ -1473,6 +1714,8 @@ domexception@^2.0.1:
   dependencies:
     webidl-conversions "^5.0.0"
 
+=======
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
 dotenv@*, dotenv@^16.0.2:
   version "16.0.2"
   resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-16.0.2.tgz#0b0f8652c016a3858ef795024508cddc4bffc5bf"
@@ -1495,10 +1738,17 @@ electron-to-chromium@^1.4.202:
   resolved "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.4.251.tgz"
   integrity sha512-k4o4cFrWPv4SoJGGAydd07GmlRVzmeDIJ6MaEChTUjk4Dmomn189tCicSzil2oyvbPoGgg2suwPDNWq4gWRhoQ==
 
+<<<<<<< HEAD
 emittery@^0.8.1:
   version "0.8.1"
   resolved "https://registry.npmjs.org/emittery/-/emittery-0.8.1.tgz"
   integrity sha512-uDfvUjVrfGJJhymx/kz6prltenw1u7WrCg1oa94zYY8xxVpLLUu045LAT0dhDZdXG58/EpPL/5kA180fQ/qudg==
+=======
+emittery@^0.10.2:
+  version "0.10.2"
+  resolved "https://registry.yarnpkg.com/emittery/-/emittery-0.10.2.tgz#902eec8aedb8c41938c46e9385e9db7e03182933"
+  integrity sha512-aITqOwnLanpHLNXZJENbOgjUBeHocD+xsSJmNrjovKBW5HbSpW3d1pEls7GFQPUWXiwG9+0P4GtHfEqC/4M0Iw==
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
 
 emoji-regex@^8.0.0:
   version "8.0.0"
@@ -1594,10 +1844,17 @@ exit@^0.1.2:
   resolved "https://registry.npmjs.org/exit/-/exit-0.1.2.tgz"
   integrity sha512-Zk/eNKV2zbjpKzrsQ+n1G6poVbErQxJ0LBOJXaKZ1EViLzH+hrLu9cdXI4zw9dBQJslwBEpbQ2P1oS7nDxs6jQ==
 
+<<<<<<< HEAD
 expect@^27.5.1:
   version "27.5.1"
   resolved "https://registry.npmjs.org/expect/-/expect-27.5.1.tgz"
   integrity sha512-E1q5hSUG2AmYQwQJ041nvgpkODHQvB+RKlB4IYdru6uJsyFTRyZAP463M+1lINorwbqAmUggi6+WwkD8lCS/Dw==
+=======
+expect@^29.0.0, expect@^29.0.3:
+  version "29.0.3"
+  resolved "https://registry.yarnpkg.com/expect/-/expect-29.0.3.tgz#6be65ddb945202f143c4e07c083f4f39f3bd326f"
+  integrity sha512-t8l5DTws3212VbmPL+tBFXhjRHLmctHB0oQbL8eUc6S7NzZtYUhycrFO9mkxA0ZUC6FAWdNi7JchJSkODtcu1Q==
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
   dependencies:
     "@jest/types" "^27.5.1"
     jest-get-type "^27.5.1"
@@ -1641,15 +1898,26 @@ express@^4.18.1:
     utils-merge "1.0.1"
     vary "~1.1.2"
 
+<<<<<<< HEAD
 fast-json-stable-stringify@^2.0.0:
+=======
+fast-json-stable-stringify@2.x, fast-json-stable-stringify@^2.1.0:
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
   version "2.1.0"
-  resolved "https://registry.npmjs.org/fast-json-stable-stringify/-/fast-json-stable-stringify-2.1.0.tgz"
+  resolved "https://registry.yarnpkg.com/fast-json-stable-stringify/-/fast-json-stable-stringify-2.1.0.tgz#874bf69c6f404c2b5d99c481341399fd55892633"
   integrity sha512-lhd/wF+Lk98HZoTCtlVraHtfh5XYijIjalXck7saUtuanSDyLMxnHhSXEDJqHxD7msR8D0uCmqlkwjCV8xvwHw==
 
+<<<<<<< HEAD
 fast-levenshtein@~2.0.6:
   version "2.0.6"
   resolved "https://registry.npmjs.org/fast-levenshtein/-/fast-levenshtein-2.0.6.tgz"
   integrity sha512-DCXu6Ifhqcks7TZKY3Hxp3y6qphY5SJZmrWMDrKcERSOXWQdMhU9Ig/PYrzyw/ul9jOIyh0N4M0tbC5hodg8dw==
+=======
+fast-safe-stringify@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/fast-safe-stringify/-/fast-safe-stringify-2.1.1.tgz#c406a83b6e70d9e35ce3b30a81141df30aeba884"
+  integrity sha512-W+KJc2dmILlPplD/H4K9l9LcAHAfPtP6BY84uVLXQ6Evcz9Lcg33Y2z1IVblT6xdY54PXYVHEv+0Wpq8Io6zkA==
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
 
 fb-watchman@^2.0.0:
   version "2.0.1"
@@ -1703,15 +1971,35 @@ fn.name@1.x.x:
   resolved "https://registry.npmjs.org/fn.name/-/fn.name-1.1.0.tgz"
   integrity sha512-GRnmB5gPyJpAhTQdSZTSp9uaPSvl09KoYcMQtsB9rQoOmzs9dH6ffeccH+Z+cv6P68Hu5bC6JjRh4Ah/mHSNRw==
 
+<<<<<<< HEAD
 form-data@^3.0.0:
   version "3.0.1"
   resolved "https://registry.npmjs.org/form-data/-/form-data-3.0.1.tgz"
   integrity sha512-RHkBKtLWUVwd7SqRIvCZMEvAMoGUp0XU+seQiZejj0COz3RI3hWP4sCv3gZWWLjJTd7rGwcsF5eKZGii0r/hbg==
+=======
+form-data@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/form-data/-/form-data-4.0.0.tgz#93919daeaf361ee529584b9b31664dc12c9fa452"
+  integrity sha512-ETEklSGi5t0QMZuiXoA/Q6vcnxcLQP5vdugSpuAyi6SVGi2clPPp+xgEhuMaHC+zGgn31Kd235W35f7Hykkaww==
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
   dependencies:
     asynckit "^0.4.0"
     combined-stream "^1.0.8"
     mime-types "^2.1.12"
 
+<<<<<<< HEAD
+=======
+formidable@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/formidable/-/formidable-2.0.1.tgz#4310bc7965d185536f9565184dee74fbb75557ff"
+  integrity sha512-rjTMNbp2BpfQShhFbR3Ruk3qk2y9jKpvMW78nJgx8QKtxjDVrwbZG+wvDOmVbifHyOUOQJXxqEy6r0faRrPzTQ==
+  dependencies:
+    dezalgo "1.0.3"
+    hexoid "1.0.0"
+    once "1.4.0"
+    qs "6.9.3"
+
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
 forwarded@0.2.0:
   version "0.2.0"
   resolved "https://registry.npmjs.org/forwarded/-/forwarded-0.2.0.tgz"
@@ -1795,7 +2083,11 @@ glob-parent@~5.1.2:
   dependencies:
     is-glob "^4.0.1"
 
+<<<<<<< HEAD
 glob@^7.1.1, glob@^7.1.2, glob@^7.1.3, glob@^7.1.4:
+=======
+glob@^7.1.3, glob@^7.1.4:
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
   version "7.2.3"
   resolved "https://registry.npmjs.org/glob/-/glob-7.2.3.tgz"
   integrity sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==
@@ -1844,12 +2136,19 @@ has@^1.0.3:
   dependencies:
     function-bind "^1.1.1"
 
+<<<<<<< HEAD
 html-encoding-sniffer@^2.0.1:
   version "2.0.1"
   resolved "https://registry.npmjs.org/html-encoding-sniffer/-/html-encoding-sniffer-2.0.1.tgz"
   integrity sha512-D5JbOMBIR/TVZkubHT+OyT2705QvogUW4IBn6nHd756OwieSF9aDYFj4dv6HHEVGYbHaLETa3WggZYWWMyy3ZQ==
   dependencies:
     whatwg-encoding "^1.0.5"
+=======
+hexoid@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/hexoid/-/hexoid-1.0.0.tgz#ad10c6573fb907de23d9ec63a711267d9dc9bc18"
+  integrity sha512-QFLV0taWQOZtvIRIAdBChesmogZrtuXvVWsFHZTk2SU+anspqZ2vMnoLg7IE1+Uk16N19APic1BuF8bC8c2m5g==
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
 
 html-escaper@^2.0.0:
   version "2.0.2"
@@ -1866,15 +2165,6 @@ http-errors@2.0.0:
     setprototypeof "1.2.0"
     statuses "2.0.1"
     toidentifier "1.0.1"
-
-http-proxy-agent@^4.0.1:
-  version "4.0.1"
-  resolved "https://registry.npmjs.org/http-proxy-agent/-/http-proxy-agent-4.0.1.tgz"
-  integrity sha512-k0zdNgqWTGA6aeIRVpvfVob4fL52dTfaehylg0Y4UvSySvOq/Y+BOyPrgpUrA7HylqvU8vIZGsRuXmspskV0Tg==
-  dependencies:
-    "@tootallnate/once" "1"
-    agent-base "6"
-    debug "4"
 
 https-proxy-agent@^5.0.0:
   version "5.0.1"
@@ -1983,11 +2273,14 @@ is-number@^7.0.0:
   resolved "https://registry.npmjs.org/is-number/-/is-number-7.0.0.tgz"
   integrity sha512-41Cifkg6e8TylSpdtTpeLVMqvSBEVzTttHvERD741+pnZ8ANv0004MRL43QKPDlK9cGvNp6NZWZUBlbGXYxxng==
 
+<<<<<<< HEAD
 is-potential-custom-element-name@^1.0.1:
   version "1.0.1"
   resolved "https://registry.npmjs.org/is-potential-custom-element-name/-/is-potential-custom-element-name-1.0.1.tgz"
   integrity sha512-bCYeRA2rVibKZd+s2625gGnGF/t7DSqDs4dP7CrLA1m7jKWz6pps0LpYLJN8Q64HtmPKJ1hrN3nzPNKFEKOUiQ==
 
+=======
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
 is-stream@^2.0.0:
   version "2.0.1"
   resolved "https://registry.npmjs.org/is-stream/-/is-stream-2.0.1.tgz"
@@ -2045,19 +2338,33 @@ istanbul-reports@^3.1.3:
     html-escaper "^2.0.0"
     istanbul-lib-report "^3.0.0"
 
+<<<<<<< HEAD
 jest-changed-files@^27.5.1:
   version "27.5.1"
   resolved "https://registry.npmjs.org/jest-changed-files/-/jest-changed-files-27.5.1.tgz"
   integrity sha512-buBLMiByfWGCoMsLLzGUUSpAmIAGnbR2KJoMN10ziLhOLvP4e0SlypHnAel8iqQXTrcbmfEY9sSqae5sgUsTvw==
+=======
+jest-changed-files@^29.0.0:
+  version "29.0.0"
+  resolved "https://registry.yarnpkg.com/jest-changed-files/-/jest-changed-files-29.0.0.tgz#aa238eae42d9372a413dd9a8dadc91ca1806dce0"
+  integrity sha512-28/iDMDrUpGoCitTURuDqUzWQoWmOmOKOFST1mi2lwh62X4BFf6khgH3uSuo1e49X/UDjuApAj3w0wLOex4VPQ==
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
   dependencies:
     "@jest/types" "^27.5.1"
     execa "^5.0.0"
     throat "^6.0.1"
 
+<<<<<<< HEAD
 jest-circus@^27.5.1:
   version "27.5.1"
   resolved "https://registry.npmjs.org/jest-circus/-/jest-circus-27.5.1.tgz"
   integrity sha512-D95R7x5UtlMA5iBYsOHFFbMD/GVA4R/Kdq15f7xYWUfWHBto9NYRsOvnSauTgdF+ogCpJ4tyKOXhUifxS65gdw==
+=======
+jest-circus@^29.0.3:
+  version "29.0.3"
+  resolved "https://registry.yarnpkg.com/jest-circus/-/jest-circus-29.0.3.tgz#90faebc90295291cfc636b27dbd82e3bfb9e7a48"
+  integrity sha512-QeGzagC6Hw5pP+df1+aoF8+FBSgkPmraC1UdkeunWh0jmrp7wC0Hr6umdUAOELBQmxtKAOMNC3KAdjmCds92Zg==
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
   dependencies:
     "@jest/environment" "^27.5.1"
     "@jest/test-result" "^27.5.1"
@@ -2079,10 +2386,17 @@ jest-circus@^27.5.1:
     stack-utils "^2.0.3"
     throat "^6.0.1"
 
+<<<<<<< HEAD
 jest-cli@^27.5.1:
   version "27.5.1"
   resolved "https://registry.npmjs.org/jest-cli/-/jest-cli-27.5.1.tgz"
   integrity sha512-Hc6HOOwYq4/74/c62dEE3r5elx8wjYqxY0r0G/nFrLDPMFRu6RA/u8qINOIkvhxG7mMQ5EJsOGfRpI8L6eFUVw==
+=======
+jest-cli@^29.0.3:
+  version "29.0.3"
+  resolved "https://registry.yarnpkg.com/jest-cli/-/jest-cli-29.0.3.tgz#fd8f0ef363a7a3d9c53ef62e0651f18eeffa77b9"
+  integrity sha512-aUy9Gd/Kut1z80eBzG10jAn6BgS3BoBbXyv+uXEqBJ8wnnuZ5RpNfARoskSrTIy1GY4a8f32YGuCMwibtkl9CQ==
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
   dependencies:
     "@jest/core" "^27.5.1"
     "@jest/test-result" "^27.5.1"
@@ -2097,10 +2411,17 @@ jest-cli@^27.5.1:
     prompts "^2.0.1"
     yargs "^16.2.0"
 
+<<<<<<< HEAD
 jest-config@^27.5.1:
   version "27.5.1"
   resolved "https://registry.npmjs.org/jest-config/-/jest-config-27.5.1.tgz"
   integrity sha512-5sAsjm6tGdsVbW9ahcChPAFCk4IlkQUknH5AvKjuLTSlcO/wCZKyFdn7Rg0EkC+OGgWODEy2hDpWB1PgzH0JNA==
+=======
+jest-config@^29.0.3:
+  version "29.0.3"
+  resolved "https://registry.yarnpkg.com/jest-config/-/jest-config-29.0.3.tgz#c2e52a8f5adbd18de79f99532d8332a19e232f13"
+  integrity sha512-U5qkc82HHVYe3fNu2CRXLN4g761Na26rWKf7CjM8LlZB3In1jadEkZdMwsE37rd9RSPV0NfYaCjHdk/gu3v+Ew==
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
   dependencies:
     "@babel/core" "^7.8.0"
     "@jest/test-sequencer" "^27.5.1"
@@ -2127,16 +2448,24 @@ jest-config@^27.5.1:
     slash "^3.0.0"
     strip-json-comments "^3.1.1"
 
+<<<<<<< HEAD
 jest-diff@^27.5.1:
   version "27.5.1"
   resolved "https://registry.npmjs.org/jest-diff/-/jest-diff-27.5.1.tgz"
   integrity sha512-m0NvkX55LDt9T4mctTEgnZk3fmEg3NRYutvMPWM/0iPnkFj2wIeF45O1718cMSOFO1vINkqmxqD8vE37uTEbqw==
+=======
+jest-diff@^29.0.3:
+  version "29.0.3"
+  resolved "https://registry.yarnpkg.com/jest-diff/-/jest-diff-29.0.3.tgz#41cc02409ad1458ae1bf7684129a3da2856341ac"
+  integrity sha512-+X/AIF5G/vX9fWK+Db9bi9BQas7M9oBME7egU7psbn4jlszLFCu0dW63UgeE6cs/GANq4fLaT+8sGHQQ0eCUfg==
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
   dependencies:
     chalk "^4.0.0"
     diff-sequences "^27.5.1"
     jest-get-type "^27.5.1"
     pretty-format "^27.5.1"
 
+<<<<<<< HEAD
 jest-docblock@^27.5.1:
   version "27.5.1"
   resolved "https://registry.npmjs.org/jest-docblock/-/jest-docblock-27.5.1.tgz"
@@ -2148,9 +2477,23 @@ jest-each@^27.5.1:
   version "27.5.1"
   resolved "https://registry.npmjs.org/jest-each/-/jest-each-27.5.1.tgz"
   integrity sha512-1Ff6p+FbhT/bXQnEouYy00bkNSY7OUpfIcmdl8vZ31A1UUaurOLPA8a8BbJOF2RDUElwJhmeaV7LnagI+5UwNQ==
+=======
+jest-docblock@^29.0.0:
+  version "29.0.0"
+  resolved "https://registry.yarnpkg.com/jest-docblock/-/jest-docblock-29.0.0.tgz#3151bcc45ed7f5a8af4884dcc049aee699b4ceae"
+  integrity sha512-s5Kpra/kLzbqu9dEjov30kj1n4tfu3e7Pl8v+f8jOkeWNqM6Ds8jRaJfZow3ducoQUrf2Z4rs2N5S3zXnb83gw==
+  dependencies:
+    detect-newline "^3.0.0"
+
+jest-each@^29.0.3:
+  version "29.0.3"
+  resolved "https://registry.yarnpkg.com/jest-each/-/jest-each-29.0.3.tgz#7ef3157580b15a609d7ef663dd4fc9b07f4e1299"
+  integrity sha512-wILhZfESURHHBNvPMJ0lZlYZrvOQJxAo3wNHi+ycr90V7M+uGR9Gh4+4a/BmaZF0XTyZsk4OiYEf3GJN7Ltqzg==
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
   dependencies:
     "@jest/types" "^27.5.1"
     chalk "^4.0.0"
+<<<<<<< HEAD
     jest-get-type "^27.5.1"
     jest-util "^27.5.1"
     pretty-format "^27.5.1"
@@ -2176,10 +2519,25 @@ jest-environment-node@^27.5.1:
     "@jest/environment" "^27.5.1"
     "@jest/fake-timers" "^27.5.1"
     "@jest/types" "^27.5.1"
+=======
+    jest-get-type "^29.0.0"
+    jest-util "^29.0.3"
+    pretty-format "^29.0.3"
+
+jest-environment-node@^29.0.3:
+  version "29.0.3"
+  resolved "https://registry.yarnpkg.com/jest-environment-node/-/jest-environment-node-29.0.3.tgz#293804b1e0fa5f0e354dacbe510655caa478a3b2"
+  integrity sha512-cdZqRCnmIlTXC+9vtvmfiY/40Cj6s2T0czXuq1whvQdmpzAnj4sbqVYuZ4zFHk766xTTJ+Ij3uUqkk8KCfXoyg==
+  dependencies:
+    "@jest/environment" "^29.0.3"
+    "@jest/fake-timers" "^29.0.3"
+    "@jest/types" "^29.0.3"
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
     "@types/node" "*"
     jest-mock "^27.5.1"
     jest-util "^27.5.1"
 
+<<<<<<< HEAD
 jest-get-type@^27.5.1:
   version "27.5.1"
   resolved "https://registry.npmjs.org/jest-get-type/-/jest-get-type-27.5.1.tgz"
@@ -2189,6 +2547,17 @@ jest-haste-map@^27.5.1:
   version "27.5.1"
   resolved "https://registry.npmjs.org/jest-haste-map/-/jest-haste-map-27.5.1.tgz"
   integrity sha512-7GgkZ4Fw4NFbMSDSpZwXeBiIbx+t/46nJ2QitkOjvwPYyZmqttu2TDSimMHP1EkPOi4xUZAN1doE5Vd25H4Jng==
+=======
+jest-get-type@^29.0.0:
+  version "29.0.0"
+  resolved "https://registry.yarnpkg.com/jest-get-type/-/jest-get-type-29.0.0.tgz#843f6c50a1b778f7325df1129a0fd7aa713aef80"
+  integrity sha512-83X19z/HuLKYXYHskZlBAShO7UfLFXu/vWajw9ZNJASN32li8yHMaVGAQqxFW1RCFOkB7cubaL6FaJVQqqJLSw==
+
+jest-haste-map@^29.0.3:
+  version "29.0.3"
+  resolved "https://registry.yarnpkg.com/jest-haste-map/-/jest-haste-map-29.0.3.tgz#d7f3f7180f558d760eacc5184aac5a67f20ef939"
+  integrity sha512-uMqR99+GuBHo0RjRhOE4iA6LmsxEwRdgiIAQgMU/wdT2XebsLDz5obIwLZm/Psj+GwSEQhw9AfAVKGYbh2G55A==
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
   dependencies:
     "@jest/types" "^27.5.1"
     "@types/graceful-fs" "^4.1.2"
@@ -2205,6 +2574,7 @@ jest-haste-map@^27.5.1:
   optionalDependencies:
     fsevents "^2.3.2"
 
+<<<<<<< HEAD
 jest-jasmine2@^27.5.1:
   version "27.5.1"
   resolved "https://registry.npmjs.org/jest-jasmine2/-/jest-jasmine2-27.5.1.tgz"
@@ -2240,16 +2610,37 @@ jest-matcher-utils@^27.5.1:
   version "27.5.1"
   resolved "https://registry.npmjs.org/jest-matcher-utils/-/jest-matcher-utils-27.5.1.tgz"
   integrity sha512-z2uTx/T6LBaCoNWNFWwChLBKYxTMcGBRjAt+2SbP929/Fflb9aa5LGma654Rz8z9HLxsrUaYzxE9T/EFIL/PAw==
+=======
+jest-leak-detector@^29.0.3:
+  version "29.0.3"
+  resolved "https://registry.yarnpkg.com/jest-leak-detector/-/jest-leak-detector-29.0.3.tgz#e85cf3391106a7a250850b6766b508bfe9c7bc6f"
+  integrity sha512-YfW/G63dAuiuQ3QmQlh8hnqLDe25WFY3eQhuc/Ev1AGmkw5zREblTh7TCSKLoheyggu6G9gxO2hY8p9o6xbaRQ==
+  dependencies:
+    jest-get-type "^29.0.0"
+    pretty-format "^29.0.3"
+
+jest-matcher-utils@^29.0.3:
+  version "29.0.3"
+  resolved "https://registry.yarnpkg.com/jest-matcher-utils/-/jest-matcher-utils-29.0.3.tgz#b8305fd3f9e27cdbc210b21fc7dbba92d4e54560"
+  integrity sha512-RsR1+cZ6p1hDV4GSCQTg+9qjeotQCgkaleIKLK7dm+U4V/H2bWedU3RAtLm8+mANzZ7eDV33dMar4pejd7047w==
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
   dependencies:
     chalk "^4.0.0"
     jest-diff "^27.5.1"
     jest-get-type "^27.5.1"
     pretty-format "^27.5.1"
 
+<<<<<<< HEAD
 jest-message-util@^27.5.1:
   version "27.5.1"
   resolved "https://registry.npmjs.org/jest-message-util/-/jest-message-util-27.5.1.tgz"
   integrity sha512-rMyFe1+jnyAAf+NHwTclDz0eAaLkVDdKVHHBFWsBWHnnh5YeJMNWWsv7AbFYXfK3oTqvL7VTWkhNLu1jX24D+g==
+=======
+jest-message-util@^29.0.3:
+  version "29.0.3"
+  resolved "https://registry.yarnpkg.com/jest-message-util/-/jest-message-util-29.0.3.tgz#f0254e1ffad21890c78355726202cc91d0a40ea8"
+  integrity sha512-7T8JiUTtDfppojosORAflABfLsLKMLkBHSWkjNQrjIltGoDzNGn7wEPOSfjqYAGTYME65esQzMJxGDjuLBKdOg==
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
   dependencies:
     "@babel/code-frame" "^7.12.13"
     "@jest/types" "^27.5.1"
@@ -2261,10 +2652,17 @@ jest-message-util@^27.5.1:
     slash "^3.0.0"
     stack-utils "^2.0.3"
 
+<<<<<<< HEAD
 jest-mock@^27.5.1:
   version "27.5.1"
   resolved "https://registry.npmjs.org/jest-mock/-/jest-mock-27.5.1.tgz"
   integrity sha512-K4jKbY1d4ENhbrG2zuPWaQBvDly+iZ2yAW+T1fATN78hc0sInwn7wZB8XtlNnvHug5RMwV897Xm4LqmPM4e2Og==
+=======
+jest-mock@^29.0.3:
+  version "29.0.3"
+  resolved "https://registry.yarnpkg.com/jest-mock/-/jest-mock-29.0.3.tgz#4f0093f6a9cb2ffdb9c44a07a3912f0c098c8de9"
+  integrity sha512-ort9pYowltbcrCVR43wdlqfAiFJXBx8l4uJDsD8U72LgBcetvEp+Qxj1W9ZYgMRoeAo+ov5cnAGF2B6+Oth+ww==
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
   dependencies:
     "@jest/types" "^27.5.1"
     "@types/node" "*"
@@ -2274,6 +2672,7 @@ jest-pnp-resolver@^1.2.2:
   resolved "https://registry.npmjs.org/jest-pnp-resolver/-/jest-pnp-resolver-1.2.2.tgz"
   integrity sha512-olV41bKSMm8BdnuMsewT4jqlZ8+3TCARAXjZGT9jcoSnrfUnRCqnMoF9XEeoWjbzObpqF9dRhHQj0Xb9QdF6/w==
 
+<<<<<<< HEAD
 jest-regex-util@^27.5.1:
   version "27.5.1"
   resolved "https://registry.npmjs.org/jest-regex-util/-/jest-regex-util-27.5.1.tgz"
@@ -2283,15 +2682,33 @@ jest-resolve-dependencies@^27.5.1:
   version "27.5.1"
   resolved "https://registry.npmjs.org/jest-resolve-dependencies/-/jest-resolve-dependencies-27.5.1.tgz"
   integrity sha512-QQOOdY4PE39iawDn5rzbIePNigfe5B9Z91GDD1ae/xNDlu9kaat8QQ5EKnNmVWPV54hUdxCVwwj6YMgR2O7IOg==
+=======
+jest-regex-util@^29.0.0:
+  version "29.0.0"
+  resolved "https://registry.yarnpkg.com/jest-regex-util/-/jest-regex-util-29.0.0.tgz#b442987f688289df8eb6c16fa8df488b4cd007de"
+  integrity sha512-BV7VW7Sy0fInHWN93MMPtlClweYv2qrSCwfeFWmpribGZtQPWNvRSq9XOVgOEjU1iBGRKXUZil0o2AH7Iy9Lug==
+
+jest-resolve-dependencies@^29.0.3:
+  version "29.0.3"
+  resolved "https://registry.yarnpkg.com/jest-resolve-dependencies/-/jest-resolve-dependencies-29.0.3.tgz#f23a54295efc6374b86b198cf8efed5606d6b762"
+  integrity sha512-KzuBnXqNvbuCdoJpv8EanbIGObk7vUBNt/PwQPPx2aMhlv/jaXpUJsqWYRpP/0a50faMBY7WFFP8S3/CCzwfDw==
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
   dependencies:
     "@jest/types" "^27.5.1"
     jest-regex-util "^27.5.1"
     jest-snapshot "^27.5.1"
 
+<<<<<<< HEAD
 jest-resolve@^27.5.1:
   version "27.5.1"
   resolved "https://registry.npmjs.org/jest-resolve/-/jest-resolve-27.5.1.tgz"
   integrity sha512-FFDy8/9E6CV83IMbDpcjOhumAQPDyETnU2KZ1O98DwTnz8AOBsW/Xv3GySr1mOZdItLR+zDZ7I/UdTFbgSOVCw==
+=======
+jest-resolve@^29.0.3:
+  version "29.0.3"
+  resolved "https://registry.yarnpkg.com/jest-resolve/-/jest-resolve-29.0.3.tgz#329a3431e3b9eb6629a2cd483e9bed95b26827b9"
+  integrity sha512-toVkia85Y/BPAjJasTC9zIPY6MmVXQPtrCk8SmiheC4MwVFE/CMFlOtMN6jrwPMC6TtNh8+sTMllasFeu1wMPg==
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
   dependencies:
     "@jest/types" "^27.5.1"
     chalk "^4.0.0"
@@ -2304,10 +2721,17 @@ jest-resolve@^27.5.1:
     resolve.exports "^1.1.0"
     slash "^3.0.0"
 
+<<<<<<< HEAD
 jest-runner@^27.5.1:
   version "27.5.1"
   resolved "https://registry.npmjs.org/jest-runner/-/jest-runner-27.5.1.tgz"
   integrity sha512-g4NPsM4mFCOwFKXO4p/H/kWGdJp9V8kURY2lX8Me2drgXqG7rrZAx5kv+5H7wtt/cdFIjhqYx1HrlqWHaOvDaQ==
+=======
+jest-runner@^29.0.3:
+  version "29.0.3"
+  resolved "https://registry.yarnpkg.com/jest-runner/-/jest-runner-29.0.3.tgz#2e47fe1e8777aea9b8970f37e8f83630b508fb87"
+  integrity sha512-Usu6VlTOZlCZoNuh3b2Tv/yzDpKqtiNAetG9t3kJuHfUyVMNW7ipCCJOUojzKkjPoaN7Bl1f7Buu6PE0sGpQxw==
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
   dependencies:
     "@jest/console" "^27.5.1"
     "@jest/environment" "^27.5.1"
@@ -2318,6 +2742,7 @@ jest-runner@^27.5.1:
     chalk "^4.0.0"
     emittery "^0.8.1"
     graceful-fs "^4.2.9"
+<<<<<<< HEAD
     jest-docblock "^27.5.1"
     jest-environment-jsdom "^27.5.1"
     jest-environment-node "^27.5.1"
@@ -2343,6 +2768,34 @@ jest-runtime@^27.5.1:
     "@jest/test-result" "^27.5.1"
     "@jest/transform" "^27.5.1"
     "@jest/types" "^27.5.1"
+=======
+    jest-docblock "^29.0.0"
+    jest-environment-node "^29.0.3"
+    jest-haste-map "^29.0.3"
+    jest-leak-detector "^29.0.3"
+    jest-message-util "^29.0.3"
+    jest-resolve "^29.0.3"
+    jest-runtime "^29.0.3"
+    jest-util "^29.0.3"
+    jest-watcher "^29.0.3"
+    jest-worker "^29.0.3"
+    p-limit "^3.1.0"
+    source-map-support "0.5.13"
+
+jest-runtime@^29.0.3:
+  version "29.0.3"
+  resolved "https://registry.yarnpkg.com/jest-runtime/-/jest-runtime-29.0.3.tgz#5a823ec5902257519556a4e5a71a868e8fd788aa"
+  integrity sha512-12gZXRQ7ozEeEHKTY45a+YLqzNDR/x4c//X6AqwKwKJPpWM8FY4vwn4VQJOcLRS3Nd1fWwgP7LU4SoynhuUMHQ==
+  dependencies:
+    "@jest/environment" "^29.0.3"
+    "@jest/fake-timers" "^29.0.3"
+    "@jest/globals" "^29.0.3"
+    "@jest/source-map" "^29.0.0"
+    "@jest/test-result" "^29.0.3"
+    "@jest/transform" "^29.0.3"
+    "@jest/types" "^29.0.3"
+    "@types/node" "*"
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
     chalk "^4.0.0"
     cjs-module-lexer "^1.0.0"
     collect-v8-coverage "^1.0.0"
@@ -2359,6 +2812,7 @@ jest-runtime@^27.5.1:
     slash "^3.0.0"
     strip-bom "^4.0.0"
 
+<<<<<<< HEAD
 jest-serializer@^27.5.1:
   version "27.5.1"
   resolved "https://registry.npmjs.org/jest-serializer/-/jest-serializer-27.5.1.tgz"
@@ -2371,6 +2825,12 @@ jest-snapshot@^27.5.1:
   version "27.5.1"
   resolved "https://registry.npmjs.org/jest-snapshot/-/jest-snapshot-27.5.1.tgz"
   integrity sha512-yYykXI5a0I31xX67mgeLw1DZ0bJB+gpq5IpSuCAoyDi0+BhgU/RIrL+RTzDmkNTchvDFWKP8lp+w/42Z3us5sA==
+=======
+jest-snapshot@^29.0.3:
+  version "29.0.3"
+  resolved "https://registry.yarnpkg.com/jest-snapshot/-/jest-snapshot-29.0.3.tgz#0a024706986a915a6eefae74d7343069d2fc8eef"
+  integrity sha512-52q6JChm04U3deq+mkQ7R/7uy7YyfVIrebMi6ZkBoDJ85yEjm/sJwdr1P0LOIEHmpyLlXrxy3QP0Zf5J2kj0ew==
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
   dependencies:
     "@babel/core" "^7.7.2"
     "@babel/generator" "^7.7.2"
@@ -2395,10 +2855,17 @@ jest-snapshot@^27.5.1:
     pretty-format "^27.5.1"
     semver "^7.3.2"
 
+<<<<<<< HEAD
 jest-util@^27.5.1:
   version "27.5.1"
   resolved "https://registry.npmjs.org/jest-util/-/jest-util-27.5.1.tgz"
   integrity sha512-Kv2o/8jNvX1MQ0KGtw480E/w4fBCDOnH6+6DmeKi6LZUIlKA5kwY0YNdlzaWTiVgxqAqik11QyxDOKk543aKXw==
+=======
+jest-util@^29.0.0, jest-util@^29.0.3:
+  version "29.0.3"
+  resolved "https://registry.yarnpkg.com/jest-util/-/jest-util-29.0.3.tgz#06d1d77f9a1bea380f121897d78695902959fbc0"
+  integrity sha512-Q0xaG3YRG8QiTC4R6fHjHQPaPpz9pJBEi0AeOE4mQh/FuWOijFjGXMMOfQEaU9i3z76cNR7FobZZUQnL6IyfdQ==
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
   dependencies:
     "@jest/types" "^27.5.1"
     "@types/node" "*"
@@ -2407,10 +2874,17 @@ jest-util@^27.5.1:
     graceful-fs "^4.2.9"
     picomatch "^2.2.3"
 
+<<<<<<< HEAD
 jest-validate@^27.5.1:
   version "27.5.1"
   resolved "https://registry.npmjs.org/jest-validate/-/jest-validate-27.5.1.tgz"
   integrity sha512-thkNli0LYTmOI1tDB3FI1S1RTp/Bqyd9pTarJwL87OIBFuqEb5Apv5EaApEudYg4g86e3CT6kM0RowkhtEnCBQ==
+=======
+jest-validate@^29.0.3:
+  version "29.0.3"
+  resolved "https://registry.yarnpkg.com/jest-validate/-/jest-validate-29.0.3.tgz#f9521581d7344685428afa0a4d110e9c519aeeb6"
+  integrity sha512-OebiqqT6lK8cbMPtrSoS3aZP4juID762lZvpf1u+smZnwTEBCBInan0GAIIhv36MxGaJvmq5uJm7dl5gVt+Zrw==
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
   dependencies:
     "@jest/types" "^27.5.1"
     camelcase "^6.2.0"
@@ -2419,10 +2893,17 @@ jest-validate@^27.5.1:
     leven "^3.1.0"
     pretty-format "^27.5.1"
 
+<<<<<<< HEAD
 jest-watcher@^27.5.1:
   version "27.5.1"
   resolved "https://registry.npmjs.org/jest-watcher/-/jest-watcher-27.5.1.tgz"
   integrity sha512-z676SuD6Z8o8qbmEGhoEUFOM1+jfEiL3DXHK/xgEiG2EyNYfFG60jluWcupY6dATjfEsKQuibReS1djInQnoVw==
+=======
+jest-watcher@^29.0.3:
+  version "29.0.3"
+  resolved "https://registry.yarnpkg.com/jest-watcher/-/jest-watcher-29.0.3.tgz#8e220d1cc4f8029875e82015d084cab20f33d57f"
+  integrity sha512-tQX9lU91A+9tyUQKUMp0Ns8xAcdhC9fo73eqA3LFxP2bSgiF49TNcc+vf3qgGYYK9qRjFpXW9+4RgF/mbxyOOw==
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
   dependencies:
     "@jest/test-result" "^27.5.1"
     "@jest/types" "^27.5.1"
@@ -2432,19 +2913,33 @@ jest-watcher@^27.5.1:
     jest-util "^27.5.1"
     string-length "^4.0.1"
 
+<<<<<<< HEAD
 jest-worker@^27.5.1:
   version "27.5.1"
   resolved "https://registry.npmjs.org/jest-worker/-/jest-worker-27.5.1.tgz"
   integrity sha512-7vuh85V5cdDofPyxn58nrPjBktZo0u9x1g8WtjQol+jZDaE+fhN+cIvTj11GndBnMnyfrUOG1sZQxCdjKh+DKg==
+=======
+jest-worker@^29.0.3:
+  version "29.0.3"
+  resolved "https://registry.yarnpkg.com/jest-worker/-/jest-worker-29.0.3.tgz#c2ba0aa7e41eec9eb0be8e8a322ae6518df72647"
+  integrity sha512-Tl/YWUugQOjoTYwjKdfJWkSOfhufJHO5LhXTSZC3TRoQKO+fuXnZAdoXXBlpLXKGODBL3OvdUasfDD4PcMe6ng==
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
   dependencies:
     "@types/node" "*"
     merge-stream "^2.0.0"
     supports-color "^8.0.0"
 
+<<<<<<< HEAD
 jest@^27.4.3:
   version "27.5.1"
   resolved "https://registry.npmjs.org/jest/-/jest-27.5.1.tgz"
   integrity sha512-Yn0mADZB89zTtjkPJEXwrac3LHudkQMR+Paqa8uxJHCBr9agxztUifWCyiYrjhMPBoUVBjyny0I7XH6ozDr7QQ==
+=======
+jest@^29.0.3:
+  version "29.0.3"
+  resolved "https://registry.yarnpkg.com/jest/-/jest-29.0.3.tgz#5227a0596d30791b2649eea347e4aa97f734944d"
+  integrity sha512-ElgUtJBLgXM1E8L6K1RW1T96R897YY/3lRYqq9uVcPWtP2AAl/nQ16IYDh/FzQOOQ12VEuLdcPU83mbhG2C3PQ==
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
   dependencies:
     "@jest/core" "^27.5.1"
     import-local "^3.0.2"
@@ -2474,6 +2969,7 @@ js-yaml@^3.13.1:
     argparse "^1.0.7"
     esprima "^4.0.0"
 
+<<<<<<< HEAD
 jsdom@^16.6.0:
   version "16.7.0"
   resolved "https://registry.npmjs.org/jsdom/-/jsdom-16.7.0.tgz"
@@ -2507,6 +3003,8 @@ jsdom@^16.6.0:
     ws "^7.4.6"
     xml-name-validator "^3.0.0"
 
+=======
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
 jsesc@^2.5.1:
   version "2.5.2"
   resolved "https://registry.npmjs.org/jsesc/-/jsesc-2.5.2.tgz"
@@ -2570,6 +3068,7 @@ leven@^3.1.0:
   resolved "https://registry.npmjs.org/leven/-/leven-3.1.0.tgz"
   integrity sha512-qsda+H8jTaUaN/x5vzW2rzc+8Rw4TAQ/4KjB46IwK5VH+IlVeeeje/EoZRpiXvIqjFgK84QffqPztGI3VBLG1A==
 
+<<<<<<< HEAD
 levn@~0.3.0:
   version "0.3.0"
   resolved "https://registry.npmjs.org/levn/-/levn-0.3.0.tgz"
@@ -2578,6 +3077,8 @@ levn@~0.3.0:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
 
+=======
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
 lines-and-columns@^1.1.6:
   version "1.2.4"
   resolved "https://registry.npmjs.org/lines-and-columns/-/lines-and-columns-1.2.4.tgz"
@@ -2620,16 +3121,27 @@ lodash.isstring@^4.0.1:
   resolved "https://registry.yarnpkg.com/lodash.isstring/-/lodash.isstring-4.0.1.tgz#d527dfb5456eca7cc9bb95d5daeaf88ba54a5451"
   integrity sha512-0wJxfxH1wgO3GrbuP+dTTk7op+6L41QCXbGINEmD+ny/G/eCqGzxyCsh7159S+mgDDcoarnBw6PC1PS5+wUGgw==
 
+<<<<<<< HEAD
+=======
+lodash.memoize@4.x:
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/lodash.memoize/-/lodash.memoize-4.1.2.tgz#bcc6c49a42a2840ed997f323eada5ecd182e0bfe"
+  integrity sha512-t7j+NzmgnQzTAYXcsHYLgimltOV1MXHtlOWf6GjL9Kj8GK5FInw5JotxvbOs+IvV1/Dzo04/fCGfLVs7aXb4Ag==
+
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
 lodash.once@^4.0.0:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/lodash.once/-/lodash.once-4.1.1.tgz#0dd3971213c7c56df880977d504c88fb471a97ac"
   integrity sha512-Sb487aTOCr9drQVL8pIxOzVhafOjZN9UU54hiN8PU3uAiSV7lx1yYNpbNmex2PK6dSJoNTSJUUswT651yww3Mg==
 
+<<<<<<< HEAD
 lodash@^4.7.0:
   version "4.17.21"
   resolved "https://registry.npmjs.org/lodash/-/lodash-4.17.21.tgz"
   integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
 
+=======
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
 logform@^2.3.2, logform@^2.4.0:
   version "2.4.2"
   resolved "https://registry.npmjs.org/logform/-/logform-2.4.2.tgz"
@@ -2722,6 +3234,14 @@ mime@1.6.0:
   resolved "https://registry.npmjs.org/mime/-/mime-1.6.0.tgz"
   integrity sha512-x0Vn8spI+wuJ1O6S7gnbaQg8Pxh4NNHb7KSINmEWKiPE4RKOplvijn+NkmYmmRgP68mc70j2EbeTFRsrswaQeg==
 
+<<<<<<< HEAD
+=======
+mime@2.6.0:
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/mime/-/mime-2.6.0.tgz#a2a682a95cd4d0cb1d6257e28f83da7e35800367"
+  integrity sha512-USPkMeET31rOMiarsBNIHZKLGgvKc/LrjofAnBlOttf5ajRvqiRA8QsenbcooctK6d6Ts6aqZXBA+XbkKthiQg==
+
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
 mimic-fn@^2.1.0:
   version "2.1.0"
   resolved "https://registry.npmjs.org/mimic-fn/-/mimic-fn-2.1.0.tgz"
@@ -2858,11 +3378,14 @@ npmlog@^5.0.1:
     gauge "^3.0.0"
     set-blocking "^2.0.0"
 
+<<<<<<< HEAD
 nwsapi@^2.2.0:
   version "2.2.2"
   resolved "https://registry.npmjs.org/nwsapi/-/nwsapi-2.2.2.tgz"
   integrity sha512-90yv+6538zuvUMnN+zCr8LuV6bPFdq50304114vJYJ8RDyK8D5O9Phpbd6SZWgI7PwzmmfN1upeOJlvybDSgCw==
 
+=======
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
 object-assign@^4, object-assign@^4.1.1:
   version "4.1.1"
   resolved "https://registry.npmjs.org/object-assign/-/object-assign-4.1.1.tgz"
@@ -2911,6 +3434,7 @@ onetime@^5.1.2:
   dependencies:
     mimic-fn "^2.1.0"
 
+<<<<<<< HEAD
 optionator@^0.8.1:
   version "0.8.3"
   resolved "https://registry.npmjs.org/optionator/-/optionator-0.8.3.tgz"
@@ -2923,6 +3447,8 @@ optionator@^0.8.1:
     type-check "~0.3.2"
     word-wrap "~1.2.3"
 
+=======
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
 p-limit@^2.2.0:
   version "2.3.0"
   resolved "https://registry.npmjs.org/p-limit/-/p-limit-2.3.0.tgz"
@@ -2930,6 +3456,16 @@ p-limit@^2.2.0:
   dependencies:
     p-try "^2.0.0"
 
+<<<<<<< HEAD
+=======
+p-limit@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/p-limit/-/p-limit-3.1.0.tgz#e1daccbe78d0d1388ca18c64fea38e3e57e3706b"
+  integrity sha512-TYOanM3wGwNGsZN2cVTYPArw454xnXj5qmWF1bEoAc4+cU/ol7GVh7odevjp1FNHduHc3KZMcFduxU5Xc6uJRQ==
+  dependencies:
+    yocto-queue "^0.1.0"
+
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
 p-locate@^4.1.0:
   version "4.1.0"
   resolved "https://registry.npmjs.org/p-locate/-/p-locate-4.1.0.tgz"
@@ -2952,11 +3488,14 @@ parse-json@^5.2.0:
     json-parse-even-better-errors "^2.3.0"
     lines-and-columns "^1.1.6"
 
+<<<<<<< HEAD
 parse5@6.0.1:
   version "6.0.1"
   resolved "https://registry.npmjs.org/parse5/-/parse5-6.0.1.tgz"
   integrity sha512-Ofn/CTFzRGTTxwpNEs9PP93gXShHcTq255nzRYSKe8AkVpZY7e1fpmTfOyoIvjP5HG7Z2ZM7VS9PPhQGW2pOpw==
 
+=======
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
 parseurl@~1.3.2, parseurl@~1.3.3:
   version "1.3.3"
   resolved "https://registry.npmjs.org/parseurl/-/parseurl-1.3.3.tgz"
@@ -3009,6 +3548,7 @@ pkg-dir@^4.2.0:
   dependencies:
     find-up "^4.0.0"
 
+<<<<<<< HEAD
 prelude-ls@~1.1.2:
   version "1.1.2"
   resolved "https://registry.npmjs.org/prelude-ls/-/prelude-ls-1.1.2.tgz"
@@ -3018,10 +3558,20 @@ pretty-format@^27.5.1:
   version "27.5.1"
   resolved "https://registry.npmjs.org/pretty-format/-/pretty-format-27.5.1.tgz"
   integrity sha512-Qb1gy5OrP5+zDf2Bvnzdl3jsTf1qXVMazbvCoKhtKqVs4/YK4ozX4gKQJJVyNe+cajNPn0KoC0MC3FUmaHWEmQ==
+=======
+pretty-format@^29.0.0, pretty-format@^29.0.3:
+  version "29.0.3"
+  resolved "https://registry.yarnpkg.com/pretty-format/-/pretty-format-29.0.3.tgz#23d5f8cabc9cbf209a77d49409d093d61166a811"
+  integrity sha512-cHudsvQr1K5vNVLbvYF/nv3Qy/F/BcEKxGuIeMiVMRHxPOO1RxXooP8g/ZrwAp7Dx+KdMZoOc7NxLHhMrP2f9Q==
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
   dependencies:
     ansi-regex "^5.0.1"
     ansi-styles "^5.0.0"
+<<<<<<< HEAD
     react-is "^17.0.1"
+=======
+    react-is "^18.0.0"
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
 
 prisma@^4.3.1:
   version "4.3.1"
@@ -3046,21 +3596,27 @@ proxy-addr@~2.0.7:
     forwarded "0.2.0"
     ipaddr.js "1.9.1"
 
+<<<<<<< HEAD
 psl@^1.1.33:
   version "1.9.0"
   resolved "https://registry.npmjs.org/psl/-/psl-1.9.0.tgz"
   integrity sha512-E/ZsdU4HLs/68gYzgGTkMicWTLPdAftJLfJFlLUAAKZGkStNU72sZjT66SnMDVOfOWY/YAoiD7Jxa9iHvngcag==
 
+=======
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
 pstree.remy@^1.1.8:
   version "1.1.8"
   resolved "https://registry.npmjs.org/pstree.remy/-/pstree.remy-1.1.8.tgz"
   integrity sha512-77DZwxQmxKnu3aR542U+X8FypNzbfJ+C5XQDk3uWjWxn6151aIMGthWYRXTqT1E5oJvg+ljaa2OJi+VfvCOQ8w==
 
+<<<<<<< HEAD
 punycode@^2.1.1:
   version "2.1.1"
   resolved "https://registry.npmjs.org/punycode/-/punycode-2.1.1.tgz"
   integrity sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==
 
+=======
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
 qs@6.10.3:
   version "6.10.3"
   resolved "https://registry.npmjs.org/qs/-/qs-6.10.3.tgz"
@@ -3068,10 +3624,24 @@ qs@6.10.3:
   dependencies:
     side-channel "^1.0.4"
 
+<<<<<<< HEAD
 querystringify@^2.1.1:
   version "2.2.0"
   resolved "https://registry.npmjs.org/querystringify/-/querystringify-2.2.0.tgz"
   integrity sha512-FIqgj2EUvTa7R50u0rGsyTftzjYmv/a3hO345bZNrqabNqjtgiDMgmo4mkUjd+nzU5oF3dClKqFIPUKybUyqoQ==
+=======
+qs@6.9.3:
+  version "6.9.3"
+  resolved "https://registry.yarnpkg.com/qs/-/qs-6.9.3.tgz#bfadcd296c2d549f1dffa560619132c977f5008e"
+  integrity sha512-EbZYNarm6138UKKq46tdx08Yo/q9ZhFoAXAI1meAFd2GtbRDhbZY2WQSICskT0c5q99aFzLG1D4nvTk9tqfXIw==
+
+qs@^6.10.3:
+  version "6.11.0"
+  resolved "https://registry.yarnpkg.com/qs/-/qs-6.11.0.tgz#fd0d963446f7a65e1367e01abd85429453f0c37a"
+  integrity sha512-MvjoMCJwEarSbUYk5O+nmoSzSutSsTwF85zcHPQ9OrlFoZOYIjaqBAJIqIXjptyD5vThxGq52Xu/MaJzRkIk4Q==
+  dependencies:
+    side-channel "^1.0.4"
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
 
 range-parser@~1.2.1:
   version "1.2.1"
@@ -3088,10 +3658,17 @@ raw-body@2.5.1:
     iconv-lite "0.4.24"
     unpipe "1.0.0"
 
+<<<<<<< HEAD
 react-is@^17.0.1:
   version "17.0.2"
   resolved "https://registry.npmjs.org/react-is/-/react-is-17.0.2.tgz"
   integrity sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==
+=======
+react-is@^18.0.0:
+  version "18.2.0"
+  resolved "https://registry.yarnpkg.com/react-is/-/react-is-18.2.0.tgz#199431eeaaa2e09f86427efbb4f1473edb47609b"
+  integrity sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
 
 readable-stream@^3.4.0, readable-stream@^3.6.0:
   version "3.6.0"
@@ -3145,7 +3722,11 @@ resolve@^1.20.0:
     path-parse "^1.0.7"
     supports-preserve-symlinks-flag "^1.0.0"
 
+<<<<<<< HEAD
 rimraf@^3.0.0, rimraf@^3.0.2:
+=======
+rimraf@^3.0.2:
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
   version "3.0.2"
   resolved "https://registry.npmjs.org/rimraf/-/rimraf-3.0.2.tgz"
   integrity sha512-JZkJMZkAGFFPP2YqXZXPbMlMBgsxzE8ILs4lMIX/2o0L9UBw9O/Y3o6wFw/i9YLapcUJWwqbi3kdxIPdC62TIA==
@@ -3172,10 +3753,17 @@ safe-stable-stringify@^2.3.1:
   resolved "https://registry.npmjs.org/safer-buffer/-/safer-buffer-2.1.2.tgz"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
 
+<<<<<<< HEAD
 saxes@^5.0.1:
   version "5.0.1"
   resolved "https://registry.npmjs.org/saxes/-/saxes-5.0.1.tgz"
   integrity sha512-5LBh1Tls8c9xgGjw3QrMwETmTMVk0oFgvrFSvWx62llR2hcEInrKNZ2GZCCuuy2lvWrdl5jhbpeqc5hRYKFOcw==
+=======
+semver@7.x, semver@^7.3.5, semver@^7.3.7:
+  version "7.3.7"
+  resolved "https://registry.npmjs.org/semver/-/semver-7.3.7.tgz"
+  integrity sha512-QlYTucUYOews+WeEujDoEGziz4K6c47V/Bd+LjSSYcA94p+DmINdf7ncaUinThfvZyu13lN9OY1XDxt8C0Tw0g==
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
   dependencies:
     xmlchars "^2.2.0"
 
@@ -3261,7 +3849,11 @@ side-channel@^1.0.4:
     get-intrinsic "^1.0.2"
     object-inspect "^1.9.0"
 
+<<<<<<< HEAD
 signal-exit@^3.0.0, signal-exit@^3.0.2, signal-exit@^3.0.3:
+=======
+signal-exit@^3.0.0, signal-exit@^3.0.3, signal-exit@^3.0.7:
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
   version "3.0.7"
   resolved "https://registry.npmjs.org/signal-exit/-/signal-exit-3.0.7.tgz"
   integrity sha512-wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ==
@@ -3290,10 +3882,17 @@ slash@^3.0.0:
   resolved "https://registry.npmjs.org/slash/-/slash-3.0.0.tgz"
   integrity sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==
 
+<<<<<<< HEAD
 source-map-support@^0.5.6:
   version "0.5.21"
   resolved "https://registry.npmjs.org/source-map-support/-/source-map-support-0.5.21.tgz"
   integrity sha512-uBHU3L3czsIyYXKX88fdrGovxdSCoTGDRZ6SYXtSRxLZUzHg5P/66Ht6uoUlHu9EZod+inXhKo3qQgwXUT/y1w==
+=======
+source-map-support@0.5.13:
+  version "0.5.13"
+  resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.5.13.tgz#31b24a9c2e73c2de85066c0feb7d44767ed52932"
+  integrity sha512-SHSKFHadjVA5oR4PPqhtAVdcBWwRYVd6g6cAXnIbRiIwc2EhPrTuKUBdSLvlEKyIP3GCf89fltvcZiP9MMFA1w==
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
   dependencies:
     buffer-from "^1.0.0"
     source-map "^0.6.0"
@@ -3303,11 +3902,14 @@ source-map@^0.6.0, source-map@^0.6.1, source-map@~0.6.1:
   resolved "https://registry.npmjs.org/source-map/-/source-map-0.6.1.tgz"
   integrity sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==
 
+<<<<<<< HEAD
 source-map@^0.7.3:
   version "0.7.4"
   resolved "https://registry.npmjs.org/source-map/-/source-map-0.7.4.tgz"
   integrity sha512-l3BikUxvPOcn5E74dZiq5BGsTb5yEwhaTSzccU6t4sDOH8NWJCstKO5QT2CvtFoK6F0saL7p9xHAqHOlCPJygA==
 
+=======
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
 sprintf-js@~1.0.2:
   version "1.0.3"
   resolved "https://registry.npmjs.org/sprintf-js/-/sprintf-js-1.0.3.tgz"
@@ -3376,6 +3978,34 @@ strip-json-comments@^3.1.1:
   resolved "https://registry.npmjs.org/strip-json-comments/-/strip-json-comments-3.1.1.tgz"
   integrity sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==
 
+<<<<<<< HEAD
+=======
+superagent@^8.0.0:
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/superagent/-/superagent-8.0.0.tgz#2ea4587df4b81ef023ec01ebc6e1bcb9e2344cb6"
+  integrity sha512-iudipXEel+SzlP9y29UBWGDjB+Zzag+eeA1iLosaR2YHBRr1Q1kC29iBrF2zIVD9fqVbpZnXkN/VJmwFMVyNWg==
+  dependencies:
+    component-emitter "^1.3.0"
+    cookiejar "^2.1.3"
+    debug "^4.3.4"
+    fast-safe-stringify "^2.1.1"
+    form-data "^4.0.0"
+    formidable "^2.0.1"
+    methods "^1.1.2"
+    mime "2.6.0"
+    qs "^6.10.3"
+    readable-stream "^3.6.0"
+    semver "^7.3.7"
+
+supertest@^6.2.4:
+  version "6.2.4"
+  resolved "https://registry.yarnpkg.com/supertest/-/supertest-6.2.4.tgz#3dcebe42f7fd6f28dd7ac74c6cba881f7101b2f0"
+  integrity sha512-M8xVnCNv+q2T2WXVzxDECvL2695Uv2uUj2O0utxsld/HRyJvOU8W9f1gvsYxSNU4wmIe0/L/ItnpU4iKq0emDA==
+  dependencies:
+    methods "^1.1.2"
+    superagent "^8.0.0"
+
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
 supports-color@^5.3.0, supports-color@^5.5.0:
   version "5.5.0"
   resolved "https://registry.npmjs.org/supports-color/-/supports-color-5.5.0.tgz"
@@ -3410,11 +4040,14 @@ supports-preserve-symlinks-flag@^1.0.0:
   resolved "https://registry.npmjs.org/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
 
+<<<<<<< HEAD
 symbol-tree@^3.2.4:
   version "3.2.4"
   resolved "https://registry.npmjs.org/symbol-tree/-/symbol-tree-3.2.4.tgz"
   integrity sha512-9QNk5KwDF+Bvz+PyObkmSYjI5ksVUYtjW7AU22r2NKcfLJcXp96hkDWU3+XndOsUb+AQ9QhfzfCT2O+CNWT5Tw==
 
+=======
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
 tar@^6.1.11:
   version "6.1.11"
   resolved "https://registry.yarnpkg.com/tar/-/tar-6.1.11.tgz#6760a38f003afa1b2ffd0ffe9e9abbd0eab3d621"
@@ -3449,11 +4082,14 @@ text-hex@1.0.x:
   resolved "https://registry.npmjs.org/text-hex/-/text-hex-1.0.0.tgz"
   integrity sha512-uuVGNWzgJ4yhRaNSiubPY7OjISw4sw4E5Uv0wbjp+OzcbmVU/rsT8ujgcXJhn9ypzsgr5vlzpPqP+MBBKcGvbg==
 
+<<<<<<< HEAD
 throat@^6.0.1:
   version "6.0.1"
   resolved "https://registry.npmjs.org/throat/-/throat-6.0.1.tgz"
   integrity sha512-8hmiGIJMDlwjg7dlJ4yKGLK8EsYqKgPWbG3b4wjJddKNwc7N7Dpn08Df4szr/sZdMVeOstrdYSsqzX6BYbcB+w==
 
+=======
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
 tmpl@1.0.5:
   version "1.0.5"
   resolved "https://registry.npmjs.org/tmpl/-/tmpl-1.0.5.tgz"
@@ -3483,6 +4119,7 @@ touch@^3.1.0:
   dependencies:
     nopt "~1.0.10"
 
+<<<<<<< HEAD
 tough-cookie@^4.0.0:
   version "4.1.2"
   resolved "https://registry.npmjs.org/tough-cookie/-/tough-cookie-4.1.2.tgz"
@@ -3500,6 +4137,8 @@ tr46@^2.1.0:
   dependencies:
     punycode "^2.1.1"
 
+=======
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
 tr46@~0.0.3:
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/tr46/-/tr46-0.0.3.tgz#8184fd347dac9cdc185992f3a6622e14b9d9ab6a"
@@ -3510,11 +4149,33 @@ triple-beam@^1.3.0:
   resolved "https://registry.npmjs.org/triple-beam/-/triple-beam-1.3.0.tgz"
   integrity sha512-XrHUvV5HpdLmIj4uVMxHggLbFSZYIn7HEWsqePZcI50pco+MPqJ50wMGY794X7AOOhxOBAjbkqfAbEe/QMp2Lw==
 
+<<<<<<< HEAD
 ts-node@^10.9.1:
   version "10.9.1"
   resolved "https://registry.npmjs.org/ts-node/-/ts-node-10.9.1.tgz"
   integrity sha512-NtVysVPkxxrwFGUUxGYhfux8k78pQB3JqYBXlLRZgdGUqTO5wU/UyHop5p70iEbGhB7q5KmiZiU0Y3KlJrScEw==
   dependencies:
+=======
+ts-jest@^29.0.1:
+  version "29.0.1"
+  resolved "https://registry.yarnpkg.com/ts-jest/-/ts-jest-29.0.1.tgz#3296b39d069dc55825ce1d059a9510b33c718b86"
+  integrity sha512-htQOHshgvhn93QLxrmxpiQPk69+M1g7govO1g6kf6GsjCv4uvRV0znVmDrrvjUrVCnTYeY4FBxTYYYD4airyJA==
+  dependencies:
+    bs-logger "0.x"
+    fast-json-stable-stringify "2.x"
+    jest-util "^29.0.0"
+    json5 "^2.2.1"
+    lodash.memoize "4.x"
+    make-error "1.x"
+    semver "7.x"
+    yargs-parser "^21.0.1"
+
+ts-node@^10.9.1:
+  version "10.9.1"
+  resolved "https://registry.npmjs.org/ts-node/-/ts-node-10.9.1.tgz"
+  integrity sha512-NtVysVPkxxrwFGUUxGYhfux8k78pQB3JqYBXlLRZgdGUqTO5wU/UyHop5p70iEbGhB7q5KmiZiU0Y3KlJrScEw==
+  dependencies:
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
     "@cspotcode/source-map-support" "^0.8.0"
     "@tsconfig/node10" "^1.0.7"
     "@tsconfig/node12" "^1.0.7"
@@ -3529,6 +4190,7 @@ ts-node@^10.9.1:
     v8-compile-cache-lib "^3.0.1"
     yn "3.1.1"
 
+<<<<<<< HEAD
 type-check@~0.3.2:
   version "0.3.2"
   resolved "https://registry.npmjs.org/type-check/-/type-check-0.3.2.tgz"
@@ -3536,6 +4198,8 @@ type-check@~0.3.2:
   dependencies:
     prelude-ls "~1.1.2"
 
+=======
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
 type-detect@4.0.8:
   version "4.0.8"
   resolved "https://registry.npmjs.org/type-detect/-/type-detect-4.0.8.tgz"
@@ -3554,6 +4218,7 @@ type-is@~1.6.18:
     media-typer "0.3.0"
     mime-types "~2.1.24"
 
+<<<<<<< HEAD
 typedarray-to-buffer@^3.1.5:
   version "3.1.5"
   resolved "https://registry.npmjs.org/typedarray-to-buffer/-/typedarray-to-buffer-3.1.5.tgz"
@@ -3561,6 +4226,8 @@ typedarray-to-buffer@^3.1.5:
   dependencies:
     is-typedarray "^1.0.0"
 
+=======
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
 typescript@^4.8.3:
   version "4.8.3"
   resolved "https://registry.npmjs.org/typescript/-/typescript-4.8.3.tgz"
@@ -3571,11 +4238,14 @@ undefsafe@^2.0.5:
   resolved "https://registry.npmjs.org/undefsafe/-/undefsafe-2.0.5.tgz"
   integrity sha512-WxONCrssBM8TSPRqN5EmsjVrsv4A8X12J4ArBiiayv3DyyG3ZlIg6yysuuSYdZsVz3TKcTg2fd//Ujd4CHV1iA==
 
+<<<<<<< HEAD
 universalify@^0.2.0:
   version "0.2.0"
   resolved "https://registry.npmjs.org/universalify/-/universalify-0.2.0.tgz"
   integrity sha512-CJ1QgKmNg3CwvAv/kOFmtnEN05f0D/cn9QntgNOQlQF9dgvVTHj3t+8JPdjqawCHk7V/KA+fbUqzZ9XWhcqPUg==
 
+=======
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
 unpipe@1.0.0, unpipe@~1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/unpipe/-/unpipe-1.0.0.tgz"
@@ -3589,6 +4259,7 @@ update-browserslist-db@^1.0.5:
     escalade "^3.1.1"
     picocolors "^1.0.0"
 
+<<<<<<< HEAD
 url-parse@^1.5.3:
   version "1.5.10"
   resolved "https://registry.npmjs.org/url-parse/-/url-parse-1.5.10.tgz"
@@ -3597,6 +4268,8 @@ url-parse@^1.5.3:
     querystringify "^2.1.1"
     requires-port "^1.0.0"
 
+=======
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
 util-deprecate@^1.0.1:
   version "1.0.2"
   resolved "https://registry.npmjs.org/util-deprecate/-/util-deprecate-1.0.2.tgz"
@@ -3612,14 +4285,24 @@ v8-compile-cache-lib@^3.0.1:
   resolved "https://registry.npmjs.org/v8-compile-cache-lib/-/v8-compile-cache-lib-3.0.1.tgz"
   integrity sha512-wa7YjyUGfNZngI/vtK0UHAN+lgDCxBPCylVXGp0zu59Fz5aiGtNXaq3DhIov063MorB+VfufLh3JlF2KdTK3xg==
 
+<<<<<<< HEAD
 v8-to-istanbul@^8.1.0:
   version "8.1.1"
   resolved "https://registry.npmjs.org/v8-to-istanbul/-/v8-to-istanbul-8.1.1.tgz"
   integrity sha512-FGtKtv3xIpR6BYhvgH8MI/y78oT7d8Au3ww4QIxymrCtZEh5b8gCw2siywE+puhEmuWKDtmfrvF5UlB298ut3w==
+=======
+v8-to-istanbul@^9.0.1:
+  version "9.0.1"
+  resolved "https://registry.yarnpkg.com/v8-to-istanbul/-/v8-to-istanbul-9.0.1.tgz#b6f994b0b5d4ef255e17a0d17dc444a9f5132fa4"
+  integrity sha512-74Y4LqY74kLE6IFyIjPtkSTWzUZmj8tdHT9Ii/26dvQ6K9Dl2NbEfj0XgU2sHCtKgt5VupqhlO/5aWuqS+IY1w==
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
   dependencies:
     "@types/istanbul-lib-coverage" "^2.0.1"
     convert-source-map "^1.6.0"
+<<<<<<< HEAD
     source-map "^0.7.3"
+=======
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
 
 vary@^1, vary@~1.1.2:
   version "1.1.2"
@@ -3642,7 +4325,7 @@ w3c-xmlserializer@^2.0.0:
 
 walker@^1.0.7:
   version "1.0.8"
-  resolved "https://registry.npmjs.org/walker/-/walker-1.0.8.tgz"
+  resolved "https://registry.yarnpkg.com/walker/-/walker-1.0.8.tgz#bd498db477afe573dc04185f011d3ab8a8d7653f"
   integrity sha512-ts/8E8l5b7kY0vlWLewOkDXMmPdLcVV4GmOQLyxuSswIJsweeFZtAsMF7k1Nszz+TYBQrlYRmzOnr398y1JemQ==
   dependencies:
     makeerror "1.0.12"
@@ -3682,6 +4365,7 @@ whatwg-url@^5.0.0:
     tr46 "~0.0.3"
     webidl-conversions "^3.0.0"
 
+<<<<<<< HEAD
 whatwg-url@^8.0.0, whatwg-url@^8.5.0:
   version "8.7.0"
   resolved "https://registry.npmjs.org/whatwg-url/-/whatwg-url-8.7.0.tgz"
@@ -3691,6 +4375,8 @@ whatwg-url@^8.0.0, whatwg-url@^8.5.0:
     tr46 "^2.1.0"
     webidl-conversions "^6.1.0"
 
+=======
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
 which@^2.0.1:
   version "2.0.2"
   resolved "https://registry.npmjs.org/which/-/which-2.0.2.tgz"
@@ -3741,11 +4427,14 @@ winston@^3.8.1:
     triple-beam "^1.3.0"
     winston-transport "^4.5.0"
 
+<<<<<<< HEAD
 word-wrap@~1.2.3:
   version "1.2.3"
   resolved "https://registry.npmjs.org/word-wrap/-/word-wrap-1.2.3.tgz"
   integrity sha512-Hz/mrNwitNRh/HUAtM/VT/5VH+ygD6DV7mYKZAtHOrbs8U7lvPS6xf7EJKMF0uW1KJCl0H701g3ZGus+muE5vQ==
 
+=======
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
 wrap-ansi@^7.0.0:
   version "7.0.0"
   resolved "https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-7.0.0.tgz"
@@ -3760,6 +4449,7 @@ wrappy@1:
   resolved "https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz"
   integrity sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==
 
+<<<<<<< HEAD
 write-file-atomic@^3.0.0:
   version "3.0.3"
   resolved "https://registry.npmjs.org/write-file-atomic/-/write-file-atomic-3.0.3.tgz"
@@ -3784,6 +4474,15 @@ xmlchars@^2.2.0:
   version "2.2.0"
   resolved "https://registry.npmjs.org/xmlchars/-/xmlchars-2.2.0.tgz"
   integrity sha512-JZnDKK8B0RCDw84FNdDAIpZK+JuJw+s7Lz8nksI7SIuU3UXJJslUthsi+uWBUYOwPFwW7W7PRLRfUKpxjtjFCw==
+=======
+write-file-atomic@^4.0.1:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/write-file-atomic/-/write-file-atomic-4.0.2.tgz#a9df01ae5b77858a027fd2e80768ee433555fcfd"
+  integrity sha512-7KxauUdBmSdWnmpaGFg+ppNjKF8uNLry8LyzjauQDOVONfFLNKrKvQOxZ/VuTIcS/gge/YNahf5RIIQWTSarlg==
+  dependencies:
+    imurmurhash "^0.1.4"
+    signal-exit "^3.0.7"
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
 
 y18n@^5.0.5:
   version "5.0.8"
@@ -3795,6 +4494,7 @@ yallist@^4.0.0:
   resolved "https://registry.npmjs.org/yallist/-/yallist-4.0.0.tgz"
   integrity sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==
 
+<<<<<<< HEAD
 yargs-parser@^20.2.2:
   version "20.2.9"
   resolved "https://registry.npmjs.org/yargs-parser/-/yargs-parser-20.2.9.tgz"
@@ -3804,16 +4504,41 @@ yargs@^16.2.0:
   version "16.2.0"
   resolved "https://registry.npmjs.org/yargs/-/yargs-16.2.0.tgz"
   integrity sha512-D1mvvtDG0L5ft/jGWkLpG1+m0eQxOfaBvTNELraWj22wSVUMWxZUvYgJYcKh6jGGIkJFhH4IZPQhR4TKpc8mBw==
+=======
+yargs-parser@^21.0.0, yargs-parser@^21.0.1:
+  version "21.1.1"
+  resolved "https://registry.yarnpkg.com/yargs-parser/-/yargs-parser-21.1.1.tgz#9096bceebf990d21bb31fa9516e0ede294a77d35"
+  integrity sha512-tVpsJW7DdjecAiFpbIB1e3qxIQsE6NoPc5/eTdrbbIC4h0LVsWhnoa3g+m2HclBIujHzsxZ4VJVA+GUuc2/LBw==
+
+yargs@^17.3.1:
+  version "17.5.1"
+  resolved "https://registry.yarnpkg.com/yargs/-/yargs-17.5.1.tgz#e109900cab6fcb7fd44b1d8249166feb0b36e58e"
+  integrity sha512-t6YAJcxDkNX7NFYiVtKvWUz8l+PaKTLiL63mJYWR2GnHq2gjEWISzsLp9wg3aY36dY1j+gfIEL3pIF+XlJJfbA==
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
   dependencies:
     cliui "^7.0.2"
     escalade "^3.1.1"
     get-caller-file "^2.0.5"
     require-directory "^2.1.1"
+<<<<<<< HEAD
     string-width "^4.2.0"
     y18n "^5.0.5"
     yargs-parser "^20.2.2"
+=======
+    string-width "^4.2.3"
+    y18n "^5.0.5"
+    yargs-parser "^21.0.0"
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
 
 yn@3.1.1:
   version "3.1.1"
   resolved "https://registry.npmjs.org/yn/-/yn-3.1.1.tgz"
   integrity sha512-Ux4ygGWsu2c7isFWe8Yu1YluJmqVhxqK2cLXNQA5AcC3QfbGNpM7fu0Y8b/z16pXLnFxZYvWhd3fhBY9DLmC6Q==
+<<<<<<< HEAD
+=======
+
+yocto-queue@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/yocto-queue/-/yocto-queue-0.1.0.tgz#0294eb3dee05028d31ee1a5fa2c556a6aaf10a1b"
+  integrity sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
+>>>>>>> parent of c16bb69 ([edit] 구조 변경중)
