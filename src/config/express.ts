@@ -4,6 +4,7 @@ import cors from 'cors';
 import methodOverride from 'method-override';
 import router from '@/routes/index';
 import dotenv from 'dotenv';
+import errorHandler from '@/middleware/error';
 
 const exp = () => {
   dotenv.config();
@@ -19,6 +20,7 @@ const exp = () => {
     .use(express.static('public'));
 
   app.use(router);
+  app.use(errorHandler);
   return app;
 };
 
