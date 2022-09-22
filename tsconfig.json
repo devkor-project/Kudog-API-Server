@@ -1,4 +1,5 @@
 {
+  "ts-node": {"files": true},
   "compilerOptions": {
     "experimentalDecorators": true,
     "module": "commonjs",
