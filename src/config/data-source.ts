@@ -1,7 +1,10 @@
 import 'reflect-metadata';
 import { DataSource } from 'typeorm';
 import { join } from 'path';
+import logger from '@/config/winston';
+import dotenv from 'dotenv';
 
+dotenv.config();
 // To do : 개발용, 배포용 분리
 const AppDataSource = new DataSource({
   type: 'mysql',
