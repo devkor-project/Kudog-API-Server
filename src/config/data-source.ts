@@ -1,9 +1,6 @@
 import 'reflect-metadata';
-import dotenv from 'dotenv';
 import { DataSource } from 'typeorm';
 import { join } from 'path';
-
-dotenv.config();
 
 // To do : 개발용, 배포용 분리
 const AppDataSource = new DataSource({
