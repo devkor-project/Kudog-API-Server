@@ -13,7 +13,7 @@ export const TokenValidation = (req: Request, res: Response, next: NextFunction)
     if (!token) throw TOKEN_EMPTY_ERROR;
     logger.info(token);
 
-    const secret = process.env.ACCESS_TOKEN_SECRET;
+    const secret = process.env.JWT_TOKEN_SECRET;
     const payload = jwt.verify(token, secret) as IPayload;
     req.userId = payload.userId;
     next();

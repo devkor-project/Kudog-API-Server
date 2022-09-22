@@ -26,7 +26,7 @@ export const login = async function (userData: logInUserDto) :
 
   // To do : password 검증 부분 추가
 
-  const secret = process.env.ACCESS_TOKEN_SECRET;
+  const secret = process.env.JWT_TOKEN_SECRET;
   // create JWT access token
   const accessToken = JWT.sign(
     { userId },
@@ -73,7 +73,7 @@ export const getAccessToken = async function (userId: number) :
     throw EMAIL_NOT_EXISTS;
   }
 
-  const secret = process.env.ACCESS_TOKEN_SECRET;
+  const secret = process.env.JWT_TOKEN_SECRET;
   // create JWT access token
   const accessToken = JWT.sign(
     { userId },
