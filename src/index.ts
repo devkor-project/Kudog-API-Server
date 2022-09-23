@@ -1,9 +1,8 @@
+import '@/config/env';
 import express from '@/config/express';
 import logger from '@/config/winston';
 import AppDataSource from '@/config/data-source';
-import dotenv from 'dotenv';
 
-dotenv.config();
 const port = process.env.PORT || 8080;
 
 AppDataSource.initialize()
