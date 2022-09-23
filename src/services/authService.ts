@@ -10,7 +10,7 @@ import ServiceResult, * as common from '@/interfaces/common';
 import logger from '@/config/winston';
 
 // eslint-disable-next-line import/prefer-default-export
-export const login = async function (userData: logInUserDto) :
+export const login = async function (userData: logInUserDto):
   Promise<ServiceResult<logInResultDto>> {
   const { email, password } = userData;
 
