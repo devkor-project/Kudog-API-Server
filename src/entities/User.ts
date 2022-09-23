@@ -2,7 +2,7 @@ import {
   BaseEntity, Column, Entity, Index, OneToMany, PrimaryGeneratedColumn,
 } from 'typeorm';
 // eslint-disable-next-line import/no-cycle
-import CategoryPerUser from './CategoryPerUser';
+import CategoryPerUser from '@/entities/CategoryPerUser';
 
 @Index('User_email_uindex', ['email'], { unique: true })
 @Index('User_userId_uindex', ['userId'], { unique: true })
