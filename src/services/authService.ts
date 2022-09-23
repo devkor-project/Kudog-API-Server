@@ -15,26 +15,28 @@ export const login = async function (userData: logInUserDto) :
   const { email, password } = userData;
 
   const findUser: User = await User.findOne({
-    where: { email: userData.email },
+    where: { email },
   });
 
   if (!findUser) {
     throw EMAIL_NOT_EXISTS;
   }
 
+  const { userId } = findUser;
+
   // To do : password 검증 부분 추가
 
-  const secret = process.env.ACCESS_TOKEN_SECRET;
+  const secret = process.env.JWT_TOKEN_SECRET;
   // create JWT access token
   const accessToken = JWT.sign(
-    { email },
+    { userId },
     secret,
     {
       expiresIn: '30m',
     },
   );
   const refreshToken = JWT.sign(
-    { email },
+    { userId },
     secret,
     {
       expiresIn: '30d',
@@ -47,7 +49,7 @@ export const login = async function (userData: logInUserDto) :
     .set({
       refreshToken,
     })
-    .where('email = :email', { email })
+    .where('userId = :userId', { userId })
     .execute();
 
   const logInResult: logInResultDto = {
@@ -58,4 +60,30 @@ export const login = async function (userData: logInUserDto) :
   logger.info(logInResult.accessToken);
 
   return { data: logInResult };
+};
+
+// eslint-disable-next-line import/prefer-default-export
+export const getAccessToken = async function (userId: number) :
+  Promise<ServiceResult<string>> {
+  const findUser = await User.findOne({
+    where: { userId },
+  });
+
+  if (!findUser) {
+    throw EMAIL_NOT_EXISTS;
+  }
+
+  const secret = process.env.JWT_TOKEN_SECRET;
+  // create JWT access token
+  const accessToken = JWT.sign(
+    { userId },
+    secret,
+    {
+      expiresIn: '30m',
+    },
+  );
+
+  logger.info(accessToken);
+
+  return { data: accessToken };
 };

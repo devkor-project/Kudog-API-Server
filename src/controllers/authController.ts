@@ -25,3 +25,28 @@ export async function login(
     next(err);
   }
 }
+
+/**
+ * access token 재발급 API
+ * @method post
+ * @url /auth/token
+ * @header refresh toekn
+ * @return_data accessToken
+ */
+// eslint-disable-next-line import/prefer-default-export
+export async function getAccessToken(
+  req: any,
+  res: Response,
+  next: NextFunction,
+) {
+  try {
+    const { userId } = req;
+
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
+    const accessToken = await authService.getAccessToken(userId);
+
+    res.send(accessToken);
+  } catch (err) {
+    next(err);
+  }
+}
