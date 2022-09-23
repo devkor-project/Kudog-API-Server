@@ -26,6 +26,7 @@ class User extends BaseEntity {
   @Column('number', { name: 'studentID', unique: true })
     studentID: number;
 
+  // TODO : add reference for major? 단과대?
   @Column('text', { name: 'major' })
     major: string;
 
