@@ -14,6 +14,9 @@ class User extends BaseEntity {
   @Column('varchar', { name: 'email', unique: true, length: 100 })
     email: string;
 
+  @Column('varchar', { name: 'receiveEmail', unique: false, length: 100 })
+    receiveEmail: string;
+
   @Column('varchar', { name: 'status', length: 1, default: () => "'Y'" })
     status: string;
 
