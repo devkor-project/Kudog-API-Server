@@ -3,9 +3,9 @@
 /* eslint-disable func-names */
 import JWT from 'jsonwebtoken';
 import { EMAIL_NOT_EXISTS } from '@/interfaces/error';
-import User from '../entities/User';
+import User from '@/entities/User';
 import { logInResultDto, logInUserDto } from '@/dtos/userDto';
-import AppDataSource from '../config/data-source';
+import AppDataSource from '@/config/data-source';
 import ServiceResult, * as common from '@/interfaces/common';
 import logger from '@/config/winston';
 
