@@ -23,6 +23,12 @@ class User extends BaseEntity {
   @Column('text', { name: 'refreshToken', nullable: true })
     refreshToken: string | null;
 
+  @Column('number', { name: 'studentID', unique: true })
+    studentID: number;
+
+  @Column('text', { name: 'major' })
+    major: string;
+
   // eslint-disable-next-line @typescript-eslint/no-unsafe-return
   @OneToMany(() => CategoryPerUser, (categoryPerUser) => categoryPerUser.user)
     categoryPerUsers: CategoryPerUser[];
