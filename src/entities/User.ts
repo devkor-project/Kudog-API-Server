@@ -29,7 +29,10 @@ class User extends BaseEntity {
   @Column('number', { name: 'studentID', unique: true })
     studentID: number;
 
-  // TODO : add reference for major? 단과대?
+  @Column('number', { name: 'grade' })
+    grade: number;
+
+  // TODO : add reference for major? 단과대? enum ?
   @Column('text', { name: 'major' })
     major: string;
 
