@@ -16,7 +16,7 @@ router.post('/login', loginValidation, auth.login);
 router.post('/token', TokenValidation, auth.getAccessToken);
 
 router.post('/mail/req', auth.authMailReq);
-router.post('/mail/auth', auth.authMail);
+router.post('/mail', auth.authMail);
 router.post('/signup', auth.signup);
 
 export default router;
