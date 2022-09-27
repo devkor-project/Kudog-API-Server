@@ -21,6 +21,10 @@ export const login = async function (userData: logInUserDto):
     where: { email },
   });
 
+  if (!findUser) {
+    throw EMAIL_NOT_EXISTS;
+  }
+
   const { userId } = findUser;
 
   // To do : password 검증 부분 추가
@@ -169,10 +173,6 @@ export const getAccessToken = async function (userId: number):
   const findUser = await User.findOne({
     where: { userId },
   });
-
-  if (!findUser) {
-    throw EMAIL_NOT_EXISTS;
-  }
 
   const secret = process.env.JWT_TOKEN_SECRET;
   // create JWT access token
