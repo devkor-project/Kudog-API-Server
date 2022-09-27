@@ -3,7 +3,7 @@ import {
 } from 'typeorm';
 
 @Index('EmailAuth_email_uindex', ['email'], { unique: true })
-@Index('EmailAuth_delete_uindex', ['expiresAt'])
+@Index('EmailAuth_delete_uindex', ['createdAt'])
 @Entity('EmailAuth', { schema: 'kudog' })
 class EmailAuth extends BaseEntity {
   @PrimaryGeneratedColumn({ type: 'int', name: 'uid' })

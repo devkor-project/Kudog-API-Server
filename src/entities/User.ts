@@ -26,10 +26,10 @@ class User extends BaseEntity {
   @Column('text', { name: 'refreshToken', nullable: true })
     refreshToken: string | null;
 
-  @Column('number', { name: 'studentID', unique: true })
+  @Column('int', { name: 'studentID', unique: true })
     studentID: number;
 
-  @Column('number', { name: 'grade' })
+  @Column('int', { name: 'grade' })
     grade: number;
 
   // TODO : add reference for major? 단과대? enum ?
