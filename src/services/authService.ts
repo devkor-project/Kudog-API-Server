@@ -102,7 +102,6 @@ export const getEmailAuthCode = async (email: string) => {
   };
 };
 
-
 export const userSignUp = async (user: userSignupDto):
   Promise<ServiceResult<logInResultDto>> => {
   const mailRegex = /[a-z0-9]+@korea.ac.kr/;
@@ -168,7 +167,7 @@ export const userSignUp = async (user: userSignupDto):
   return { data: logInResult };
 };
 
-export const getAccessToken = async function (userId: number) :
+export const getAccessToken = async function (userId: number):
   Promise<ServiceResult<string>> {
   const findUser = await User.findOne({
     where: { userId },
