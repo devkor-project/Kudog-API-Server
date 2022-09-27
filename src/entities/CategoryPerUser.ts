@@ -3,8 +3,8 @@ import {
   Column, Entity, Index, JoinColumn, ManyToOne, PrimaryGeneratedColumn,
 } from 'typeorm';
 
-import Category from './Category';
-import User from './User';
+import User from '@/entities/User';
+import Category from '@/entities/Category';
 
 @Index('CategoryPerUser_id_uindex', ['id'], { unique: true })
 @Index('CategoryPerUser_Category_categoryId_fk', ['categoryId'], {})
@@ -24,6 +24,7 @@ class CategoryPerUser {
     onDelete: 'NO ACTION',
     onUpdate: 'NO ACTION',
   })
+
   @JoinColumn([{ name: 'categoryId', referencedColumnName: 'categoryId' }])
     category: Category;
 

@@ -23,6 +23,7 @@ export const SIGNUP_USER_ALREADY_EXISTS = new ValidationError(2001, 'user alread
 export const EMAIL_NOT_EXISTS = new ValidationError(2002, 'email does not exist');
 export const INVALID_PASSWORD = new ValidationError(2003, 'invalid password');
 export const INVALID_FORMAT = new ValidationError(2004, 'email or password format is wrong');
+export const NOT_KOREA = new ValidationError(2005, 'domain of email must be @korea.ac.kr');
 
 const DBError = customErrorFactory(
   function DBError(code: number, message: string) {

@@ -1,3 +1,4 @@
+import '@/config/env';
 import express from '@/config/express';
 import logger from '@/config/winston';
 import AppDataSource from '@/config/data-source';
