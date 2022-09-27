@@ -4,7 +4,7 @@
 import JWT from 'jsonwebtoken';
 import { hash } from 'argon2';
 import {
-  EMAIL_NOT_EXISTS, NOT_KOREA, SIGNUP_USER_ALREADY_EXISTS, INVALID_PASSWORD,
+  EMAIL_NOT_EXISTS, NOT_KOREA, SIGNUP_USER_ALREADY_EXISTS, INVALID_FORMAT,
 } from '@/interfaces/error';
 import User from '@/entities/User';
 import EmailAuth from '@/entities/EmailAuth';
@@ -112,7 +112,7 @@ export const userSignUp = async (user: userSignupDto):
   // number , 특수문자 하나씩 포함
   const pwdRegex = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,20}$/;
   if (!pwdRegex.test(user.password)) {
-    throw INVALID_PASSWORD;
+    throw INVALID_FORMAT;
   }
 
   const existingUser = await User.findOne({ where: { email: user.email } });
