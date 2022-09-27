@@ -20,9 +20,6 @@ export const login = async function (userData: logInUserDto):
   const findUser: User = await User.findOne({
     where: { email },
   });
-  if (!findUser) {
-    throw EMAIL_NOT_EXISTS;
-  }
 
   const { userId } = findUser;
 
