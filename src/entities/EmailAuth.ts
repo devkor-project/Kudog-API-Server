@@ -1,5 +1,5 @@
 import {
-  BaseEntity, Column, Entity, Index, PrimaryGeneratedColumn, DeleteDateColumn,
+  BaseEntity, Column, Entity, Index, PrimaryGeneratedColumn, CreateDateColumn,
 } from 'typeorm';
 
 @Index('EmailAuth_email_uindex', ['email'], { unique: true })
@@ -15,8 +15,8 @@ class EmailAuth extends BaseEntity {
   @Column('varchar', { name: 'authCode', length: 6 })
     authCode: string;
 
-  @DeleteDateColumn({ name: 'expiresAt' })
-    expiresAt: Date;
+  @CreateDateColumn({ name: 'createdAt' })
+    createdAt: Date;
 }
 
 export default EmailAuth;

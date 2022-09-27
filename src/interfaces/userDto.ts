@@ -16,3 +16,11 @@ export class logInResultDto {
   @IsString()
   public refreshToken: string;
 }
+
+export interface userSignupDto {
+  email: string;
+  password: string;
+  studentID: number;
+  grade: number;
+  major: string;
+}
