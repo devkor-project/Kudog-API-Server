@@ -125,24 +125,7 @@ export const userSignUp = async (user: userSignupDto):
 
   const hashedPwd = await hash((user.password));
 
-  const secret = process.env.ACCESS_TOKEN_SECRET;
-  // create JWT access token
-  const accessToken = JWT.sign(
-    { email: user.email },
-    secret,
-    {
-      expiresIn: '30m',
-    },
-  );
-  const refreshToken = JWT.sign(
-    { email: user.email },
-    secret,
-    {
-      expiresIn: '30d',
-    },
-  );
-
-  await AppDataSource
+  const newUser = await AppDataSource
     .createQueryBuilder()
     .insert()
     .into(User)
@@ -154,16 +137,42 @@ export const userSignUp = async (user: userSignupDto):
       grade: user.grade,
       major: user.major,
       categoryPerUsers: [],
+      refreshToken: '', // update later
+    })
+    .execute();
+
+  const userId: number = newUser.raw.insertId;
+
+  const secret = process.env.JWT_TOKEN_SECRET;
+  // create JWT access token
+  const accessToken = JWT.sign(
+    { userId },
+    secret,
+    {
+      expiresIn: '30m',
+    },
+  );
+  const refreshToken = JWT.sign(
+    { userId },
+    secret,
+    {
+      expiresIn: '30d',
+    },
+  );
+
+  // update refreshToken
+  await AppDataSource.createQueryBuilder()
+    .update(User)
+    .set({
       refreshToken,
     })
+    .where('userId = :userId', { userId })
     .execute();
 
   const logInResult: logInResultDto = {
     accessToken,
     refreshToken,
   };
-
-  logger.info(logInResult.accessToken);
 
   return { data: logInResult };
 };
