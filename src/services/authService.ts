@@ -2,9 +2,9 @@
 /* eslint-disable import/order */
 /* eslint-disable func-names */
 import JWT from 'jsonwebtoken';
-import { hash } from 'argon2';
+import { hash, verify } from 'argon2';
 import {
-  EMAIL_NOT_EXISTS, NOT_KOREA, SIGNUP_USER_ALREADY_EXISTS, INVALID_FORMAT,
+  EMAIL_NOT_EXISTS, NOT_KOREA, SIGNUP_USER_ALREADY_EXISTS, INVALID_FORMAT, INVALID_PASSWORD,
 } from '@/interfaces/error';
 import User from '@/entities/User';
 import EmailAuth from '@/entities/EmailAuth';
@@ -27,7 +27,12 @@ export const login = async function (userData: logInUserDto):
 
   const { userId } = findUser;
 
-  // To do : password 검증 부분 추가
+  // verify password
+  const hashedPwd = findUser.password;
+
+  if (!await verify(hashedPwd, password)) {
+    throw INVALID_PASSWORD;
+  }
 
   const secret = process.env.JWT_TOKEN_SECRET;
   // create JWT access token
