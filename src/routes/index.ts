@@ -1,5 +1,6 @@
 import { Router } from 'express';
 import authRouter from '@/routes/auth';
+import mailRouter from '@/routes/mail';
 
 const router = Router();
 
@@ -12,5 +13,6 @@ router.get('/', (req, res) => {
   );
 });
 
+router.use('/mail', mailRouter);
 router.use('/auth', authRouter);
 export default router;
