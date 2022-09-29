@@ -177,12 +177,9 @@ export const userSignUp = async (user: userSignupDto):
   return { data: logInResult };
 };
 
+// eslint-disable-next-line @typescript-eslint/require-await
 export const getAccessToken = async function (userId: number):
   Promise<ServiceResult<string>> {
-  const findUser = await User.findOne({
-    where: { userId },
-  });
-
   const secret = process.env.JWT_TOKEN_SECRET;
   // create JWT access token
   const accessToken = JWT.sign(
