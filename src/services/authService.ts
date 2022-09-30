@@ -2,9 +2,9 @@
 /* eslint-disable import/order */
 /* eslint-disable func-names */
 import JWT from 'jsonwebtoken';
-import { hash } from 'argon2';
+import { hash, verify } from 'argon2';
 import {
-  EMAIL_NOT_EXISTS, NOT_KOREA, SIGNUP_USER_ALREADY_EXISTS, INVALID_FORMAT,
+  EMAIL_NOT_EXISTS, NOT_KOREA, SIGNUP_USER_ALREADY_EXISTS, INVALID_FORMAT, INVALID_PASSWORD,
 } from '@/interfaces/error';
 import User from '@/entities/User';
 import EmailAuth from '@/entities/EmailAuth';
@@ -20,13 +20,19 @@ export const login = async function (userData: logInUserDto):
   const findUser: User = await User.findOne({
     where: { email },
   });
+
   if (!findUser) {
     throw EMAIL_NOT_EXISTS;
   }
 
   const { userId } = findUser;
 
-  // To do : password 검증 부분 추가
+  // verify password
+  const hashedPwd = findUser.password;
+
+  if (!await verify(hashedPwd, password)) {
+    throw INVALID_PASSWORD;
+  }
 
   const secret = process.env.JWT_TOKEN_SECRET;
   // create JWT access token
@@ -124,24 +130,7 @@ export const userSignUp = async (user: userSignupDto):
 
   const hashedPwd = await hash((user.password));
 
-  const secret = process.env.ACCESS_TOKEN_SECRET;
-  // create JWT access token
-  const accessToken = JWT.sign(
-    { email: user.email },
-    secret,
-    {
-      expiresIn: '30m',
-    },
-  );
-  const refreshToken = JWT.sign(
-    { email: user.email },
-    secret,
-    {
-      expiresIn: '30d',
-    },
-  );
-
-  await AppDataSource
+  const newUser = await AppDataSource
     .createQueryBuilder()
     .insert()
     .into(User)
@@ -153,8 +142,36 @@ export const userSignUp = async (user: userSignupDto):
       grade: user.grade,
       major: user.major,
       categoryPerUsers: [],
+      refreshToken: '', // update later
+    })
+    .execute();
+
+  const userId: number = newUser.raw.insertId;
+
+  const secret = process.env.JWT_TOKEN_SECRET;
+  // create JWT access token
+  const accessToken = JWT.sign(
+    { userId },
+    secret,
+    {
+      expiresIn: '30m',
+    },
+  );
+  const refreshToken = JWT.sign(
+    { userId },
+    secret,
+    {
+      expiresIn: '30d',
+    },
+  );
+
+  // update refreshToken
+  await AppDataSource.createQueryBuilder()
+    .update(User)
+    .set({
       refreshToken,
     })
+    .where('userId = :userId', { userId })
     .execute();
 
   const logInResult: logInResultDto = {
@@ -162,21 +179,12 @@ export const userSignUp = async (user: userSignupDto):
     refreshToken,
   };
 
-  logger.info(logInResult.accessToken);
-
   return { data: logInResult };
 };
 
+// eslint-disable-next-line @typescript-eslint/require-await
 export const getAccessToken = async function (userId: number):
   Promise<ServiceResult<string>> {
-  const findUser = await User.findOne({
-    where: { userId },
-  });
-
-  if (!findUser) {
-    throw EMAIL_NOT_EXISTS;
-  }
-
   const secret = process.env.JWT_TOKEN_SECRET;
   // create JWT access token
   const accessToken = JWT.sign(
