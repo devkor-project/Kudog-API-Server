@@ -1,6 +1,7 @@
 /* eslint-disable indent */
 /* eslint-disable import/no-cycle */
 import {
+  BaseEntity,
   Column,
   Entity,
   Index,
@@ -15,7 +16,7 @@ import Notice from '@/entities/Notice';
 @Index('Scrap_scarpId_uindex', ['scarpId'], { unique: true })
 @Index('Scrap_User_userId_fk', ['userId'], {})
 @Entity('Scrap', { schema: 'kudog' })
-class Scrap {
+class Scrap extends BaseEntity {
   @PrimaryGeneratedColumn({ type: 'int', name: 'scarpId' })
   scarpId: number;
 

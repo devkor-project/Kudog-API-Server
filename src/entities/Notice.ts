@@ -1,6 +1,7 @@
 /* eslint-disable indent */
 /* eslint-disable import/no-cycle */
 import {
+  BaseEntity,
   Column,
   Entity,
   Index,
@@ -15,7 +16,7 @@ import Category from '@/entities/Category';
 @Index('Notice_Category_categoryId_fk', ['categoryId'], {})
 @Index('Notice_noticeId_uindex', ['noticeId'], { unique: true })
 @Entity('Notice', { schema: 'kudog' })
-class Notice {
+class Notice extends BaseEntity {
   @PrimaryGeneratedColumn({ type: 'int', name: 'noticeId' })
   noticeId: number;
 
