@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import authRouter from '@/routes/auth';
-import mailRouter from '@/routes/mail';
+import noticeRouter from '@/routes/notice';
 
 const router = Router();
 
@@ -13,6 +13,6 @@ router.get('/', (req, res) => {
   );
 });
 
-router.use('/mail', mailRouter);
 router.use('/auth', authRouter);
+router.use('/notice', noticeRouter);
 export default router;
