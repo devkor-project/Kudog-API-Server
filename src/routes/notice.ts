@@ -3,6 +3,7 @@ import * as notice from '@/controllers/noticeController';
 
 const router = express.Router();
 
+router.get('/', notice.getNotices);
 router.get('/:noticeId', notice.getNotice);
 
 export default router;
