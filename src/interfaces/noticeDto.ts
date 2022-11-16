@@ -7,5 +7,6 @@ export interface noticeDto {
   url: string;
   provider: string;
   viewCount: number;
-  category: { categoryName: string };
+  categoryName: string;
+  isScraped: string;
 }

@@ -1,30 +1,42 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import ServiceResult, * as common from '@/interfaces/common';
 import AppDataSource from '@/config/data-source';
-import logger from '@/config/winston';
 import { noticeDto } from '@/interfaces/noticeDto';
 import Notice from '@/entities/Notice';
+import User from '@/entities/User';
+import Scrap from '@/entities/Scrap';
 
-export const getNotices = async function ():
+export const getNotices = async function (userId: number):
   Promise<ServiceResult<noticeDto[]>> {
   const getNoticesResult = await AppDataSource.getRepository(Notice)
     .createQueryBuilder('n')
-    .leftJoinAndSelect('n.category', 'c')
-    .select(['n.noticeId', 'n.title', 'n.content', 'n.writer', 'n.date', 'n.url', 'n.provider', 'n.viewCount'])
-    .addSelect('c.categoryName')
-    .getMany();
+    .innerJoinAndSelect('n.category', 'c')
+    .leftJoinAndSelect((subQuery) => subQuery.select('noticeId')
+      .from(Scrap, 's')
+      .innerJoin(User, 'u', 's.userId = u.userId')
+      .where('u.userId = :userId', { userId }), 'sc', 'n.noticeId = sc.noticeId')
+    .select(['n.noticeId AS noticeId', 'n.title AS title', 'n.content AS content', 'n.writer AS writer', 'n.date AS date', 'n.url AS url', 'n.provider AS provider', 'n.viewCount AS viewCount'])
+    .addSelect('c.categoryName AS categoryName')
+    .addSelect('case when n.noticeId = sc.noticeId then \'Y\' else \'N\' end as isScraped')
+    .getRawMany();
 
   return { data: getNoticesResult };
 };
 
-export const getNotice = async function (noticeId: number):
+export const getNotice = async function (noticeId: number, userId: number):
   Promise<ServiceResult<noticeDto>> {
   const getNoticeResult = await AppDataSource.getRepository(Notice)
     .createQueryBuilder('n')
-    .leftJoinAndSelect('n.category', 'c')
-    .select(['n.noticeId', 'n.title', 'n.content', 'n.writer', 'n.date', 'n.url', 'n.provider', 'n.viewCount'])
-    .addSelect('c.categoryName')
+    .innerJoinAndSelect('n.category', 'c')
+    .leftJoinAndSelect((subQuery) => subQuery.select('noticeId')
+      .from(Scrap, 's')
+      .innerJoin(User, 'u', 's.userId = u.userId')
+      .where('u.userId = :userId', { userId }), 'sc', 'n.noticeId = sc.noticeId')
+    .select(['n.noticeId AS noticeId', 'n.title AS title', 'n.content AS content', 'n.writer AS writer', 'n.date AS date', 'n.url AS url', 'n.provider AS provider', 'n.viewCount AS viewCount'])
+    .addSelect('c.categoryName AS categoryName')
+    .addSelect('case when n.noticeId = sc.noticeId then \'Y\' else \'N\' end as isScraped')
     .where('n.noticeId = :noticeId', { noticeId })
-    .getOne();
+    .getRawOne();
 
   return { data: getNoticeResult };
 };

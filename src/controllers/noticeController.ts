@@ -12,7 +12,8 @@ export async function getNotices(
   next: NextFunction,
 ) {
   try {
-    const getNoticesResult = await noticeService.getNotices();
+    const { userId } = req;
+    const getNoticesResult = await noticeService.getNotices(userId);
 
     res.send(getNoticesResult);
   } catch (err) {
@@ -32,7 +33,8 @@ export const getNotice = async (
   next: NextFunction,
 ) => {
   try {
-    const getNoticeResult = await noticeService.getNotice(req.params.noticeId);
+    const { userId } = req;
+    const getNoticeResult = await noticeService.getNotice(req.params.noticeId, userId);
     res.send(getNoticeResult);
   } catch (err) {
     next(err);
