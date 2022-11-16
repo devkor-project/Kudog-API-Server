@@ -12,5 +12,6 @@ AppDataSource.initialize()
     logger.info(`environment : ${process.env.NODE_ENV} - API Server Start At Port ${port}`);
   })
   .catch((error) => {
+    logger.error('DB Connection Fail');
     logger.error(error.toString());
   });
