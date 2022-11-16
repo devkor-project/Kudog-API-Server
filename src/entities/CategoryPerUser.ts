@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 /* eslint-disable import/no-cycle */
 import {
   Column, Entity, Index, JoinColumn, ManyToOne, PrimaryGeneratedColumn,
@@ -12,13 +13,13 @@ import Category from '@/entities/Category';
 @Entity('CategoryPerUser', { schema: 'kudog' })
 class CategoryPerUser {
   @PrimaryGeneratedColumn({ type: 'int', name: 'id' })
-    id: number;
+  id: number;
 
   @Column('int', { name: 'userId', nullable: true })
-    userId: number | null;
+  userId: number | null;
 
   @Column('int', { name: 'categoryId', nullable: true })
-    categoryId: number | null;
+  categoryId: number | null;
 
   @ManyToOne(() => Category, (category) => category.categoryPerUsers, {
     onDelete: 'NO ACTION',
@@ -26,7 +27,7 @@ class CategoryPerUser {
   })
 
   @JoinColumn([{ name: 'categoryId', referencedColumnName: 'categoryId' }])
-    category: Category;
+  category: Category;
 
   // eslint-disable-next-line @typescript-eslint/no-unsafe-return
   @ManyToOne(() => User, (user) => user.categoryPerUsers, {
@@ -34,7 +35,7 @@ class CategoryPerUser {
     onUpdate: 'NO ACTION',
   })
   @JoinColumn([{ name: 'userId', referencedColumnName: 'userId' }])
-    user: User;
+  user: User;
 }
 
 export default CategoryPerUser;

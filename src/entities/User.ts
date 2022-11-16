@@ -1,44 +1,50 @@
+/* eslint-disable import/no-cycle */
+/* eslint-disable indent */
 import {
   BaseEntity, Column, Entity, Index, OneToMany, PrimaryGeneratedColumn,
 } from 'typeorm';
-// eslint-disable-next-line import/no-cycle
 import CategoryPerUser from '@/entities/CategoryPerUser';
+import Scrap from '@/entities/Scrap';
 
 @Index('User_email_uindex', ['email'], { unique: true })
 @Index('User_userId_uindex', ['userId'], { unique: true })
 @Entity('User', { schema: 'kudog' })
 class User extends BaseEntity {
   @PrimaryGeneratedColumn({ type: 'int', name: 'userId' })
-    userId: number;
+  userId: number;
 
   @Column('varchar', { name: 'email', unique: true, length: 100 })
-    email: string;
+  email: string;
 
   @Column('varchar', { name: 'receiveEmail', unique: false, length: 100 })
-    receiveEmail: string;
+  receiveEmail: string;
 
   @Column('varchar', { name: 'status', length: 1, default: () => "'Y'" })
-    status: string;
+  status: string;
 
   @Column('text', { name: 'password' })
-    password: string;
+  password: string;
 
   @Column('text', { name: 'refreshToken', nullable: true })
-    refreshToken: string | null;
+  refreshToken: string | null;
 
   @Column('int', { name: 'studentID', unique: true })
-    studentID: number;
+  studentID: number;
 
   @Column('int', { name: 'grade' })
-    grade: number;
+  grade: number;
 
   // TODO : add reference for major? 단과대? enum ?
   @Column('text', { name: 'major' })
-    major: string;
+  major: string;
 
   // eslint-disable-next-line @typescript-eslint/no-unsafe-return
   @OneToMany(() => CategoryPerUser, (categoryPerUser) => categoryPerUser.user)
-    categoryPerUsers: CategoryPerUser[];
+  categoryPerUsers: CategoryPerUser[];
+
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-return
+  @OneToMany(() => Scrap, (scrap) => scrap.user)
+  scraps: Scrap[];
 }
 
 export default User;

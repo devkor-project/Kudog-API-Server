@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 import {
   BaseEntity, Column, Entity, Index, PrimaryGeneratedColumn, CreateDateColumn,
 } from 'typeorm';
@@ -7,16 +8,16 @@ import {
 @Entity('EmailAuth', { schema: 'kudog' })
 class EmailAuth extends BaseEntity {
   @PrimaryGeneratedColumn({ type: 'int', name: 'uid' })
-    uid: number;
+  uid: number;
 
   @Column('varchar', { name: 'email', unique: true, length: 100 })
-    email: string;
+  email: string;
 
   @Column('varchar', { name: 'authCode', length: 6 })
-    authCode: string;
+  authCode: string;
 
   @CreateDateColumn({ name: 'createdAt' })
-    createdAt: Date;
+  createdAt: Date;
 }
 
 export default EmailAuth;
