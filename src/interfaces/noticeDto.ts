@@ -20,3 +20,8 @@ export interface simpleNoticeDto {
   categoryName: string;
   isScraped: string;
 }
+
+export interface getNoticesDto {
+  userId: number;
+  categoryName: string;
+}
