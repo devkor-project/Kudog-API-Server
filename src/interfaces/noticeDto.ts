@@ -10,3 +10,13 @@ export interface noticeDto {
   categoryName: string;
   isScraped: string;
 }
+
+export interface simpleNoticeDto {
+  noticeId: number;
+  title: string;
+  date: string;
+  provider: string;
+  viewCount: number;
+  categoryName: string;
+  isScraped: string;
+}

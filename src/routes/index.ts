@@ -1,6 +1,7 @@
 import { Router } from 'express';
 import authRouter from '@/routes/auth';
 import noticeRouter from '@/routes/notice';
+import scrapRouter from '@/routes/scrap';
 
 const router = Router();
 
@@ -15,4 +16,6 @@ router.get('/', (req, res) => {
 
 router.use('/auth', authRouter);
 router.use('/notices', noticeRouter);
+router.use('/scraps', scrapRouter);
+
 export default router;
