@@ -14,7 +14,7 @@ const AppDataSource = new DataSource({
   password: process.env.DB_PASSWORD,
   database: process.env.DB_DATABASE,
   synchronize: false,
-  logging: true, // 개발용
+  logging: false, // 개발용
   entities: [join(__dirname, '../entities/*{.ts,.js}')],
   migrations: [],
   subscribers: [],
