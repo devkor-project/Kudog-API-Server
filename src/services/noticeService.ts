@@ -25,6 +25,14 @@ export const getNotices = async function (userId: number):
 
 export const getNotice = async function (noticeId: number, userId: number):
   Promise<ServiceResult<noticeDto>> {
+  await AppDataSource.createQueryBuilder()
+    .update(Notice)
+    .set({
+      viewCount: () => 'viewCount + 1',
+    })
+    .where('noticeId = :noticeId', { noticeId })
+    .execute();
+
   const getNoticeResult = await AppDataSource.getRepository(Notice)
     .createQueryBuilder('n')
     .innerJoinAndSelect('n.category', 'c')
