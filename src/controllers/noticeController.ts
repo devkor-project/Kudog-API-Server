@@ -24,8 +24,8 @@ export async function getNotices(
 /** 상세 페이지 API
  * @method get
  * @url /notices/:noticeId
- * @query email
- * @return_data out_date or already exist error
+ * @query noticeId
+ * @return_data one notice data
  */
 export const getNotice = async (
   req: Request<Record<string, never>, Record<string, never>, { noticeId: number }>,
@@ -40,3 +40,23 @@ export const getNotice = async (
     next(err);
   }
 };
+
+/** 인기 공지사항 조회 API
+ * @method get
+ * @url /notices/hot
+ * @return_data notice data sorted by view count
+ */
+export async function getHotNotices(
+  req: Request,
+  res: Response,
+  next: NextFunction,
+) {
+  try {
+    const { userId } = req;
+    const getHotNoticesResult = await noticeService.getHotNotices(userId);
+
+    res.send(getHotNoticesResult);
+  } catch (err) {
+    next(err);
+  }
+}

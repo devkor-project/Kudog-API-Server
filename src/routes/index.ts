@@ -14,5 +14,5 @@ router.get('/', (req, res) => {
 });
 
 router.use('/auth', authRouter);
-router.use('/notice', noticeRouter);
+router.use('/notices', noticeRouter);
 export default router;
