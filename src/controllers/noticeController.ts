@@ -1,5 +1,6 @@
 import { NextFunction, Request, Response } from 'express';
 import * as noticeService from '@/services/noticeService';
+import { getNoticesDto } from '@/interfaces/noticeDto';
 
 /** 메인 화면 API
  * @method get
@@ -13,7 +14,9 @@ export async function getNotices(
 ) {
   try {
     const { userId } = req;
-    const getNoticesResult = await noticeService.getNotices(userId);
+    const categoryName = req.query.categoryName as string;
+    const getNoticesParams: getNoticesDto = { userId, categoryName };
+    const getNoticesResult = await noticeService.getNotices(getNoticesParams);
 
     res.send(getNoticesResult);
   } catch (err) {

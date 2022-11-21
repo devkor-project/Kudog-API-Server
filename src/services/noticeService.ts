@@ -1,13 +1,23 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import ServiceResult, * as common from '@/interfaces/common';
 import AppDataSource from '@/config/data-source';
-import { noticeDto, simpleNoticeDto } from '@/interfaces/noticeDto';
+import { getNoticesDto, noticeDto, simpleNoticeDto } from '@/interfaces/noticeDto';
 import Notice from '@/entities/Notice';
 import User from '@/entities/User';
 import Scrap from '@/entities/Scrap';
+import Category from '@/entities/Category';
+import { CATEGORY_NAME_DOES_NOT_EXISTS } from '@/interfaces/error';
 
-export const getNotices = async function (userId: number):
+export const getNotices = async function (getNoticesParams: getNoticesDto):
   Promise<ServiceResult<simpleNoticeDto[]>> {
+  const { userId, categoryName } = getNoticesParams;
+  const category = await Category.findOne({
+    where: { categoryName },
+  });
+
+  if (!category) {
+    throw CATEGORY_NAME_DOES_NOT_EXISTS;
+  }
   const getNoticesResult = await AppDataSource.getRepository(Notice)
     .createQueryBuilder('n')
     .innerJoinAndSelect('n.category', 'c')
@@ -18,6 +28,7 @@ export const getNotices = async function (userId: number):
     .select(['n.noticeId AS noticeId', 'n.title AS title', 'n.date AS date', 'n.provider AS provider', 'n.viewCount AS viewCount'])
     .addSelect('c.categoryName AS categoryName')
     .addSelect('case when n.noticeId = sc.noticeId then \'Y\' else \'N\' end as isScraped')
+    .where('categoryName = :categoryName', { categoryName })
     .getRawMany();
 
   return { data: getNoticesResult };

@@ -28,6 +28,8 @@ export const NOT_KOREA = new ValidationError(2005, 'domain of email must be @kor
 export const INVAILD_WHETHER_SCRAP = new ValidationError(2006, 'whetherScrap must be Y or N');
 export const SCRAP_NOT_EXISTS = new ValidationError(2007, 'scrap does not exist');
 
+export const CATEGORY_NAME_DOES_NOT_EXISTS = new ValidationError(2008, 'categoryName does not exists');
+
 const DBError = customErrorFactory(
   function DBError(code: number, message: string) {
     this.message = message;
