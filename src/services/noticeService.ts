@@ -1,13 +1,13 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import ServiceResult, * as common from '@/interfaces/common';
 import AppDataSource from '@/config/data-source';
-import { noticeDto } from '@/interfaces/noticeDto';
+import { noticeDto, simpleNoticeDto } from '@/interfaces/noticeDto';
 import Notice from '@/entities/Notice';
 import User from '@/entities/User';
 import Scrap from '@/entities/Scrap';
 
 export const getNotices = async function (userId: number):
-  Promise<ServiceResult<noticeDto[]>> {
+  Promise<ServiceResult<simpleNoticeDto[]>> {
   const getNoticesResult = await AppDataSource.getRepository(Notice)
     .createQueryBuilder('n')
     .innerJoinAndSelect('n.category', 'c')
@@ -15,7 +15,7 @@ export const getNotices = async function (userId: number):
       .from(Scrap, 's')
       .innerJoin(User, 'u', 's.userId = u.userId')
       .where('u.userId = :userId', { userId }), 'sc', 'n.noticeId = sc.noticeId')
-    .select(['n.noticeId AS noticeId', 'n.title AS title', 'n.content AS content', 'n.writer AS writer', 'n.date AS date', 'n.url AS url', 'n.provider AS provider', 'n.viewCount AS viewCount'])
+    .select(['n.noticeId AS noticeId', 'n.title AS title', 'n.date AS date', 'n.provider AS provider', 'n.viewCount AS viewCount'])
     .addSelect('c.categoryName AS categoryName')
     .addSelect('case when n.noticeId = sc.noticeId then \'Y\' else \'N\' end as isScraped')
     .getRawMany();
@@ -50,7 +50,7 @@ export const getNotice = async function (noticeId: number, userId: number):
 };
 
 export const getHotNotices = async function (userId: number):
-  Promise<ServiceResult<noticeDto[]>> {
+  Promise<ServiceResult<simpleNoticeDto[]>> {
   const getHotNoticesResult = await AppDataSource.getRepository(Notice)
     .createQueryBuilder('n')
     .innerJoinAndSelect('n.category', 'c')
@@ -58,7 +58,7 @@ export const getHotNotices = async function (userId: number):
       .from(Scrap, 's')
       .innerJoin(User, 'u', 's.userId = u.userId')
       .where('u.userId = :userId', { userId }), 'sc', 'n.noticeId = sc.noticeId')
-    .select(['n.noticeId AS noticeId', 'n.title AS title', 'n.content AS content', 'n.writer AS writer', 'n.date AS date', 'n.url AS url', 'n.provider AS provider', 'n.viewCount AS viewCount'])
+    .select(['n.noticeId AS noticeId', 'n.title AS title', 'n.date AS date', 'n.provider AS provider', 'n.viewCount AS viewCount'])
     .addSelect('c.categoryName AS categoryName')
     .addSelect('case when n.noticeId = sc.noticeId then \'Y\' else \'N\' end as isScraped')
     .orderBy('n.viewCount', 'DESC')
