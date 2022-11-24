@@ -1,7 +1,7 @@
 import { NextFunction, Request, Response } from 'express';
 import * as authService from '@/services/authService';
 import { logInResultDto, logInUserDto, userSignupDto } from '@/interfaces/userDto';
-import ServiceResult from '@/interfaces/common';
+import ServiceResult, { mailAuthCodeType } from '@/interfaces/common';
 import logger from '@/config/winston';
 /**
  * 로그인 API
@@ -32,12 +32,15 @@ export async function login(
  * @return_data out_date or already exist error
  */
 export const authMailReq = async (
-  req: Request<Record<string, never>, Record<string, never>, { email: string }>,
+  req: Request<Record<string, never>,
+    Record<string, never>,
+    { email: string, type: mailAuthCodeType }>,
   res: Response,
   next: NextFunction,
 ) => {
   try {
-    const code = await authService.requestEmailAuth(req.body.email);
+    const { email, type } = req.body;
+    const code = await authService.requestEmailAuth(email, type);
     res.send(code);
   } catch (err) {
     next(err);
@@ -59,6 +62,7 @@ export const authMail = async (
     const data = await authService.getEmailAuthCode(req.body.email);
     const authCode = data.data;
     if (req.body.code === authCode) {
+      await authService.checkAuth(req.body.email);
       res.json({ success: false });
     } else {
       res.json({ success: true });
@@ -111,3 +115,16 @@ export async function getAccessToken(
     next(err);
   }
 }
+
+export const findPwd = async (
+  req: Request<Record<string, never>, Record<string, never>, { email: string, pwd: string }>,
+  res: Response,
+  next: NextFunction,
+) => {
+  try {
+    await authService.changePwd(req.body.email, req.body.pwd);
+    res.json(true);
+  } catch (err) {
+    next(err);
+  }
+};

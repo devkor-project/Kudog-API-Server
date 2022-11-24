@@ -16,6 +16,9 @@ class EmailAuth extends BaseEntity {
   @Column('varchar', { name: 'authCode', length: 6 })
   authCode: string;
 
+  @Column('bool', { name: 'isAuthenticated', default: false })
+  isAuthenticated: boolean;
+
   @CreateDateColumn({ name: 'createdAt' })
   createdAt: Date;
 }
