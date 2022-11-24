@@ -4,7 +4,8 @@
 import JWT from 'jsonwebtoken';
 import { hash, verify } from 'argon2';
 import {
-  EMAIL_NOT_EXISTS, NOT_KOREA, SIGNUP_USER_ALREADY_EXISTS, INVALID_FORMAT, INVALID_PASSWORD,
+  EMAIL_NOT_EXISTS, NOT_KOREA, SIGNUP_USER_ALREADY_EXISTS,
+  INVALID_FORMAT, INVALID_PASSWORD, EXPIRED_CODE,
 } from '@/interfaces/error';
 import User from '@/entities/User';
 import EmailAuth from '@/entities/EmailAuth';
@@ -70,6 +71,20 @@ export const login = async function (userData: logInUserDto):
   return { data: logInResult };
 };
 
+export const deleteExpiredCodes = async () => {
+  try {
+    const now = new Date();
+    now.setHours(new Date().getHours() - 1);
+    await AppDataSource.createQueryBuilder()
+      .delete()
+      .from(EmailAuth)
+      .where('createdAt < :now', { now })
+      .execute();
+  } catch (err) {
+    logger.error(err);
+  }
+};
+
 export const requestEmailAuth = async (email: string) => {
   const regex = /[a-z0-9]+@korea.ac.kr/;
   if (!regex.test(email)) {
@@ -91,15 +106,20 @@ export const requestEmailAuth = async (email: string) => {
     .values({
       email,
       authCode: code,
-      // expiresAt:
     })
     .execute();
-  // TODO : scheduler
+  // send mail
+
   return { data: code };
 };
 
 export const getEmailAuthCode = async (email: string) => {
   const mail = await EmailAuth.findOne({ where: { email } });
+  const now = new Date();
+  now.setHours(new Date().getHours() - 1);
+  if (mail.createdAt < now) {
+    throw EXPIRED_CODE;
+  }
   if (!mail) {
     throw EMAIL_NOT_EXISTS;
   }

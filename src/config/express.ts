@@ -4,8 +4,15 @@ import cors from 'cors';
 import methodOverride from 'method-override';
 import router from '@/routes/index';
 import errorHandler from '@/middleware/error';
+import schedule from 'node-schedule';
+import { deleteExpiredCodes } from '@/services/authService';
 
 const exp = () => {
+  const rule = new schedule.RecurrenceRule();
+  rule.hour = 0;
+  rule.minute = 0;
+  schedule.scheduleJob(rule, deleteExpiredCodes);
+
   const app = express();
 
   app
