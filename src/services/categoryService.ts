@@ -15,7 +15,7 @@ export const getCategoryList = async (userId: number): Promise<ServiceResult<cat
       categoryName,
     };
   });
-  logger.log('info', 'get category list success', userId, result);
+  logger.info('get category list success', userId, result);
   return {
     data: result,
   };
@@ -28,7 +28,7 @@ export const subscribeCategory = async (userId: number, categoryId: number):
   });
   if (category) {
     await category.remove();
-    logger.log('info', 'remove category success', userId, categoryId);
+    logger.info('remove category success', userId, categoryId);
     return {
       data: 'removed',
     };
