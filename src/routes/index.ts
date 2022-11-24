@@ -2,6 +2,7 @@ import { Router } from 'express';
 import authRouter from '@/routes/auth';
 import noticeRouter from '@/routes/notice';
 import scrapRouter from '@/routes/scrap';
+import categoryRouter from '@/routes/category';
 
 const router = Router();
 
@@ -17,5 +18,6 @@ router.get('/', (req, res) => {
 router.use('/auth', authRouter);
 router.use('/notices', noticeRouter);
 router.use('/scraps', scrapRouter);
+router.use('/category', categoryRouter);
 
 export default router;

@@ -1,6 +1,7 @@
 /* eslint-disable indent */
 /* eslint-disable import/no-cycle */
 import {
+  BaseEntity,
   Column, Entity, Index, JoinColumn, ManyToOne, PrimaryGeneratedColumn,
 } from 'typeorm';
 
@@ -11,7 +12,7 @@ import Category from '@/entities/Category';
 @Index('CategoryPerUser_Category_categoryId_fk', ['categoryId'], {})
 @Index('CategoryPerUser_User_userId_fk', ['userId'], {})
 @Entity('CategoryPerUser', { schema: 'kudog' })
-class CategoryPerUser {
+class CategoryPerUser extends BaseEntity {
   @PrimaryGeneratedColumn({ type: 'int', name: 'id' })
   id: number;
 

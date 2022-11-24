@@ -28,10 +28,11 @@ export const EXPIRED_CODE = new ValidationError(2006, 'expired code');
 export const CODE_ALREADY_EXISTS = new ValidationError(2007, 'code already exists');
 export const CODE_NOT_AUTHED = new ValidationError(2008, 'code is not authed');
 
-export const INVAILD_WHETHER_SCRAP = new ValidationError(2006, 'whetherScrap must be Y or N');
-export const SCRAP_NOT_EXISTS = new ValidationError(2007, 'scrap does not exist');
+export const INVAILD_WHETHER_SCRAP = new ValidationError(3001, 'whetherScrap must be Y or N');
+export const SCRAP_NOT_EXISTS = new ValidationError(3002, 'scrap does not exist');
 
-export const CATEGORY_NAME_DOES_NOT_EXISTS = new ValidationError(2008, 'categoryName does not exists');
+export const CATEGORY_NAME_DOES_NOT_EXISTS = new ValidationError(4001, 'categoryName does not exists');
+export const ALREADY_SUBSCRIBED = new ValidationError(4002, 'already subscribed');
 
 const DBError = customErrorFactory(
   function DBError(code: number, message: string) {
