@@ -24,3 +24,12 @@ export interface userSignupDto {
   grade: number;
   major: string;
 }
+
+export interface userInfoDto {
+  // name: string;
+  email: string;
+  receiveEmail: string;
+  studentID: number;
+  grade: number;
+  major: string;
+}
