@@ -1,4 +1,6 @@
 interface ServiceResult<T = undefined> {
-    data?: T;
-  }
+  data?: T;
+}
+export type mailAuthCodeType = 'signup' | 'findPwd';
+
 export default ServiceResult;
