@@ -63,3 +63,22 @@ export async function getHotNotices(
     next(err);
   }
 }
+
+/** kudog 공지사항 조회 API
+ * @method get
+ * @url /notices/admin
+ * @return_data notice data sorted by view count
+ */
+export async function getAdminNotices(
+  req: Request,
+  res: Response,
+  next: NextFunction,
+) {
+  try {
+    const getAdminNoticesResult = await noticeService.getAdminNotices();
+
+    res.send(getAdminNoticesResult);
+  } catch (err) {
+    next(err);
+  }
+}

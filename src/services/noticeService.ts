@@ -7,6 +7,7 @@ import User from '@/entities/User';
 import Scrap from '@/entities/Scrap';
 import Category from '@/entities/Category';
 import { CATEGORY_NAME_DOES_NOT_EXISTS } from '@/interfaces/error';
+import AdminNotice from '@/entities/AdminNotice';
 
 export const getNotices = async function (getNoticesParams: getNoticesDto):
   Promise<ServiceResult<simpleNoticeDto[]>> {
@@ -74,6 +75,16 @@ export const getHotNotices = async function (userId: number):
     .addSelect('case when n.noticeId = sc.noticeId then \'Y\' else \'N\' end as isScraped')
     .orderBy('n.viewCount', 'DESC')
     .limit(20)
+    .getRawMany();
+
+  return { data: getHotNoticesResult };
+};
+
+export const getAdminNotices = async function ():
+  Promise<ServiceResult<simpleNoticeDto[]>> {
+  const getHotNoticesResult = await AppDataSource.getRepository(AdminNotice)
+    .createQueryBuilder('a')
+    .select(['a.adminNoticeId as adminNoticeId', 'a.title as title', 'a.content as content', 'a.writer as writer', 'a.createdAt as createdAt'])
     .getRawMany();
 
   return { data: getHotNoticesResult };

@@ -7,5 +7,6 @@ const router = express.Router();
 router.get('/details/:noticeId', TokenValidation, notice.getNotice);
 router.get('/hot', TokenValidation, notice.getHotNotices);
 router.get('/', TokenValidation, notice.getNotices);
+router.get('/admin', notice.getAdminNotices);
 
 export default router;
