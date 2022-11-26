@@ -2,6 +2,8 @@ import ServiceResult from '@/interfaces/common';
 import logger from '@/config/winston';
 import CategoryPerUser from '@/entities/CategoryPerUser';
 import { categoryDto } from '@/interfaces/categoryDto';
+import AppDataSource from '@/config/data-source';
+import Category from '@/entities/Category';
 
 export const getCategoryList = async (userId: number): Promise<ServiceResult<categoryDto[]>> => {
   const categoryList = await CategoryPerUser.find({
@@ -40,5 +42,16 @@ export const subscribeCategory = async (userId: number, categoryId: number):
   logger.log('info', 'add category success', userId, categoryId);
   return {
     data: 'subscribed',
+  };
+};
+
+export const getAllCategoryList = async (): Promise<ServiceResult<categoryDto[]>> => {
+  const categoryList = await AppDataSource.getRepository(Category)
+    .createQueryBuilder('c')
+    .select(['c.categoryId as categoryId', 'c.categoryName as categoryName'])
+    .getRawMany();
+
+  return {
+    data: categoryList,
   };
 };

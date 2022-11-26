@@ -25,3 +25,16 @@ export const subscribeCategory = async (
     next(err);
   }
 };
+
+export const getAllCategoryList = async (
+  req: Request,
+  res: Response,
+  next: NextFunction,
+) => {
+  try {
+    const categoryList = await categoryService.getAllCategoryList();
+    res.send(categoryList);
+  } catch (err) {
+    next(err);
+  }
+};
