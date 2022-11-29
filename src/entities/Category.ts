@@ -23,5 +23,8 @@ class Category extends BaseEntity {
 
   @OneToMany(() => Notice, (notice) => notice.category)
   notices: Notice[];
+
+  @Column('varchar', { name: 'provider', length: 30 })
+  provider: string;
 }
 export default Category;

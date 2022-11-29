@@ -12,6 +12,8 @@ export const getUserInfo = async (userId: number):
   }
 
   const userInfo: userInfoDto = {
+    name: user.name,
+    status: user.status,
     email: user.email,
     receiveEmail: user.receiveEmail,
     studentID: user.studentID,
@@ -26,7 +28,7 @@ export const getUserInfo = async (userId: number):
 export const modifyUserInfo = async (userId: number, modifiedInfo: userInfoDto):
   Promise<ServiceResult<userInfoDto>> => {
   const {
-    email, receiveEmail, studentID, grade, major,
+    email, receiveEmail, studentID, grade, major, name, status,
   } = modifiedInfo;
   const user = await User.findOne({ where: { userId } });
   if (!user) {
@@ -37,6 +39,9 @@ export const modifyUserInfo = async (userId: number, modifiedInfo: userInfoDto):
   user.studentID = studentID;
   user.grade = grade;
   user.major = major;
+  user.name = name;
+  user.status = status;
+
   await user.save();
   const userInfo: userInfoDto = {
     email: user.email,
@@ -44,6 +49,8 @@ export const modifyUserInfo = async (userId: number, modifiedInfo: userInfoDto):
     studentID: user.studentID,
     grade: user.grade,
     major: user.major,
+    name: user.name,
+    status: user.status,
   };
 
   logger.info('modify user information success', userId, userInfo);

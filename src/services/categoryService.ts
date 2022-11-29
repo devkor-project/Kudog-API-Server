@@ -9,10 +9,11 @@ export const getCategoryList = async (userId: number): Promise<ServiceResult<cat
   });
   const result = categoryList.map((category) => {
     const { categoryId } = category;
-    const { categoryName } = category.category;
+    const { categoryName, provider } = category.category;
     return {
       categoryId,
       categoryName,
+      provider,
     };
   });
   logger.info('get category list success', userId, result);

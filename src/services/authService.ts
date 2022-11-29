@@ -165,6 +165,7 @@ export const userSignUp = async (user: userSignupDto):
     .insert()
     .into(User)
     .values({
+      name: user.name,
       email: user.email,
       receiveEmail: user.email,
       password: hashedPwd,
