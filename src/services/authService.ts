@@ -13,6 +13,7 @@ import { logInResultDto, logInUserDto, userSignupDto } from '@/interfaces/userDt
 import AppDataSource from '@/config/data-source';
 import ServiceResult, { mailAuthCodeType } from '@/interfaces/common';
 import logger from '@/config/winston';
+import axios from 'axios';
 
 export const login = async function (userData: logInUserDto):
   Promise<ServiceResult<logInResultDto>> {
@@ -105,6 +106,10 @@ export const requestEmailAuth = async (email: string, type: mailAuthCodeType) =>
   const authCode = Math.floor(Math.random() * 1000000);
   const codeString = authCode.toString();
   const code = '0'.repeat(6 - codeString.length).concat(codeString);
+  const res = await axios.post(`${process.env.MAILER_URL}/auth`, { email, code });
+  if (res.data !== 'success') {
+    throw Error('unknown error');
+  }
 
   await AppDataSource
     .createQueryBuilder()
@@ -115,7 +120,6 @@ export const requestEmailAuth = async (email: string, type: mailAuthCodeType) =>
       authCode: code,
     })
     .execute();
-  // send mail
 
   return { data: code };
 };
