@@ -20,7 +20,7 @@ class User extends BaseEntity {
   receiveEmail: string;
 
   @Column('varchar', { name: 'status', length: 1, default: () => "'Y'" })
-  status: string;
+  status: 'Y' | 'N';
 
   @Column('text', { name: 'password' })
   password: string;
@@ -33,6 +33,9 @@ class User extends BaseEntity {
 
   @Column('int', { name: 'grade' })
   grade: number;
+
+  @Column('varchar', { name: 'name', length: 30 })
+  name: string;
 
   // TODO : add reference for major? 단과대? enum ?
   @Column('text', { name: 'major' })

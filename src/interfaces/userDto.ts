@@ -22,11 +22,13 @@ export interface userSignupDto {
   password: string;
   studentID: number;
   grade: number;
+  name: string;
   major: string;
 }
 
 export interface userInfoDto {
-  // name: string;
+  name: string;
+  status: 'Y' | 'N';
   email: string;
   receiveEmail: string;
   studentID: number;

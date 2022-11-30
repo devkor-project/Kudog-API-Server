@@ -13,6 +13,7 @@ import { logInResultDto, logInUserDto, userSignupDto } from '@/interfaces/userDt
 import AppDataSource from '@/config/data-source';
 import ServiceResult, { mailAuthCodeType } from '@/interfaces/common';
 import logger from '@/config/winston';
+import axios from 'axios';
 
 export const login = async function (userData: logInUserDto):
   Promise<ServiceResult<logInResultDto>> {
@@ -74,7 +75,7 @@ export const login = async function (userData: logInUserDto):
 export const deleteExpiredCodes = async () => {
   try {
     const now = new Date();
-    now.setHours(new Date().getHours() - 1);
+    now.setHours(new Date().getHours() - 10);
     await AppDataSource.createQueryBuilder()
       .delete()
       .from(EmailAuth)
@@ -105,6 +106,10 @@ export const requestEmailAuth = async (email: string, type: mailAuthCodeType) =>
   const authCode = Math.floor(Math.random() * 1000000);
   const codeString = authCode.toString();
   const code = '0'.repeat(6 - codeString.length).concat(codeString);
+  const res = await axios.post(`${process.env.MAILER_URL}/auth`, { email, code });
+  if (res.data !== 'success') {
+    throw Error('unknown error');
+  }
 
   await AppDataSource
     .createQueryBuilder()
@@ -113,9 +118,9 @@ export const requestEmailAuth = async (email: string, type: mailAuthCodeType) =>
     .values({
       email,
       authCode: code,
+      createdAt: new Date(),
     })
     .execute();
-  // send mail
 
   return { data: code };
 };
@@ -123,7 +128,7 @@ export const requestEmailAuth = async (email: string, type: mailAuthCodeType) =>
 export const getEmailAuthCode = async (email: string) => {
   const mail = await EmailAuth.findOne({ where: { email } });
   const now = new Date();
-  now.setHours(new Date().getHours() - 1);
+  now.setHours(new Date().getHours() - 10);
   if (mail.createdAt < now) {
     throw EXPIRED_CODE;
   }
@@ -165,6 +170,7 @@ export const userSignUp = async (user: userSignupDto):
     .insert()
     .into(User)
     .values({
+      name: user.name,
       email: user.email,
       receiveEmail: user.email,
       password: hashedPwd,
