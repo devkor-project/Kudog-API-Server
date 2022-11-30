@@ -63,9 +63,9 @@ export const authMail = async (
     const authCode = data.data;
     if (req.body.code === authCode) {
       await authService.checkAuth(req.body.email);
-      res.json({ success: false });
-    } else {
       res.json({ success: true });
+    } else {
+      res.json({ success: false });
     }
   } catch (err) {
     next(err);

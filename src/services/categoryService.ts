@@ -1,9 +1,25 @@
 import ServiceResult from '@/interfaces/common';
 import logger from '@/config/winston';
 import CategoryPerUser from '@/entities/CategoryPerUser';
+import Category from '@/entities/Category';
 import { categoryDto } from '@/interfaces/categoryDto';
 import AppDataSource from '@/config/data-source';
-import Category from '@/entities/Category';
+
+export const getAllCategories = async (): Promise<ServiceResult<categoryDto[]>> => {
+  const categoryList = await Category.find();
+  const result = categoryList.map((category) => {
+    const { categoryId, categoryName, provider } = category;
+    return {
+      categoryId,
+      categoryName,
+      provider,
+    };
+  });
+  logger.info('get category list success', result);
+  return {
+    data: result,
+  };
+};
 
 export const getCategoryList = async (userId: number): Promise<ServiceResult<categoryDto[]>> => {
   const categoryList = await CategoryPerUser.find({
@@ -11,10 +27,11 @@ export const getCategoryList = async (userId: number): Promise<ServiceResult<cat
   });
   const result = categoryList.map((category) => {
     const { categoryId } = category;
-    const { categoryName } = category.category;
+    const { categoryName, provider } = category.category;
     return {
       categoryId,
       categoryName,
+      provider,
     };
   });
   logger.info('get category list success', userId, result);

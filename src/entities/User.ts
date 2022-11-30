@@ -20,7 +20,7 @@ class User extends BaseEntity {
   receiveEmail: string;
 
   @Column('varchar', { name: 'status', length: 1, default: () => "'Y'" })
-  status: string;
+  status: 'Y' | 'N';
 
   @Column('text', { name: 'password' })
   password: string;
