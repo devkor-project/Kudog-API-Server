@@ -2,6 +2,7 @@ import ServiceResult from '@/interfaces/common';
 import logger from '@/config/winston';
 import CategoryPerUser from '@/entities/CategoryPerUser';
 import Category from '@/entities/Category';
+import { In } from 'typeorm';
 import { categoryDto } from '@/interfaces/categoryDto';
 import AppDataSource from '@/config/data-source';
 
@@ -58,4 +59,21 @@ export const subscribeCategory = async (userId: number, categoryId: number):
   return {
     data: 'subscribed',
   };
+};
+
+export const subscribeCategories = async (
+  userId: number,
+  removeCatIds: number[],
+  newCatIds: number[],
+):
+  Promise<ServiceResult<boolean>> => {
+  await CategoryPerUser.delete({ userId, categoryId: In(removeCatIds) });
+  const newCategories = newCatIds.map((categoryId) => {
+    const category = new CategoryPerUser();
+    category.userId = userId;
+    category.categoryId = categoryId;
+    return category;
+  });
+  await CategoryPerUser.save(newCategories);
+  return { data: true };
 };
