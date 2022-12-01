@@ -26,13 +26,13 @@ export const subscribeCategory = async (
   }
 };
 
-export const getAllCategoryList = async (
+export const getAllCategories = async (
   req: Request,
   res: Response,
   next: NextFunction,
 ) => {
   try {
-    const categoryList = await categoryService.getAllCategoryList();
+    const categoryList = await categoryService.getAllCategories();
     res.send(categoryList);
   } catch (err) {
     next(err);
