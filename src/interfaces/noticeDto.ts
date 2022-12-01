@@ -23,5 +23,5 @@ export interface simpleNoticeDto {
 
 export interface getNoticesDto {
   userId: number;
-  categoryName: string;
+  categoryId: number;
 }

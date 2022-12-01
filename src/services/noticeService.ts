@@ -11,9 +11,9 @@ import AdminNotice from '@/entities/AdminNotice';
 
 export const getNotices = async function (getNoticesParams: getNoticesDto):
   Promise<ServiceResult<simpleNoticeDto[]>> {
-  const { userId, categoryName } = getNoticesParams;
+  const { userId, categoryId } = getNoticesParams;
   const category = await Category.findOne({
-    where: { categoryName },
+    where: { categoryId },
   });
 
   if (!category) {
@@ -29,7 +29,7 @@ export const getNotices = async function (getNoticesParams: getNoticesDto):
     .select(['n.noticeId AS noticeId', 'n.title AS title', 'n.date AS date', 'n.provider AS provider', 'n.viewCount AS viewCount'])
     .addSelect('c.categoryName AS categoryName')
     .addSelect('case when n.noticeId = sc.noticeId then \'Y\' else \'N\' end as isScraped')
-    .where('categoryName = :categoryName', { categoryName })
+    .where('n.categoryId = :categoryId', { categoryId })
     .getRawMany();
 
   return { data: getNoticesResult };
