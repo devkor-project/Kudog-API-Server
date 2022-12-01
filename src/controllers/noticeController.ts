@@ -14,8 +14,8 @@ export async function getNotices(
 ) {
   try {
     const { userId } = req;
-    const categoryName = req.query.categoryName as string;
-    const getNoticesParams: getNoticesDto = { userId, categoryName };
+    const categoryId = Number(req.query.categoryId);
+    const getNoticesParams: getNoticesDto = { userId, categoryId };
     const getNoticesResult = await noticeService.getNotices(getNoticesParams);
 
     res.send(getNoticesResult);
