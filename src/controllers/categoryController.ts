@@ -38,3 +38,31 @@ export const getAllCategories = async (
     next(err);
   }
 };
+
+export const categoryByProvider = async (
+  req: Request,
+  res: Response,
+  next: NextFunction,
+) => {
+  try {
+    const categoryList = await categoryService.getAllCategories();
+    const list = categoryList.data;
+    const result: Record<string, Array<{ categoryId: number, categoryName: string }>> = {};
+    list.forEach((category) => {
+      if (result[category.provider]) {
+        result[category.provider].push({
+          categoryId: category.categoryId,
+          categoryName: category.categoryName,
+        });
+      } else {
+        result[category.provider] = [{
+          categoryId: category.categoryId,
+          categoryName: category.categoryName,
+        }];
+      }
+    });
+    res.json({ data: result });
+  } catch (err) {
+    next(err);
+  }
+};
