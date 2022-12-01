@@ -129,11 +129,11 @@ export const getEmailAuthCode = async (email: string) => {
   const mail = await EmailAuth.findOne({ where: { email } });
   const now = new Date();
   now.setHours(new Date().getHours() - 10);
-  if (mail.createdAt < now) {
-    throw EXPIRED_CODE;
-  }
   if (!mail) {
     throw EMAIL_NOT_EXISTS;
+  }
+  if (mail.createdAt < now) {
+    throw EXPIRED_CODE;
   }
   return {
     data: mail.authCode,

@@ -25,6 +25,22 @@ export const subscribeCategory = async (
     next(err);
   }
 };
+export const subscribeCategories = async (
+  req: Request<Record<string, never>, Record<string, never>, { categoryIds: number[], type: 'remove' | 'subscribe' }>,
+  res: Response,
+  next: NextFunction,
+) => {
+  try {
+    const result = await categoryService.subscribeCategories(
+      req.userId,
+      req.body.categoryIds,
+      req.body.type,
+    );
+    res.send(result);
+  } catch (err) {
+    next(err);
+  }
+};
 
 export const getAllCategories = async (
   req: Request,
