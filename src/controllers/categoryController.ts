@@ -27,13 +27,13 @@ export const subscribeCategory = async (
 };
 export const subscribeCategories = async (
   req: Request<Record<string, never>, Record<string, never>,
-    { userId: number, removeCatIds: number[], newCatIds: number[] }>,
+    { removeCatIds: number[], newCatIds: number[] }>,
   res: Response,
   next: NextFunction,
 ) => {
   try {
     const result = await categoryService.subscribeCategories(
-      req.body.userId,
+      req.userId,
       req.body.removeCatIds,
       req.body.newCatIds,
     );
