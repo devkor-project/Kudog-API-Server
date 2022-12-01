@@ -26,15 +26,16 @@ export const subscribeCategory = async (
   }
 };
 export const subscribeCategories = async (
-  req: Request<Record<string, never>, Record<string, never>, { categoryIds: number[], type: 'remove' | 'subscribe' }>,
+  req: Request<Record<string, never>, Record<string, never>,
+    { userId: number, removeCatIds: number[], newCatIds: number[] }>,
   res: Response,
   next: NextFunction,
 ) => {
   try {
     const result = await categoryService.subscribeCategories(
-      req.userId,
-      req.body.categoryIds,
-      req.body.type,
+      req.body.userId,
+      req.body.removeCatIds,
+      req.body.newCatIds,
     );
     res.send(result);
   } catch (err) {

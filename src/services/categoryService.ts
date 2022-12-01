@@ -62,18 +62,19 @@ export const subscribeCategory = async (userId: number, categoryId: number):
   };
 };
 
-export const subscribeCategories = async (userId: number, categoryIds: number[], type: 'subscribe' | 'remove'):
-  Promise<ServiceResult<string>> => {
-  if (type === 'remove') {
-    await CategoryPerUser.delete({ userId, categoryId: In(categoryIds) });
-    return { data: 'removed' };
-  }
-  const newCategories = categoryIds.map((categoryId) => {
+export const subscribeCategories = async (
+  userId: number,
+  removeCatIds: number[],
+  newCatIds: number[],
+):
+  Promise<ServiceResult<boolean>> => {
+  await CategoryPerUser.delete({ userId, categoryId: In(removeCatIds) });
+  const newCategories = newCatIds.map((categoryId) => {
     const category = new CategoryPerUser();
     category.userId = userId;
     category.categoryId = categoryId;
     return category;
   });
   await CategoryPerUser.save(newCategories);
-  return { data: 'subscribed' };
+  return { data: true };
 };
