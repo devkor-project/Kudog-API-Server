@@ -28,14 +28,14 @@ class User extends BaseEntity {
   @Column('text', { name: 'refreshToken', nullable: true })
   refreshToken: string | null;
 
+  @Column('varchar', { name: 'name', unique: false, length: 50 })
+  name: string;
+
   @Column('int', { name: 'studentID', unique: true })
   studentID: number;
 
   @Column('int', { name: 'grade' })
   grade: number;
-
-  @Column('varchar', { name: 'name', length: 30 })
-  name: string;
 
   // TODO : add reference for major? 단과대? enum ?
   @Column('text', { name: 'major' })

@@ -63,3 +63,43 @@ export async function getHotNotices(
     next(err);
   }
 }
+
+/** kudog 공지사항 조회 API
+ * @method get
+ * @url /notices/admin
+ * @return_data admin notice data
+ */
+export async function getAdminNotices(
+  req: Request,
+  res: Response,
+  next: NextFunction,
+) {
+  try {
+    const getAdminNoticesResult = await noticeService.getAdminNotices();
+
+    res.send(getAdminNoticesResult);
+  } catch (err) {
+    next(err);
+  }
+}
+
+/** 공지사항 검색 API
+ * @method get
+ * @url /notices/search
+ * @return_data notices data
+ */
+export async function searchNotices(
+  req: Request,
+  res: Response,
+  next: NextFunction,
+) {
+  try {
+    const { userId } = req;
+    const keyword = req.query.keyword as string;
+    const getNoticesResult = await noticeService.searchNotices(userId, keyword);
+
+    res.send(getNoticesResult);
+  } catch (err) {
+    next(err);
+  }
+}
