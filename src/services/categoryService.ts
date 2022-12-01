@@ -28,7 +28,7 @@ export const getCategoryList = async (userId: number): Promise<ServiceResult<cat
   const result = await AppDataSource.getRepository(CategoryPerUser)
     .createQueryBuilder('cp')
     .innerJoinAndSelect('cp.category', 'c')
-    .select(['c.categoryId', 'c.categoryName', 'c.provider'])
+    .select(['c.categoryId AS categoryId', 'c.categoryName AS categoryName', 'c.provider AS provider'])
     .where('cp.userId = :userId', { userId })
     .getRawMany();
 
