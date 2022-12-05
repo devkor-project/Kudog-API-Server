@@ -30,7 +30,7 @@ export async function getScraps(
  */
 export async function updateScrap(
   // eslint-disable-next-line max-len
-  req: Request<Record<string, never>, Record<number, never>, { whetherScrap: string, noticeId: number }>,
+  req: Request<Record<string, never>, Record<number, never>, { whetherScrap: boolean, noticeId: number }>,
   res: Response,
   next: NextFunction,
 ) {
