@@ -1,7 +1,9 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import ServiceResult, * as common from '@/interfaces/common';
 import AppDataSource from '@/config/data-source';
-import { getNoticesDto, noticeDto, simpleNoticeDto } from '@/interfaces/noticeDto';
+import {
+  getNoticesDto, noticeDto, searchNoticesDto, simpleNoticeDto,
+} from '@/interfaces/noticeDto';
 import Notice from '@/entities/Notice';
 import User from '@/entities/User';
 import Scrap from '@/entities/Scrap';
@@ -90,8 +92,11 @@ export const getAdminNotices = async function ():
   return { data: getHotNoticesResult };
 };
 
-export const searchNotices = async function (userId: number, keyword: string):
+export const searchNotices = async function (searchParams: searchNoticesDto):
   Promise<ServiceResult<simpleNoticeDto[]>> {
+  const {
+    userId, keyword, categoryName, provider,
+  } = searchParams;
   const searchNoticesResult = await AppDataSource.getRepository(Notice)
     .createQueryBuilder('n')
     .innerJoinAndSelect('n.category', 'c')
@@ -103,6 +108,8 @@ export const searchNotices = async function (userId: number, keyword: string):
     .addSelect('c.categoryName AS categoryName')
     .addSelect('case when n.noticeId = sc.noticeId then \'Y\' else \'N\' end as isScraped')
     .where('title like :word', { word: `%${keyword}%` })
+    .andWhere('c.categoryName = :categoryName', { categoryName })
+    .andWhere('c.provider = :provider', { provider })
     .getRawMany();
 
   return { data: searchNoticesResult };
