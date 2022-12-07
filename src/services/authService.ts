@@ -93,6 +93,9 @@ export const requestEmailAuth = async (email: string, type: mailAuthCodeType) =>
   }
   const existingMail = await EmailAuth.findOne({ where: { email } });
   const userMail = await User.findOne({ where: { email } });
+  if (existingMail.isAuthenticated === true) {
+    return { data: 'already authenticated' };
+  }
   if (existingMail) {
     throw CODE_ALREADY_EXISTS;
   }
@@ -129,6 +132,7 @@ export const getEmailAuthCode = async (email: string) => {
   const mail = await EmailAuth.findOne({ where: { email } });
   const now = new Date();
   now.setHours(new Date().getHours() - 10);
+  now.setMinutes(now.getMinutes() - 50);
   if (!mail) {
     throw EMAIL_NOT_EXISTS;
   }
@@ -148,7 +152,7 @@ export const userSignUp = async (user: userSignupDto):
   }
 
   // number , 특수문자 하나씩 포함
-  const pwdRegex = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,20}$/;
+  const pwdRegex = /^(?=.*[0-9])(?=.*[~!@#$%^&*])[~a-zA-Z0-9!@#$%^&*]{8,20}$/;
   if (!pwdRegex.test(user.password)) {
     throw INVALID_FORMAT;
   }
@@ -172,7 +176,7 @@ export const userSignUp = async (user: userSignupDto):
     .values({
       name: user.name,
       email: user.email,
-      receiveEmail: user.email,
+      receiveEmail: user.receivingMail,
       password: hashedPwd,
       studentID: user.studentID,
       grade: user.grade,
@@ -250,7 +254,7 @@ export const changePwd = async (email: string, pwd: string) => {
     throw CODE_NOT_AUTHED;
   }
   // number , 특수문자 하나씩 포함
-  const pwdRegex = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,20}$/;
+  const pwdRegex = /^(?=.*[0-9])(?=.*[~!@#$%^&*])[a-zA-Z0-9~!@#$%^&*]{8,20}$/;
   if (!pwdRegex.test(pwd)) {
     throw INVALID_FORMAT;
   }
@@ -269,4 +273,17 @@ export const changePwd = async (email: string, pwd: string) => {
     })
     .where('email = :email', { email })
     .execute();
+};
+
+export const reSendMail = async (email: string, type: mailAuthCodeType) => {
+  const existingMail = await EmailAuth.findOne({ where: { email } });
+  if (!existingMail) {
+    throw EMAIL_NOT_EXISTS;
+  }
+  if (existingMail.isAuthenticated) {
+    throw Error('already Authenticated');
+  }
+  await existingMail.remove();
+  const data = await requestEmailAuth(email, type);
+  return data;
 };

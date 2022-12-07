@@ -19,6 +19,7 @@ export class logInResultDto {
 
 export interface userSignupDto {
   email: string;
+  receivingMail: string;
   password: string;
   studentID: number;
   grade: number;

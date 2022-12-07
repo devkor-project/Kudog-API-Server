@@ -9,7 +9,6 @@ import { deleteExpiredCodes } from '@/services/authService';
 
 const exp = () => {
   const rule = new schedule.RecurrenceRule();
-  rule.hour = 0;
   rule.minute = 0;
   schedule.scheduleJob(rule, deleteExpiredCodes);
 

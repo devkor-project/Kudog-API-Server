@@ -31,7 +31,7 @@ class User extends BaseEntity {
   @Column('varchar', { name: 'name', unique: false, length: 50 })
   name: string;
 
-  @Column('int', { name: 'studentID', unique: true })
+  @Column('int', { name: 'studentID' })
   studentID: number;
 
   @Column('int', { name: 'grade' })
