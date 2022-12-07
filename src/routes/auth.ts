@@ -14,7 +14,7 @@ router.post('/login', loginValidation, auth.login);
  * access token 재발급 API
  */
 router.post('/token', TokenValidation, auth.getAccessToken);
-
+router.post('/mail/req/resend', auth.reSendMail);
 router.post('/mail/req', auth.authMailReq);
 router.post('/mail', auth.authMail);
 router.post('/signup', auth.signup);

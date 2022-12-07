@@ -128,3 +128,28 @@ export const findPwd = async (
     next(err);
   }
 };
+
+const cache = new Set();
+
+export const reSendMail = async (
+  req: Request<Record<string, never>,
+    Record<string, never>,
+    { email: string, type: mailAuthCodeType }>,
+  res: Response,
+  next: NextFunction,
+) => {
+  try {
+    const { email, type } = req.body;
+    if (cache.has(email)) {
+      throw Error('이미 인증 메일을 보냈습니다. 3분 후에 다시 시도해주세요.');
+    }
+    const code = await authService.reSendMail(email, type);
+    cache.add(email);
+    setTimeout(() => {
+      cache.delete(email);
+    }, 3 * 60 * 1000);
+    res.send(code);
+  } catch (err) {
+    next(err);
+  }
+};

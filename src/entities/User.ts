@@ -28,7 +28,7 @@ class User extends BaseEntity {
   @Column('text', { name: 'refreshToken', nullable: true })
   refreshToken: string | null;
 
-  @Column('int', { name: 'studentID', unique: true })
+  @Column('int', { name: 'studentID' })
   studentID: number;
 
   @Column('int', { name: 'grade' })
