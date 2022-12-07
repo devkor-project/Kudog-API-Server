@@ -6,7 +6,7 @@ import Notice from '@/entities/Notice';
 import User from '@/entities/User';
 import Scrap from '@/entities/Scrap';
 import { updateScrapDto } from '@/interfaces/scrapDto';
-import { INVAILD_WHETHER_SCRAP, SCRAP_NOT_EXISTS } from '@/interfaces/error';
+import { SCRAP_EXISTS, SCRAP_NOT_EXISTS } from '@/interfaces/error';
 
 export const getScraps = async function (userId: number):
   Promise<ServiceResult<simpleNoticeDto[]>> {
@@ -31,12 +31,19 @@ export const getScraps = async function (userId: number):
 export const updateScrap = async function (updateParams: updateScrapDto):
   Promise<void> {
   const { whetherScrap, noticeId, userId } = updateParams;
+  const scrap = await AppDataSource
+    .getRepository(Scrap)
+    .find({
+      where: {
+        noticeId,
+        userId,
+      },
+    });
+  if (whetherScrap) {
+    if (scrap.length !== 0) {
+      throw SCRAP_EXISTS;
+    }
 
-  if (whetherScrap !== 'Y' && whetherScrap !== 'N') {
-    throw INVAILD_WHETHER_SCRAP;
-  }
-
-  if (whetherScrap === 'Y') {
     await AppDataSource.createQueryBuilder()
       .insert()
       .into(Scrap)
@@ -46,15 +53,6 @@ export const updateScrap = async function (updateParams: updateScrapDto):
       })
       .execute();
   } else {
-    const scrap = await AppDataSource
-      .getRepository(Scrap)
-      .find({
-        where: {
-          noticeId,
-          userId,
-        },
-      });
-
     if (scrap.length === 0) {
       throw SCRAP_NOT_EXISTS;
     }

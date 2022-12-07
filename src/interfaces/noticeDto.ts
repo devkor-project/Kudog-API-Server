@@ -23,5 +23,12 @@ export interface simpleNoticeDto {
 
 export interface getNoticesDto {
   userId: number;
+  categoryId: number;
+}
+
+export interface searchNoticesDto {
+  userId: number;
+  keyword: string;
   categoryName: string;
+  provider: string;
 }

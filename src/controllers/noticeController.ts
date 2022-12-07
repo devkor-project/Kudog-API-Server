@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from 'express';
 import * as noticeService from '@/services/noticeService';
-import { getNoticesDto } from '@/interfaces/noticeDto';
+import { getNoticesDto, searchNoticesDto } from '@/interfaces/noticeDto';
 
 /** 메인 화면 API
  * @method get
@@ -14,8 +14,8 @@ export async function getNotices(
 ) {
   try {
     const { userId } = req;
-    const categoryName = req.query.categoryName as string;
-    const getNoticesParams: getNoticesDto = { userId, categoryName };
+    const categoryId = Number(req.query.categoryId);
+    const getNoticesParams: getNoticesDto = { userId, categoryId };
     const getNoticesResult = await noticeService.getNotices(getNoticesParams);
 
     res.send(getNoticesResult);
@@ -59,6 +59,50 @@ export async function getHotNotices(
     const getHotNoticesResult = await noticeService.getHotNotices(userId);
 
     res.send(getHotNoticesResult);
+  } catch (err) {
+    next(err);
+  }
+}
+
+/** kudog 공지사항 조회 API
+ * @method get
+ * @url /notices/admin
+ * @return_data admin notice data
+ */
+export async function getAdminNotices(
+  req: Request,
+  res: Response,
+  next: NextFunction,
+) {
+  try {
+    const getAdminNoticesResult = await noticeService.getAdminNotices();
+
+    res.send(getAdminNoticesResult);
+  } catch (err) {
+    next(err);
+  }
+}
+
+/** 공지사항 검색 API
+ * @method get
+ * @url /notices/search
+ * @return_data notices data
+ */
+export async function searchNotices(
+  req: Request,
+  res: Response,
+  next: NextFunction,
+) {
+  try {
+    const { userId } = req;
+    const { categoryName, provider } = req.params;
+    const keyword = req.query.keyword as string;
+    const searchParams: searchNoticesDto = {
+      userId, categoryName, provider, keyword,
+    };
+    const getNoticesResult = await noticeService.searchNotices(searchParams);
+
+    res.send(getNoticesResult);
   } catch (err) {
     next(err);
   }

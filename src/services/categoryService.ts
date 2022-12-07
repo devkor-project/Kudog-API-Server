@@ -4,6 +4,7 @@ import CategoryPerUser from '@/entities/CategoryPerUser';
 import Category from '@/entities/Category';
 import { In } from 'typeorm';
 import { categoryDto } from '@/interfaces/categoryDto';
+import AppDataSource from '@/config/data-source';
 
 export const getAllCategories = async (): Promise<ServiceResult<categoryDto[]>> => {
   const categoryList = await Category.find();
@@ -25,15 +26,13 @@ export const getCategoryList = async (userId: number): Promise<ServiceResult<cat
   const categoryList = await CategoryPerUser.find({
     where: { userId },
   });
-  const result = categoryList.map((category) => {
-    const { categoryId } = category;
-    const { categoryName, provider } = category.category;
-    return {
-      categoryId,
-      categoryName,
-      provider,
-    };
-  });
+  const result = await AppDataSource.getRepository(CategoryPerUser)
+    .createQueryBuilder('cp')
+    .innerJoinAndSelect('cp.category', 'c')
+    .select(['c.categoryId AS categoryId', 'c.categoryName AS categoryName', 'c.provider AS provider'])
+    .where('cp.userId = :userId', { userId })
+    .getRawMany();
+
   logger.info('get category list success', userId, result);
   return {
     data: result,

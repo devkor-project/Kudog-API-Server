@@ -1,5 +1,5 @@
 export interface updateScrapDto {
-  whetherScrap: string;
+  whetherScrap: boolean;
   noticeId: number;
   userId: number;
 }
