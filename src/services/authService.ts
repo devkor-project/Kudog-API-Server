@@ -93,7 +93,7 @@ export const requestEmailAuth = async (email: string, type: mailAuthCodeType) =>
   }
   const existingMail = await EmailAuth.findOne({ where: { email } });
   const userMail = await User.findOne({ where: { email } });
-  if (existingMail.isAuthenticated === true) {
+  if (existingMail && existingMail.isAuthenticated === true) {
     return { data: 'already authenticated' };
   }
   if (existingMail) {
