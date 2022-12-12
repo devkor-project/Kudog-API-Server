@@ -4,6 +4,7 @@ import noticeRouter from '@/routes/notice';
 import scrapRouter from '@/routes/scrap';
 import categoryRouter from '@/routes/category';
 import userRouter from '@/routes/user';
+import majorRouter from '@/routes/major';
 
 const router = Router();
 
@@ -21,5 +22,6 @@ router.use('/notices', noticeRouter);
 router.use('/scraps', scrapRouter);
 router.use('/category', categoryRouter);
 router.use('/user', userRouter);
+router.use('/major', majorRouter);
 
 export default router;

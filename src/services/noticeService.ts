@@ -14,13 +14,32 @@ import AdminNotice from '@/entities/AdminNotice';
 export const getNotices = async function (getNoticesParams: getNoticesDto):
   Promise<ServiceResult<simpleNoticeDto[]>> {
   const { userId, categoryId } = getNoticesParams;
-  const category = await Category.findOne({
-    where: { categoryId },
-  });
 
-  if (!category) {
-    throw CATEGORY_NAME_DOES_NOT_EXISTS;
+  if (categoryId) {
+    const category = await Category.findOne({
+      where: { categoryId },
+    });
+    if (!category) {
+      throw CATEGORY_NAME_DOES_NOT_EXISTS;
+    }
+
+    const getNoticesResult = await AppDataSource.getRepository(Notice)
+      .createQueryBuilder('n')
+      .innerJoinAndSelect('n.category', 'c')
+      .leftJoinAndSelect((subQuery) => subQuery.select('noticeId')
+        .from(Scrap, 's')
+        .innerJoin(User, 'u', 's.userId = u.userId')
+        .where('u.userId = :userId', { userId }), 'sc', 'n.noticeId = sc.noticeId')
+      .select(['n.noticeId AS noticeId', 'n.title AS title', 'date_format(n.date, \'%Y-%m-%d\') as date', 'n.provider AS provider', 'n.viewCount AS viewCount'])
+      .addSelect('c.categoryName AS categoryName')
+      .addSelect('case when n.noticeId = sc.noticeId then \'Y\' else \'N\' end as isScraped')
+      .where('n.categoryId = :categoryId', { categoryId })
+      .getRawMany();
+
+    return { data: getNoticesResult };
   }
+
+  // 카테고리 filtering 없이 전체 불러오기
   const getNoticesResult = await AppDataSource.getRepository(Notice)
     .createQueryBuilder('n')
     .innerJoinAndSelect('n.category', 'c')
@@ -31,7 +50,6 @@ export const getNotices = async function (getNoticesParams: getNoticesDto):
     .select(['n.noticeId AS noticeId', 'n.title AS title', 'date_format(n.date, \'%Y-%m-%d\') as date', 'n.provider AS provider', 'n.viewCount AS viewCount'])
     .addSelect('c.categoryName AS categoryName')
     .addSelect('case when n.noticeId = sc.noticeId then \'Y\' else \'N\' end as isScraped')
-    .where('n.categoryId = :categoryId', { categoryId })
     .getRawMany();
 
   return { data: getNoticesResult };
