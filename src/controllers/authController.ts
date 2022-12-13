@@ -41,7 +41,7 @@ export const authMailReq = async (
   try {
     const { email, type } = req.body;
     const code = await authService.requestEmailAuth(email, type);
-    res.send(code);
+    res.send('success');
   } catch (err) {
     next(err);
   }
