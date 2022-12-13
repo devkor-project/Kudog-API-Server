@@ -19,7 +19,7 @@ export const getScraps = async function (userId: number):
       .where('u.userId = :userId', { userId }), 'sc', 'n.noticeId = sc.noticeId')
     .innerJoin('n.scraps', 's')
     .innerJoin('s.user', 'u')
-    .select(['n.noticeId AS noticeId', 'n.title AS title', 'n.date AS date', 'n.provider AS provider', 'n.viewCount AS viewCount'])
+    .select(['n.noticeId AS noticeId', 'n.title AS title', 'date_format(n.date, \'%Y-%m-%d\') as date', 'n.provider AS provider', 'n.viewCount AS viewCount'])
     .addSelect('c.categoryName AS categoryName')
     .addSelect('case when n.noticeId = sc.noticeId then \'Y\' else \'N\' end as isScraped')
     .where('u.userId = :userId', { userId })
