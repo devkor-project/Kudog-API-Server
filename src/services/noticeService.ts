@@ -34,6 +34,7 @@ export const getNotices = async function (getNoticesParams: getNoticesDto):
       .addSelect('c.categoryName AS categoryName')
       .addSelect('case when n.noticeId = sc.noticeId then \'Y\' else \'N\' end as isScraped')
       .where('n.categoryId = :categoryId', { categoryId })
+      .orderBy('n.date', 'DESC')
       .getRawMany();
 
     return { data: getNoticesResult };
@@ -50,6 +51,7 @@ export const getNotices = async function (getNoticesParams: getNoticesDto):
     .select(['n.noticeId AS noticeId', 'n.title AS title', 'date_format(n.date, \'%Y-%m-%d\') as date', 'n.provider AS provider', 'n.viewCount AS viewCount'])
     .addSelect('c.categoryName AS categoryName')
     .addSelect('case when n.noticeId = sc.noticeId then \'Y\' else \'N\' end as isScraped')
+    .orderBy('n.date', 'DESC')
     .getRawMany();
 
   return { data: getNoticesResult };
