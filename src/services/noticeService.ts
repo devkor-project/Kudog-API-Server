@@ -96,6 +96,7 @@ export const getHotNotices = async function (userId: number):
     .addSelect('c.categoryName AS categoryName')
     .addSelect('case when n.noticeId = sc.noticeId then \'Y\' else \'N\' end as isScraped')
     .orderBy('n.viewCount', 'DESC')
+    .where('date BETWEEN DATE_ADD(NOW(),INTERVAL -30 DAY ) AND NOW()')
     .limit(20)
     .getRawMany();
 
