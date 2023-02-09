@@ -1,7 +1,7 @@
 import logger from '@/config/winston';
 import User from '@/entities/User';
 import ServiceResult from '@/interfaces/common';
-import { EMAIL_NOT_EXISTS } from '@/interfaces/error';
+import { EMAIL_NOT_EXISTS, NOT_KOREA } from '@/interfaces/error';
 import { userInfoDto } from '@/interfaces/userDto';
 
 export const getUserInfo = async (userId: number):
@@ -33,6 +33,10 @@ export const modifyUserInfo = async (userId: number, modifiedInfo: userInfoDto):
   const user = await User.findOne({ where: { userId } });
   if (!user) {
     throw EMAIL_NOT_EXISTS;
+  }
+  const regex = /[a-z0-9]+@korea.ac.kr/;
+  if (!regex.test(email)) {
+    throw NOT_KOREA;
   }
   user.email = email;
   user.receiveEmail = receiveEmail;
