@@ -31,6 +31,7 @@ export const getCategoryList = async (userId: number): Promise<ServiceResult<cat
     .innerJoinAndSelect('cp.category', 'c')
     .select(['c.categoryId AS categoryId', 'c.categoryName AS categoryName', 'c.provider AS provider'])
     .where('cp.userId = :userId', { userId })
+    .orderBy('c.provider')
     .getRawMany();
 
   logger.info('get category list success', userId, result);
